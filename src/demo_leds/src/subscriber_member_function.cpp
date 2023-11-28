@@ -42,7 +42,7 @@ private:
 		
 		std::string pwm1_enable = "/sys/class/pwm/pwmchip0/pwm1/enable";
 		std::string pwm1_duty_cycle = "/sys/class/pwm/pwmchip0/pwm1/duty_cycle";
-		std::string pwm1_period = "/sys/class/pwm/pwmchip0/pwm0/period";
+		std::string pwm1_period = "/sys/class/pwm/pwmchip0/pwm1/period";
 
 
 		
