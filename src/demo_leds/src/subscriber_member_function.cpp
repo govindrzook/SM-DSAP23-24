@@ -93,8 +93,8 @@ private:
     	
     	if(std::stoi(msg.data) == 1){
   	
-			pwm0_dut << 1400000;
-			pwm1_dut << 1400000;
+			pwm0_dut << 1200000;
+			pwm1_dut << 1200000;
 
 	    	file0 << 0;
             file1 << 1;
@@ -108,8 +108,8 @@ private:
     	
     	if(std::stoi(msg.data) == 2){
 			
-			pwm0_dut << 1800000;
-			pwm1_dut << 1800000;
+			pwm0_dut << 1600000;
+			pwm1_dut << 1600000;
 
 	  		file0 << 0;
             file1 << 0;
@@ -123,8 +123,8 @@ private:
     	
     	if(std::stoi(msg.data) == 3){
 			
-			pwm0_dut << 2200000;
-			pwm1_dut << 2200000;
+			pwm0_dut << 1800000;
+			pwm1_dut << 1800000;
 
 			file0 << 0;
             file1 << 0;
@@ -138,8 +138,8 @@ private:
 
 		if(std::stoi(msg.data) == 4){
 
-			pwm0_dut << 2500000;
-			pwm1_dut << 2500000;
+			pwm0_dut << 2000000;
+			pwm1_dut << 2000000;
 
 		 	file0 << 0;
             file1 << 0;
