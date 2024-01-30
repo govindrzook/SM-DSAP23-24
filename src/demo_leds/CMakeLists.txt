@@ -12,8 +12,8 @@ find_package(std_msgs REQUIRED)
 #find_package(fstream REQUIRED)
 #find_package(iostream REQUIRED)
 
-add_executable(talker src/publisher_member_function.cpp)
-ament_target_dependencies(talker rclcpp std_msgs)
+add_executable(imu src/IMU.cpp)
+ament_target_dependencies(imu rclcpp std_msgs)
 
 
 add_executable(listener src/subscriber_member_function.cpp)
@@ -35,7 +35,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 install(TARGETS
-  talker
+  imu
   listener
   DESTINATION lib/${PROJECT_NAME})
 ament_package()
