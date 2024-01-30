@@ -1,63 +1,54 @@
-// Copyright 2016 Open Source Robotics Foundation, Inc.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-#include <chrono>
-#include <functional>
-#include <memory>
-#include <string>
-
 #include "rclcpp/rclcpp.hpp"
-#include "std_msgs/msg/string.hpp"
+#include "std_msgs/msg/int32.hpp"
 
-using namespace std::chrono_literals;
-
-/* This example creates a subclass of Node and uses std::bind() to register a
- * member function as a callback from the timer. */
-
-class MinimalPublisher : public rclcpp::Node
+class IMU : public rclcpp::Node
 {
 public:
-  MinimalPublisher()
-  : Node("minimal_publisher"), count_(0)
+  IMU()
+    : Node("imu_node")
   {
-    publisher_ = this->create_publisher<std_msgs::msg::String>("topic", 10);
-    timer_ = this->create_wall_timer(
-      3000ms, std::bind(&MinimalPublisher::timer_callback, this));
+    // Create publishers for six different topics
+    pub1_ = create_publisher<std_msgs::msg::Int32>("topic1", 10);
+    pub2_ = create_publisher<std_msgs::msg::Int32>("topic2", 10);
+    pub3_ = create_publisher<std_msgs::msg::Int32>("topic3", 10);
+    pub4_ = create_publisher<std_msgs::msg::Int32>("topic4", 10);
+    pub5_ = create_publisher<std_msgs::msg::Int32>("topic5", 10);
+    pub6_ = create_publisher<std_msgs::msg::Int32>("topic6", 10);
+
+    // Create a timer to update the topics every 1 ms
+    timer_ = create_wall_timer(std::chrono::milliseconds(1), std::bind(&IMU::timer_callback, this));
   }
 
 private:
   void timer_callback()
   {
-    auto message = std_msgs::msg::String();
-    message.data = std::to_string(count_++);
-    
-    if(count_ == 5){
-    	count_ = 0;
-    }
-    
-    RCLCPP_INFO(this->get_logger(),"Set servo to position: '%s'", message.data.c_str());
-    publisher_->publish(message);
+    // Create a message to publish
+    auto msg = std_msgs::msg::Int32();
+    msg.data = 42;  // Example data, replace with your actual data
+
+    // Publish to each topic
+    pub1_->publish(msg);
+    pub2_->publish(msg);
+    pub3_->publish(msg);
+    pub4_->publish(msg);
+    pub5_->publish(msg);
+    pub6_->publish(msg);
   }
+
+  rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub1_;
+  rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub2_;
+  rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub3_;
+  rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub4_;
+  rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub5_;
+  rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub6_;
   rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
-  size_t count_;
 };
 
-int main(int argc, char * argv[])
+int main(int argc, char *argv[])
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<MinimalPublisher>());
+  auto IMU = std::make_shared<IMU>();
+  rclcpp::spin(imu_node);
   rclcpp::shutdown();
   return 0;
 }
