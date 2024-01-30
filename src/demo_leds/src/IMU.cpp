@@ -9,12 +9,12 @@ public:
     : Node("imu_node")
   {
     // Create publishers for six different topics
-    pub1_ = create_publisher<std_msgs::msg::Int32>("aX", 10);
-    pub2_ = create_publisher<std_msgs::msg::Int32>("aY", 10);
-    pub3_ = create_publisher<std_msgs::msg::Int32>("aZ", 10);
-    pub4_ = create_publisher<std_msgs::msg::Int32>("gX", 10);
-    pub5_ = create_publisher<std_msgs::msg::Int32>("gY", 10);
-    pub6_ = create_publisher<std_msgs::msg::Int32>("gZ", 10);
+    pub1_ = create_publisher<std_msgs::msg::String>("aX", 10);
+    pub2_ = create_publisher<std_msgs::msg::String>("aY", 10);
+    pub3_ = create_publisher<std_msgs::msg::String>("aZ", 10);
+    pub4_ = create_publisher<std_msgs::msg::String>("gX", 10);
+    pub5_ = create_publisher<std_msgs::msg::String>("gY", 10);
+    pub6_ = create_publisher<std_msgs::msg::String>("gZ", 10);
 
     // Create a timer to update the topics every 1 ms
     timer_ = create_wall_timer(std::chrono::milliseconds(1), std::bind(&IMU::timer_callback, this));
