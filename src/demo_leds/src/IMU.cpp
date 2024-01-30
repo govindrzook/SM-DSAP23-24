@@ -25,15 +25,27 @@ private:
   {
     // Create a message to publish
     auto msg = std_msgs::msg::String();
-    msg.data = "Sample IMU data";  // Example data, replace with your actual data
+    auto msg1 = std_msgs::msg::String();
+    auto msg2 = std_msgs::msg::String();
+    auto msg3 = std_msgs::msg::String();
+    auto msg4 = std_msgs::msg::String();
+    auto msg5 = std_msgs::msg::String();
+
+    msg.data = "0g";  // Example data, replace with your actual data
+    msg1.data = "1g";  // Example data, replace with your actual data
+    msg2.data = "2g";  // Example data, replace with your actual data
+
+    msg3.data = "3g";  // Example data, replace with your actual data
+    msg4.data = "4g";  // Example data, replace with your actual data
+    msg5.data = "5g";  // Example data, replace with your actual data
 
     // Publish to each topic
     pub1_->publish(msg);
-    pub2_->publish(msg);
-    pub3_->publish(msg);
-    pub4_->publish(msg);
-    pub5_->publish(msg);
-    pub6_->publish(msg);
+    pub2_->publish(msg1);
+    pub3_->publish(msg2);
+    pub4_->publish(msg3);
+    pub5_->publish(msg4);
+    pub6_->publish(msg5);
   }
 
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub1_;
@@ -42,6 +54,7 @@ private:
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub4_;
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub5_;
   rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub6_;
+
   rclcpp::TimerBase::SharedPtr timer_;
 };
 

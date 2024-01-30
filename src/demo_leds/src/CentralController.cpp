@@ -49,14 +49,14 @@ private:
 	auto msg1 = std_msgs::msg::String();
 	auto msg2 = std_msgs::msg::String();
 
-    msg.data = "30 degrees";  // Example data, replace with your actual data
-	msg1.data = "55 degrees";
-	msg2.data = "1 Nm";
+    msg.data = "30 degrees";  // Static steering angle data
+	msg1.data = "55 degrees"; // static brake angle data
+	msg2.data = "1 Nm"; // static torque data
 
     // Publish to each topic
-    pub1_->publish(msg);
-	pub2_->publish(msg1);
-	pub3_->publish(msg2);
+    pub1_->publish(msg); //front right steer position
+	pub2_->publish(msg1); // front right brake position
+	pub3_->publish(msg2); // front right torque
     
   }
 
@@ -93,7 +93,7 @@ private:
 
   void front_right_speed_callback(const std_msgs::msg::String & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "Front right speed: '%s'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "Read front right speed: '%s'", msg.data.c_str());  
 		    
   }
 	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr ax_subscription;

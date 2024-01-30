@@ -44,7 +44,7 @@ private:
 
   void front_right_torque_callback(const std_msgs::msg::String & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "Front right torque: '%s'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "Received torque command: '%s'", msg.data.c_str());  
 		    
   }
  
