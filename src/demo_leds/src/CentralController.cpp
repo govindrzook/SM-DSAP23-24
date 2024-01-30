@@ -10,27 +10,47 @@
 
 using std::placeholders::_1;
 
-class MinimalSubscriber : public rclcpp::Node
+class CentralController : public rclcpp::Node
 {
 public:
-  MinimalSubscriber()
-  : Node("minimal_subscriber")
+  CentralController()
+  : Node("central_controller")
   {
     	ax_subscription = this->create_subscription<std_msgs::msg::String>(
-      		"aX", 10, std::bind(&MinimalSubscriber::ax_callback, this, _1));
+      		"aX", 10, std::bind(&CentralController::ax_callback, this, _1));
 	ay_subscription = this->create_subscription<std_msgs::msg::String>(
-      		"aY", 10, std::bind(&MinimalSubscriber::ay_callback, this, _1));
+      		"aY", 10, std::bind(&CentralController::ay_callback, this, _1));
 	az_subscription = this->create_subscription<std_msgs::msg::String>(
-      		"aZ", 10, std::bind(&MinimalSubscriber::az_callback, this, _1));
+      		"aZ", 10, std::bind(&CentralController::az_callback, this, _1));
 	gx_subscription = this->create_subscription<std_msgs::msg::String>(
-      		"gX", 10, std::bind(&MinimalSubscriber::gx_callback, this, _1));
+      		"gX", 10, std::bind(&CentralController::gx_callback, this, _1));
 	gy_subscription = this->create_subscription<std_msgs::msg::String>(
-      		"gY", 10, std::bind(&MinimalSubscriber::gy_callback, this, _1));
+      		"gY", 10, std::bind(&CentralController::gy_callback, this, _1));
 	gz_subscription = this->create_subscription<std_msgs::msg::String>(
-      		"gZ", 10, std::bind(&MinimalSubscriber::gz_callback, this, _1));
+      		"gZ", 10, std::bind(&CentralController::gz_callback, this, _1));
+
+	pub1_ = create_publisher<std_msgs::msg::String>("frontRightSteerPosition", 10);
+    pub2_ = create_publisher<std_msgs::msg::String>("frontRightBrakePosition", 10);
+
+	timer_ = create_wall_timer(std::chrono::milliseconds(1), std::bind(&CentralController::timer_callback, this));
+
   }
 
 private:
+
+	void timer_callback()
+  {
+    // Create a message to publish
+    auto msg = std_msgs::msg::String();
+	auto msg1 = std_msgs::msg::String();
+    msg.data = "Steering position";  // Example data, replace with your actual data
+	msg1.data = "Brake position";
+
+    // Publish to each topic
+    pub1_->publish(msg);
+	pub2_->publish(msg1);
+    
+  }
 
   void ax_callback(const std_msgs::msg::String & msg) const
   {
@@ -70,12 +90,16 @@ private:
 	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr gy_subscription;
 	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr gz_subscription;
 
+	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub1_;
+	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub2_;
+  	rclcpp::TimerBase::SharedPtr timer_;
+
 };
 
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<MinimalSubscriber>());
+  rclcpp::spin(std::make_shared<CentralController>());
   rclcpp::shutdown();
   return 0;
 }

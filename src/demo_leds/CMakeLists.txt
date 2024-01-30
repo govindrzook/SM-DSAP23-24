@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(demo_pwm)
+project(digital_architecture)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -15,9 +15,11 @@ find_package(std_msgs REQUIRED)
 add_executable(imu src/IMU.cpp)
 ament_target_dependencies(imu rclcpp std_msgs)
 
+add_executable(central_controller src/CentralController.cpp)
+ament_target_dependencies(central_controller rclcpp std_msgs)
 
-add_executable(listener src/subscriber_member_function.cpp)
-ament_target_dependencies(listener rclcpp std_msgs)
+add_executable(front_right_servo_controller src/FrontRightServoController.cpp)
+ament_target_dependencies(front_right_servo_controller rclcpp std_msgs)
 
 # uncomment the following section in order to fill in
 # further dependencies manually.
@@ -36,7 +38,8 @@ if(BUILD_TESTING)
 endif()
 install(TARGETS
   imu
-  listener
+  central_controller
+  front_right_servo_controller
   DESTINATION lib/${PROJECT_NAME})
 ament_package()
 
