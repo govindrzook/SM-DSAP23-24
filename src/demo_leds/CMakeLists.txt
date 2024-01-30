@@ -21,6 +21,9 @@ ament_target_dependencies(central_controller rclcpp std_msgs)
 add_executable(front_right_servo_controller src/FrontRightServoController.cpp)
 ament_target_dependencies(front_right_servo_controller rclcpp std_msgs)
 
+add_executable(front_right_solo src/FrontRightSOLO.cpp)
+ament_target_dependencies(front_right_solo rclcpp std_msgs)
+
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -40,6 +43,7 @@ install(TARGETS
   imu
   central_controller
   front_right_servo_controller
+  front_right_solo
   DESTINATION lib/${PROJECT_NAME})
 ament_package()
 

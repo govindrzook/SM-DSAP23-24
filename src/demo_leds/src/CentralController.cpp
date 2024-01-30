@@ -28,9 +28,13 @@ public:
       		"gY", 10, std::bind(&CentralController::gy_callback, this, _1));
 	gz_subscription = this->create_subscription<std_msgs::msg::String>(
       		"gZ", 10, std::bind(&CentralController::gz_callback, this, _1));
+	
+	front_right_speed_subscription = this->create_subscription<std_msgs::msg::String>(
+      		"frontRightSpeed", 10, std::bind(&CentralController::front_right_speed_callback, this, _1));
 
 	pub1_ = create_publisher<std_msgs::msg::String>("frontRightSteerPosition", 10);
     pub2_ = create_publisher<std_msgs::msg::String>("frontRightBrakePosition", 10);
+	pub3_ = create_publisher<std_msgs::msg::String>("frontRightTorque", 10);
 
 	timer_ = create_wall_timer(std::chrono::milliseconds(1), std::bind(&CentralController::timer_callback, this));
 
@@ -43,12 +47,16 @@ private:
     // Create a message to publish
     auto msg = std_msgs::msg::String();
 	auto msg1 = std_msgs::msg::String();
-    msg.data = "Steering position";  // Example data, replace with your actual data
-	msg1.data = "Brake position";
+	auto msg2 = std_msgs::msg::String();
+
+    msg.data = "30 degrees";  // Example data, replace with your actual data
+	msg1.data = "55 degrees";
+	msg2.data = "1 Nm";
 
     // Publish to each topic
     pub1_->publish(msg);
 	pub2_->publish(msg1);
+	pub3_->publish(msg2);
     
   }
 
@@ -82,6 +90,12 @@ private:
 	    	RCLCPP_INFO(this->get_logger(), "gZ: '%s'", msg.data.c_str());  
 		    
   }
+
+  void front_right_speed_callback(const std_msgs::msg::String & msg) const
+  {
+	    	RCLCPP_INFO(this->get_logger(), "Front right speed: '%s'", msg.data.c_str());  
+		    
+  }
 	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr ax_subscription;
 	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr ay_subscription;
 	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr az_subscription;
@@ -90,8 +104,11 @@ private:
 	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr gy_subscription;
 	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr gz_subscription;
 
+	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr front_right_speed_subscription;
+
 	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub1_;
 	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub2_;
+	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub3_;
   	rclcpp::TimerBase::SharedPtr timer_;
 
 };
