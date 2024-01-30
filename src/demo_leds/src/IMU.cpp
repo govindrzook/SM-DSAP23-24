@@ -24,7 +24,7 @@ private:
   void timer_callback()
   {
     // Create a message to publish
-    auto msg = std_msgs::msg::String()
+    auto msg = std_msgs::msg::String();
     msg.data = "Sample IMU data";  // Example data, replace with your actual data
 
     // Publish to each topic
