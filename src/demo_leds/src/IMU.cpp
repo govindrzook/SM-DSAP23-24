@@ -36,12 +36,12 @@ private:
     pub6_->publish(msg);
   }
 
-  rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub1_;
-  rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub2_;
-  rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub3_;
-  rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub4_;
-  rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub5_;
-  rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr pub6_;
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub1_;
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub2_;
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub3_;
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub4_;
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub5_;
+  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub6_;
   rclcpp::TimerBase::SharedPtr timer_;
 };
 
