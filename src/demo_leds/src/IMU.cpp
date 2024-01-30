@@ -47,7 +47,6 @@ private:
 int main(int argc, char *argv[])
 {
   rclcpp::init(argc, argv);
-  auto IMU = std::make_shared<IMU>();
   rclcpp::spin(imu_node);
   rclcpp::shutdown();
   return 0;
