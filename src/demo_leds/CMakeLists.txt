@@ -5,6 +5,9 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+
+
+
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -17,6 +20,10 @@ ament_target_dependencies(imu rclcpp std_msgs)
 
 add_executable(central_controller src/CentralController.cpp)
 ament_target_dependencies(central_controller rclcpp std_msgs)
+
+target_link_libraries(central_controller
+  ${catkin_LIBRARIES} serial
+)
 
 add_executable(front_right_servo_controller src/FrontRightServoController.cpp)
 ament_target_dependencies(front_right_servo_controller rclcpp std_msgs)
@@ -46,4 +53,3 @@ install(TARGETS
   front_right_solo
   DESTINATION lib/${PROJECT_NAME})
 ament_package()
-

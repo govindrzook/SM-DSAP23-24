@@ -1,0 +1,165 @@
+[0.000000] (-) TimerEvent: {}
+[0.000195] (digital_architecture) JobQueued: {'identifier': 'digital_architecture', 'dependencies': OrderedDict()}
+[0.000250] (digital_architecture) JobStarted: {'identifier': 'digital_architecture'}
+[0.064298] (digital_architecture) JobProgress: {'identifier': 'digital_architecture', 'progress': 'cmake'}
+[0.065049] (digital_architecture) JobProgress: {'identifier': 'digital_architecture', 'progress': 'build'}
+[0.066001] (digital_architecture) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture', '--', '-j8', '-l8'], 'cwd': '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'sysmodel'), ('XDG_SESSION_TYPE', 'wayland'), ('STM32CubeMX_PATH', '/home/sysmodel/STM32CubeMX'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/sysmodel'), ('OLDPWD', '/home/sysmodel/13feb'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1968'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'sysmodel'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sysmodel'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/sysmodel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/sysmodel-OptiPlex-7010:@/tmp/.ICE-unix/1944,unix/sysmodel-OptiPlex-7010:/tmp/.ICE-unix/1944'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2356e864_a778_44ac_beb5_a1db55c90b7e'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.8WVRI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.148'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099174] (-) TimerEvent: {}
+[0.114864] (digital_architecture) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target central_controller\x1b[0m\n'}
+[0.128221] (digital_architecture) StdoutLine: {'line': b'[ 50%] Built target front_right_solo\n'}
+[0.128719] (digital_architecture) StdoutLine: {'line': b'[ 50%] Built target front_right_servo_controller\n'}
+[0.129191] (digital_architecture) StdoutLine: {'line': b'[ 75%] Built target imu\n'}
+[0.136232] (digital_architecture) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o\x1b[0m\n'}
+[0.199293] (-) TimerEvent: {}
+[0.299682] (-) TimerEvent: {}
+[0.400064] (-) TimerEvent: {}
+[0.500463] (-) TimerEvent: {}
+[0.600852] (-) TimerEvent: {}
+[0.701237] (-) TimerEvent: {}
+[0.801630] (-) TimerEvent: {}
+[0.902029] (-) TimerEvent: {}
+[1.002419] (-) TimerEvent: {}
+[1.102818] (-) TimerEvent: {}
+[1.203207] (-) TimerEvent: {}
+[1.303604] (-) TimerEvent: {}
+[1.404007] (-) TimerEvent: {}
+[1.504439] (-) TimerEvent: {}
+[1.604823] (-) TimerEvent: {}
+[1.705219] (-) TimerEvent: {}
+[1.805617] (-) TimerEvent: {}
+[1.906014] (-) TimerEvent: {}
+[2.006415] (-) TimerEvent: {}
+[2.106820] (-) TimerEvent: {}
+[2.207218] (-) TimerEvent: {}
+[2.307622] (-) TimerEvent: {}
+[2.408001] (-) TimerEvent: {}
+[2.508354] (-) TimerEvent: {}
+[2.608753] (-) TimerEvent: {}
+[2.709156] (-) TimerEvent: {}
+[2.809573] (-) TimerEvent: {}
+[2.890410] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[2.890661] (digital_architecture) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[2.890770] (digital_architecture) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[2.890865] (digital_architecture) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[2.890954] (digital_architecture) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[2.891040] (digital_architecture) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[2.891126] (digital_architecture) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[2.891210] (digital_architecture) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[2.891294] (digital_architecture) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[2.891379] (digital_architecture) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[2.891462] (digital_architecture) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[2.891544] (digital_architecture) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:8\x1b[m\x1b[K:\n'}
+[2.891626] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid CentralController::timer_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.891722] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:48:41:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%s\x1b[m\x1b[K\xe2\x80\x99 expects argument of type \xe2\x80\x98\x1b[01m\x1b[Kchar*\x1b[m\x1b[K\xe2\x80\x99, but argument 5 has type \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.891810] (digital_architecture) StderrLine: {'line': b'   48 |         RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K"testing: \'%s\'"\x1b[m\x1b[K, \x1b[32m\x1b[Ktest()\x1b[m\x1b[K);\n'}
+[2.891892] (digital_architecture) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K  \x1b[32m\x1b[K~~~~~~\x1b[m\x1b[K\n'}
+[2.891973] (digital_architecture) StderrLine: {'line': b'      |                                                              \x1b[32m\x1b[K|\x1b[m\x1b[K\n'}
+[2.892054] (digital_architecture) StderrLine: {'line': b'      |                                                              \x1b[32m\x1b[Kint\x1b[m\x1b[K\n'}
+[2.892135] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:48:53:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[2.892217] (digital_architecture) StderrLine: {'line': b'   48 |         RCLCPP_INFO(this->get_logger(), "testing: \'\x1b[01;36m\x1b[K%s\x1b[m\x1b[K\'", test());\n'}
+[2.892297] (digital_architecture) StderrLine: {'line': b'      |                                                    \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[2.892378] (digital_architecture) StderrLine: {'line': b'      |                                                     \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[2.892500] (digital_architecture) StderrLine: {'line': b'      |                                                     \x1b[01;36m\x1b[Kchar*\x1b[m\x1b[K\n'}
+[2.892581] (digital_architecture) StderrLine: {'line': b'      |                                                    \x1b[32m\x1b[K%d\x1b[m\x1b[K\n'}
+[2.909651] (-) TimerEvent: {}
+[3.009946] (-) TimerEvent: {}
+[3.110311] (-) TimerEvent: {}
+[3.210672] (-) TimerEvent: {}
+[3.311036] (-) TimerEvent: {}
+[3.411374] (-) TimerEvent: {}
+[3.511728] (-) TimerEvent: {}
+[3.612075] (-) TimerEvent: {}
+[3.712456] (-) TimerEvent: {}
+[3.812806] (-) TimerEvent: {}
+[3.913162] (-) TimerEvent: {}
+[4.013513] (-) TimerEvent: {}
+[4.113894] (-) TimerEvent: {}
+[4.214256] (-) TimerEvent: {}
+[4.314629] (-) TimerEvent: {}
+[4.415010] (-) TimerEvent: {}
+[4.515359] (-) TimerEvent: {}
+[4.615705] (-) TimerEvent: {}
+[4.716056] (-) TimerEvent: {}
+[4.816433] (-) TimerEvent: {}
+[4.916796] (-) TimerEvent: {}
+[5.017144] (-) TimerEvent: {}
+[5.117498] (-) TimerEvent: {}
+[5.217849] (-) TimerEvent: {}
+[5.318197] (-) TimerEvent: {}
+[5.418554] (-) TimerEvent: {}
+[5.518924] (-) TimerEvent: {}
+[5.619300] (-) TimerEvent: {}
+[5.719655] (-) TimerEvent: {}
+[5.820010] (-) TimerEvent: {}
+[5.920349] (-) TimerEvent: {}
+[6.020756] (-) TimerEvent: {}
+[6.121148] (-) TimerEvent: {}
+[6.221500] (-) TimerEvent: {}
+[6.321849] (-) TimerEvent: {}
+[6.422201] (-) TimerEvent: {}
+[6.522558] (-) TimerEvent: {}
+[6.622909] (-) TimerEvent: {}
+[6.723250] (-) TimerEvent: {}
+[6.823597] (-) TimerEvent: {}
+[6.923942] (-) TimerEvent: {}
+[7.024289] (-) TimerEvent: {}
+[7.124669] (-) TimerEvent: {}
+[7.225023] (-) TimerEvent: {}
+[7.325365] (-) TimerEvent: {}
+[7.425710] (-) TimerEvent: {}
+[7.526047] (-) TimerEvent: {}
+[7.626383] (-) TimerEvent: {}
+[7.726723] (-) TimerEvent: {}
+[7.827061] (-) TimerEvent: {}
+[7.927400] (-) TimerEvent: {}
+[8.027738] (-) TimerEvent: {}
+[8.128075] (-) TimerEvent: {}
+[8.228437] (-) TimerEvent: {}
+[8.328777] (-) TimerEvent: {}
+[8.429117] (-) TimerEvent: {}
+[8.529453] (-) TimerEvent: {}
+[8.629787] (-) TimerEvent: {}
+[8.730122] (-) TimerEvent: {}
+[8.830460] (-) TimerEvent: {}
+[8.930886] (-) TimerEvent: {}
+[9.031387] (-) TimerEvent: {}
+[9.131791] (-) TimerEvent: {}
+[9.232132] (-) TimerEvent: {}
+[9.332491] (-) TimerEvent: {}
+[9.432892] (-) TimerEvent: {}
+[9.525397] (digital_architecture) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable central_controller\x1b[0m\n'}
+[9.532977] (-) TimerEvent: {}
+[9.633304] (-) TimerEvent: {}
+[9.733698] (-) TimerEvent: {}
+[9.834046] (-) TimerEvent: {}
+[9.926826] (digital_architecture) StdoutLine: {'line': b'[100%] Built target central_controller\n'}
+[9.934152] (-) TimerEvent: {}
+[9.938210] (digital_architecture) CommandEnded: {'returncode': 0}
+[9.977211] (digital_architecture) JobProgress: {'identifier': 'digital_architecture', 'progress': 'install'}
+[9.987142] (digital_architecture) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture'], 'cwd': '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_CA:en'), ('USER', 'sysmodel'), ('XDG_SESSION_TYPE', 'wayland'), ('STM32CubeMX_PATH', '/home/sysmodel/STM32CubeMX'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/sysmodel'), ('OLDPWD', '/home/sysmodel/13feb'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1968'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'sysmodel'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'sysmodel'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/sysmodel/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/sysmodel-OptiPlex-7010:@/tmp/.ICE-unix/1944,unix/sysmodel-OptiPlex-7010:/tmp/.ICE-unix/1944'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/2356e864_a778_44ac_beb5_a1db55c90b7e'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.8WVRI2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.148'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[9.995101] (digital_architecture) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.995422] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/imu\n'}
+[9.995884] (digital_architecture) StdoutLine: {'line': b'-- Installing: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller\n'}
+[10.000448] (digital_architecture) StdoutLine: {'line': b'-- Set runtime path of "/home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller" to ""\n'}
+[10.000757] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_servo_controller\n'}
+[10.001171] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_solo\n'}
+[10.001497] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/package_run_dependencies/digital_architecture\n'}
+[10.001692] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/parent_prefix_path/digital_architecture\n'}
+[10.001930] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.sh\n'}
+[10.002139] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.dsv\n'}
+[10.002310] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.sh\n'}
+[10.002481] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.dsv\n'}
+[10.002659] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.bash\n'}
+[10.002826] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.sh\n'}
+[10.002980] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.zsh\n'}
+[10.003119] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.dsv\n'}
+[10.003253] (digital_architecture) StdoutLine: {'line': b'-- Installing: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.dsv\n'}
+[10.003387] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/packages/digital_architecture\n'}
+[10.003515] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig.cmake\n'}
+[10.003643] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig-version.cmake\n'}
+[10.003769] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.xml\n'}
+[10.005198] (digital_architecture) CommandEnded: {'returncode': 0}
+[10.034372] (-) TimerEvent: {}
+[10.134848] (-) TimerEvent: {}
+[10.228588] (digital_architecture) JobEnded: {'identifier': 'digital_architecture', 'rc': 0}
+[10.230029] (-) EventReactorShutdown: {}

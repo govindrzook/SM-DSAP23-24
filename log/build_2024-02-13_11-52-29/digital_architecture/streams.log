@@ -1,0 +1,32 @@
+[0.088s] Invoking command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture -- -j8 -l8
+[0.144s] [35m[1mConsolidate compiler generated dependencies of target central_controller[0m
+[0.156s] [ 75%] Built target imu
+[0.157s] [ 75%] Built target front_right_solo
+[0.157s] [ 75%] Built target front_right_servo_controller
+[0.162s] [ 87%] [32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o[0m
+[9.405s] [100%] [32m[1mLinking CXX executable central_controller[0m
+[9.803s] [100%] Built target central_controller
+[9.817s] Invoked command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture -- -j8 -l8
+[9.868s] Invoking command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture
+[9.875s] -- Install configuration: ""
+[9.876s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/imu
+[9.876s] -- Installing: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller
+[9.881s] -- Set runtime path of "/home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller" to ""
+[9.881s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_servo_controller
+[9.882s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_solo
+[9.882s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/package_run_dependencies/digital_architecture
+[9.882s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/parent_prefix_path/digital_architecture
+[9.883s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.sh
+[9.883s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.dsv
+[9.883s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.sh
+[9.883s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.dsv
+[9.883s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.bash
+[9.883s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.sh
+[9.883s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.zsh
+[9.883s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.dsv
+[9.883s] -- Installing: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.dsv
+[9.883s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/packages/digital_architecture
+[9.884s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig.cmake
+[9.884s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig-version.cmake
+[9.884s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.xml
+[9.885s] Invoked command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture

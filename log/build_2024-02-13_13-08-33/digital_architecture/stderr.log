@@ -1,0 +1,6 @@
+[31mCMake Error at CMakeLists.txt:9 (TARGET_LINK_LIBRARIES):
+  Cannot specify link libraries for target "central_controller" which is not
+  built by this project.
+
+[0m
+gmake: *** [Makefile:390: cmake_check_build_system] Error 1

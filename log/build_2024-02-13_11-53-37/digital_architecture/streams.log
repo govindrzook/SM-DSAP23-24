@@ -1,0 +1,10 @@
+[0.087s] Invoking command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture -- -j8 -l8
+[0.137s] [35m[1mConsolidate compiler generated dependencies of target central_controller[0m
+[0.153s] [ 75%] Built target imu
+[0.153s] [ 75%] Built target front_right_servo_controller
+[0.153s] [ 75%] Built target front_right_solo
+[0.155s] [ 87%] [32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o[0m
+[4.965s] gmake[2]: *** [CMakeFiles/central_controller.dir/build.make:76: CMakeFiles/central_controller.dir/src/CentralController.cpp.o] Interrupt
+[4.965s] gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/central_controller.dir/all] Interrupt
+[4.965s] gmake: *** [Makefile:146: all] Interrupt
+[4.984s] Invoked command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture' returned '-2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture -- -j8 -l8

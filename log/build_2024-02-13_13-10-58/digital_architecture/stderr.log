@@ -1,0 +1,7 @@
+[0mCMake Error: The following variables are used in this project, but they are set to NOTFOUND.
+Please set them or make sure they are set and tested correctly in the CMake files:
+LIBSERIAL_LIBRARY
+    linked by target "central_controller" in directory /home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds
+[0m
+[0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+gmake: *** [Makefile:390: cmake_check_build_system] Error 1

@@ -1,0 +1,27 @@
+[ 62%] Built target imu
+[ 50%] [32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o[0m
+[ 62%] Built target front_right_solo
+[ 87%] Built target front_right_servo_controller
+[100%] [32m[1mLinking CXX executable central_controller[0m
+[100%] Built target central_controller
+-- Install configuration: ""
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/imu
+-- Installing: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller
+-- Set runtime path of "/home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller" to ""
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_servo_controller
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_solo
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/package_run_dependencies/digital_architecture
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/parent_prefix_path/digital_architecture
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.sh
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.sh
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.dsv
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.bash
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.sh
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.zsh
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.dsv
+-- Installing: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.dsv
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/packages/digital_architecture
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig.cmake
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig-version.cmake
+-- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.xml

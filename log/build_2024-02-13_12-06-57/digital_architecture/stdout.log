@@ -1,0 +1,5 @@
+[ 62%] Built target imu
+[ 62%] [32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o[0m
+[ 62%] Built target front_right_servo_controller
+[ 87%] Built target front_right_solo
+[100%] [32m[1mLinking CXX executable central_controller[0m

@@ -1,0 +1,56 @@
+[0.069s] Invoking command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture -- -j8 -l8
+[0.115s] [35m[1mConsolidate compiler generated dependencies of target central_controller[0m
+[0.128s] [ 50%] Built target front_right_solo
+[0.129s] [ 50%] Built target front_right_servo_controller
+[0.129s] [ 75%] Built target imu
+[0.136s] [ 87%] [32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o[0m
+[2.890s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.890s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.891s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.891s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.891s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.891s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.891s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.891s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.891s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.891s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.891s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.891s]                  from [01m[K/home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:8[m[K:
+[2.891s] [01m[K/home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:[m[K In member function ‘[01m[Kvoid CentralController::timer_callback()[m[K’:
+[2.892s] [01m[K/home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:48:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar*[m[K’, but argument 5 has type ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[2.892s]    48 |         RCLCPP_INFO(this->get_logger(), [01;35m[K"testing: '%s'"[m[K, [32m[Ktest()[m[K);
+[2.892s]       |                                         [01;35m[K^~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~[m[K
+[2.892s]       |                                                              [32m[K|[m[K
+[2.892s]       |                                                              [32m[Kint[m[K
+[2.892s] [01m[K/home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:48:53:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[2.892s]    48 |         RCLCPP_INFO(this->get_logger(), "testing: '[01;36m[K%s[m[K'", test());
+[2.892s]       |                                                    [01;36m[K~^[m[K
+[2.892s]       |                                                     [01;36m[K|[m[K
+[2.892s]       |                                                     [01;36m[Kchar*[m[K
+[2.892s]       |                                                    [32m[K%d[m[K
+[9.525s] [100%] [32m[1mLinking CXX executable central_controller[0m
+[9.927s] [100%] Built target central_controller
+[9.938s] Invoked command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture -- -j8 -l8
+[9.988s] Invoking command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture
+[9.995s] -- Install configuration: ""
+[9.995s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/imu
+[9.996s] -- Installing: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller
+[10.000s] -- Set runtime path of "/home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller" to ""
+[10.001s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_servo_controller
+[10.001s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_solo
+[10.001s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/package_run_dependencies/digital_architecture
+[10.002s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/parent_prefix_path/digital_architecture
+[10.002s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.sh
+[10.002s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.dsv
+[10.002s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.sh
+[10.002s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.dsv
+[10.003s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.bash
+[10.003s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.sh
+[10.003s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.zsh
+[10.003s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.dsv
+[10.003s] -- Installing: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.dsv
+[10.003s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/packages/digital_architecture
+[10.003s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig.cmake
+[10.003s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig-version.cmake
+[10.004s] -- Up-to-date: /home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.xml
+[10.005s] Invoked command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture

@@ -1,0 +1,4 @@
+source;share/digital_architecture/local_setup.bash
+source;share/digital_architecture/local_setup.dsv
+source;share/digital_architecture/local_setup.sh
+source;share/digital_architecture/local_setup.zsh

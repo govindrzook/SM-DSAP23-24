@@ -1,0 +1,13 @@
+[ 62%] Built target imu
+[ 62%] [32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o[0m
+[ 62%] Built target front_right_servo_controller
+[ 87%] Built target front_right_solo
+[100%] [32m[1mLinking CXX executable central_controller[0m
+/usr/bin/ld: CMakeFiles/central_controller.dir/src/CentralController.cpp.o: in function `test[abi:cxx11]()':
+CentralController.cpp:(.text+0x91): undefined reference to `LibSerial::SerialPort::SerialPort()'
+/usr/bin/ld: CentralController.cpp:(.text+0xcf): undefined reference to `LibSerial::SerialPort::~SerialPort()'
+/usr/bin/ld: CentralController.cpp:(.text+0x100): undefined reference to `LibSerial::SerialPort::~SerialPort()'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/central_controller.dir/build.make:159: central_controller] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/central_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

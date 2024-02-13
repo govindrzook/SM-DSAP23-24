@@ -1,0 +1,15 @@
+[0.086s] Invoking command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture -- -j8 -l8
+[0.147s] [ 62%] Built target imu
+[0.148s] [ 62%] [32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o[0m
+[0.148s] [ 62%] Built target front_right_servo_controller
+[0.149s] [ 87%] Built target front_right_solo
+[9.560s] [100%] [32m[1mLinking CXX executable central_controller[0m
+[9.898s] /usr/bin/ld: CMakeFiles/central_controller.dir/src/CentralController.cpp.o: in function `test[abi:cxx11]()':
+[9.898s] CentralController.cpp:(.text+0x91): undefined reference to `LibSerial::SerialPort::SerialPort()'
+[9.898s] /usr/bin/ld: CentralController.cpp:(.text+0xcf): undefined reference to `LibSerial::SerialPort::~SerialPort()'
+[9.898s] /usr/bin/ld: CentralController.cpp:(.text+0x100): undefined reference to `LibSerial::SerialPort::~SerialPort()'
+[9.939s] collect2: error: ld returned 1 exit status
+[9.941s] gmake[2]: *** [CMakeFiles/central_controller.dir/build.make:159: central_controller] Error 1
+[9.941s] gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/central_controller.dir/all] Error 2
+[9.941s] gmake: *** [Makefile:146: all] Error 2
+[9.944s] Invoked command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture -- -j8 -l8

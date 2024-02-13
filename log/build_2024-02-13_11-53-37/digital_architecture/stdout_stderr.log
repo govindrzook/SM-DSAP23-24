@@ -1,0 +1,8 @@
+[35m[1mConsolidate compiler generated dependencies of target central_controller[0m
+[ 75%] Built target imu
+[ 75%] Built target front_right_servo_controller
+[ 75%] Built target front_right_solo
+[ 87%] [32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o[0m
+gmake[2]: *** [CMakeFiles/central_controller.dir/build.make:76: CMakeFiles/central_controller.dir/src/CentralController.cpp.o] Interrupt
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/central_controller.dir/all] Interrupt
+gmake: *** [Makefile:146: all] Interrupt

@@ -5,9 +5,12 @@
 #include <fstream>
 #include <iostream>
 
+
+#include </usr/include/libserial/SerialPort.h>
+
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
-
+#include "serial_testing.cpp"
 using std::placeholders::_1;
 
 class CentralController : public rclcpp::Node
@@ -44,6 +47,10 @@ private:
 
 	void timer_callback()
   {
+
+	RCLCPP_INFO(this->get_logger(), "testing: '%s'", test().c_str()); 
+
+
     // Create a message to publish
     auto msg = std_msgs::msg::String();
 	auto msg1 = std_msgs::msg::String();
