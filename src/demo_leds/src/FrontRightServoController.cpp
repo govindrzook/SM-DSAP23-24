@@ -16,10 +16,10 @@ public:
   FrontRightServoController()
   : Node("front_right_servo_controller")
   {
-    front_right_steering_position_subscription = this->create_subscription<std_msgs::msg::String>(
+    front_right_steering_position_subscription = this->create_subscription<std_msgs::msg::Double>(
       		"frontRightSteerPosition", 10, std::bind(&FrontRightServoController::steering_position_callback, this, _1));
 	
-    front_right_brake_position_subscription = this->create_subscription<std_msgs::msg::String>(
+    front_right_brake_position_subscription = this->create_subscription<std_msgs::msg::Double>(
       		"frontRightBrakePosition", 10, std::bind(&FrontRightServoController::brake_position_callback, this, _1));
     
   }
@@ -28,12 +28,12 @@ private:
 
   void steering_position_callback(const std_msgs::msg::String & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "Steering position: '%s'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "Steering position: '%d'", msg.data);  
 		    
   }
  void brake_position_callback(const std_msgs::msg::String & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "Brake position: '%s'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "Brake position: '%d'", msg.data);  
 		    
   }
  
