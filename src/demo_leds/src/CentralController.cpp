@@ -7,7 +7,7 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
-#include "std_msgs/msg/uint8.hpp"
+#include "std_msgs/msg/u_int8.hpp"
 
 using std::placeholders::_1;
 
