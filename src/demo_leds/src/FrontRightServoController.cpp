@@ -27,8 +27,7 @@ public:
   }
 
 private:
-SysModel_PWMServoDriver servo_steer;
-SysModel_PWMServoDriver servo_brake;
+
 
 
   void steering_position_callback(const std_msgs::msg::String & msg) const
@@ -57,6 +56,8 @@ SysModel_PWMServoDriver servo_brake;
 
 int main(int argc, char * argv[])
 {
+	SysModel_PWMServoDriver servo_steer;
+SysModel_PWMServoDriver servo_brake;
 	servo_steer.begin();
 	servo_brake.begin();
   rclcpp::init(argc, argv);
