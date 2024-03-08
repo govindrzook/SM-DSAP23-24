@@ -9,6 +9,7 @@
 #include "std_msgs/msg/string.hpp"
 
 #include "SysModel_PWMServoDriver.cpp"
+#include "SysModel_PWMServoDriver.h"
 
 using std::placeholders::_1;
 
@@ -31,7 +32,8 @@ public:
   }
 
 private:
-
+SysModel_PWMServoDriver servo_steer;
+	SysModel_PWMServoDriver servo_brake;
 
 
 
@@ -62,8 +64,7 @@ private:
 int main(int argc, char * argv[])
 {
 	
-SysModel_PWMServoDriver servo_steer;
-	SysModel_PWMServoDriver servo_brake;
+
   rclcpp::init(argc, argv);
   rclcpp::spin(std::make_shared<FrontRightServoController>());
   rclcpp::shutdown();
