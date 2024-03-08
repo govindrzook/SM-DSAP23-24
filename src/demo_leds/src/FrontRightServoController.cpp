@@ -27,18 +27,14 @@ public:
   }
 
 private:
+SysModel_PWMServoDriver servo_steer;
+SysModel_PWMServoDriver servo_brake;
 
-  void create_servo(){
-		SysModel_PWMServoDriver servo_steer;
-	  	SysModel_PWMServoDriver servo_brake;	
-		servo_steer.begin();
-	  	servo_brake.begin();
-  }
 
   void steering_position_callback(const std_msgs::msg::String & msg) const
   {
-	  SysModel_PWMServoDriver servo_steer;
-	  servo_steer.begin();
+	  // SysModel_PWMServoDriver servo_steer;
+	  // servo_steer.begin();
 	  double buffer = std::stod(msg.data);
 	  servo_steer.setAngle(0,buffer);  	
 	  RCLCPP_INFO(this->get_logger(), "Steering position: '%s'", msg.data.c_str());  
@@ -46,8 +42,8 @@ private:
   }
  void brake_position_callback(const std_msgs::msg::String & msg) const
   {	  
-	  SysModel_PWMServoDriver servo_brake;
-	  servo_brake.begin();
+	  // SysModel_PWMServoDriver servo_brake;
+	  // servo_brake.begin();
 	  double buffer = std::stod(msg.data);
 	  servo_brake.setAngle(1,buffer);  
 	  RCLCPP_INFO(this->get_logger(), "Brake position: '%s'", msg.data.c_str());  
@@ -61,6 +57,8 @@ private:
 
 int main(int argc, char * argv[])
 {
+	servo_steer.begin();
+	servo_brake.begin();
   rclcpp::init(argc, argv);
   rclcpp::spin(std::make_shared<FrontRightServoController>());
   rclcpp::shutdown();
