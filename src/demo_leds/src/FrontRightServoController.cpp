@@ -9,7 +9,6 @@
 #include "std_msgs/msg/string.hpp"
 
 #include "SysModel_PWMServoDriver.cpp"
-#include "SysModel_PWMServoDriver.h"
 
 using std::placeholders::_1;
 
@@ -41,7 +40,7 @@ SysModel_PWMServoDriver servo_steer;
   {
 	  // SysModel_PWMServoDriver servo_steer;
 	  // servo_steer.begin();
-	  double buffer = std::stod(msg.data);
+	  // double buffer = std::stod(msg.data);
 	  servo_steer.setAngle(0,45);  	
 	  RCLCPP_INFO(this->get_logger(), "Steering position: '%s'", msg.data.c_str());  
 		    
@@ -50,7 +49,7 @@ SysModel_PWMServoDriver servo_steer;
   {	  
 	  // SysModel_PWMServoDriver servo_brake;
 	  // servo_brake.begin();
-	  double buffer = std::stod(msg.data);
+	  // double buffer = std::stod(msg.data);
 	  servo_brake.setAngle(1,90);  
 	  RCLCPP_INFO(this->get_logger(), "Brake position: '%s'", msg.data.c_str());  
 		    
