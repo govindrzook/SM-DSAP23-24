@@ -37,7 +37,7 @@ SysModel_PWMServoDriver servo_steer;
 
 
 
-  void steering_position_callback(const std_msgs::msg::String & msg) const
+  void steering_position_callback(const std_msgs::msg::String & msg)
   {
 	  // SysModel_PWMServoDriver servo_steer;
 	  // servo_steer.begin();
@@ -46,7 +46,7 @@ SysModel_PWMServoDriver servo_steer;
 	  RCLCPP_INFO(this->get_logger(), "Steering position: '%s'", msg.data.c_str());  
 		    
   }
- void brake_position_callback(const std_msgs::msg::String & msg) const
+ void brake_position_callback(const std_msgs::msg::String & msg)
   {	  
 	  // SysModel_PWMServoDriver servo_brake;
 	  // servo_brake.begin();
