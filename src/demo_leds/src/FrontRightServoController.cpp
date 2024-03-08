@@ -27,6 +27,7 @@ public:
 	  
 	  	servo_steer.begin();
 		servo_brake.begin();
+	  	servo_steer.setFreq(50);
     
   }
 
