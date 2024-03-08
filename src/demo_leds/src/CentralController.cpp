@@ -33,8 +33,8 @@ public:
 	front_right_speed_subscription = this->create_subscription<std_msgs::msg::String>(
       		"frontRightSpeed", 10, std::bind(&CentralController::front_right_speed_callback, this, _1));
 
-	pub1_ = create_publisher<std_msgs::msg::Uint8>("frontRightSteerPosition", 10);
-    pub2_ = create_publisher<std_msgs::msg::Uint8>("frontRightBrakePosition", 10);
+	pub1_ = create_publisher<std_msgs::msg::String>("frontRightSteerPosition", 10);
+    pub2_ = create_publisher<std_msgs::msg::String>("frontRightBrakePosition", 10);
 	pub3_ = create_publisher<std_msgs::msg::String>("frontRightTorque", 10);
 
 	timer_ = create_wall_timer(std::chrono::milliseconds(3000), std::bind(&CentralController::timer_callback, this));
@@ -46,12 +46,12 @@ private:
 	void timer_callback()
   {
     // Create a message to publish
-    auto msg = std_msgs::msg::Uint8();
-	auto msg1 = std_msgs::msg::Uint8();
+    auto msg = std_msgs::msg::String();
+	auto msg1 = std_msgs::msg::String();
 	auto msg2 = std_msgs::msg::String();
 
-    msg.data = 45;  // Static steering angle data
-	msg1.data = 90; // static brake angle data
+    msg.data = "45";  // Static steering angle data
+	msg1.data = "90"; // static brake angle data
 	msg2.data = "1 Nm"; // static torque data
 
     // Publish to each topic
@@ -107,8 +107,8 @@ private:
 
 	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr front_right_speed_subscription;
 
-	rclcpp::Publisher<std_msgs::msg::Uint8>::SharedPtr pub1_;
-	rclcpp::Publisher<std_msgs::msg::Uint8>::SharedPtr pub2_;
+	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub1_;
+	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub2_;
 	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub3_;
   	rclcpp::TimerBase::SharedPtr timer_;
 
