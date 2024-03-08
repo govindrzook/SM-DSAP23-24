@@ -28,12 +28,12 @@ private:
 
   void steering_position_callback(const std_msgs::msg::String & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "Steering position: '%f'", msg.data);  
+	    	RCLCPP_INFO(this->get_logger(), "Steering position: '%s'", msg.data.c_str());  
 		    
   }
  void brake_position_callback(const std_msgs::msg::String & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "Brake position: '%f'", msg.data);  
+	    	RCLCPP_INFO(this->get_logger(), "Brake position: '%s'", msg.data.c_str());  
 		    
   }
  
