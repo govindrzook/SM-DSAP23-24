@@ -16,10 +16,10 @@ public:
   FrontRightServoController()
   : Node("front_right_servo_controller")
   {
-    front_right_steering_position_subscription = this->create_subscription<std_msgs::msg::Double>(
+    front_right_steering_position_subscription = this->create_subscription<std_msgs::msg::String>(
       		"frontRightSteerPosition", 10, std::bind(&FrontRightServoController::steering_position_callback, this, _1));
 	
-    front_right_brake_position_subscription = this->create_subscription<std_msgs::msg::Double>(
+    front_right_brake_position_subscription = this->create_subscription<std_msgs::msg::String>(
       		"frontRightBrakePosition", 10, std::bind(&FrontRightServoController::brake_position_callback, this, _1));
     
   }
