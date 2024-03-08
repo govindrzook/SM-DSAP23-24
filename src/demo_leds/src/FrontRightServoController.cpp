@@ -23,6 +23,12 @@ public:
 	
     front_right_brake_position_subscription = this->create_subscription<std_msgs::msg::String>(
       		"frontRightBrakePosition", 10, std::bind(&FrontRightServoController::brake_position_callback, this, _1));
+
+	  SysModel_PWMServoDriver servo_steer;
+	SysModel_PWMServoDriver servo_brake;
+	  
+	  	servo_steer.begin();
+		servo_brake.begin();
     
   }
 
@@ -56,10 +62,8 @@ private:
 
 int main(int argc, char * argv[])
 {
-	SysModel_PWMServoDriver servo_steer;
-SysModel_PWMServoDriver servo_brake;
-	servo_steer.begin();
-	servo_brake.begin();
+	
+
   rclcpp::init(argc, argv);
   rclcpp::spin(std::make_shared<FrontRightServoController>());
   rclcpp::shutdown();
