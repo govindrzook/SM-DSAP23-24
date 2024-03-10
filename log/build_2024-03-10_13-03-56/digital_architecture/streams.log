@@ -1,0 +1,17 @@
+[0.027s] Invoking command in '/10march/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24
+[0.045s] [35m[1mConsolidate compiler generated dependencies of target central_controller[0m
+[0.050s] [ 25%] Built target imu
+[0.050s] [ 50%] Built target front_right_servo_controller
+[0.050s] [ 62%] [32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o[0m
+[0.052s] [ 87%] Built target central_controller
+[1.121s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:34:3:[m[K [01;31m[Kerror: [m[K‘[01m[KSoloUno[m[K’ does not name a type
+[1.121s]    34 |   [01;31m[KSoloUno[m[K solo1;
+[1.121s]       |   [01;31m[K^~~~~~~[m[K
+[1.145s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:[m[K In constructor ‘[01m[KFrontRightSOLO::FrontRightSOLO()[m[K’:
+[1.145s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:20:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksolo1[m[K’ was not declared in this scope
+[1.145s]    20 |     [01;31m[Ksolo1[m[K.init();
+[1.145s]       |     [01;31m[K^~~~~[m[K
+[2.413s] gmake[2]: *** [CMakeFiles/front_right_solo.dir/build.make:76: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o] Error 1
+[2.414s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/front_right_solo.dir/all] Error 2
+[2.414s] gmake: *** [Makefile:146: all] Error 2
+[2.415s] Invoked command in '/10march/SM-DSAP23-24/build/digital_architecture' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24

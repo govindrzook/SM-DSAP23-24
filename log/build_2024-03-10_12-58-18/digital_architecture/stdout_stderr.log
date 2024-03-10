@@ -1,0 +1,74 @@
+[35m[1mConsolidate compiler generated dependencies of target central_controller[0m
+[35m[1mConsolidate compiler generated dependencies of target front_right_solo[0m
+[ 25%] Built target imu
+[ 50%] Built target front_right_servo_controller
+[ 75%] [32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o[0m
+In file included from [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:16[m[K:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kint SoloUno::soloWriteFast(char, int)[m[K’:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:31:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+   31 |         char initiator = [01;35m[K0xFF[m[K;
+      |                          [01;35m[K^~~~[m[K
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:42:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+   42 |         char ending = [01;35m[K0xFE[m[K;
+      |                       [01;35m[K^~~~[m[K
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kint SoloUno::soloWriteSlow(char, int)[m[K’:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:62:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+   62 |         char initiator = [01;35m[K0xFF[m[K;
+      |                          [01;35m[K^~~~[m[K
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:73:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+   73 |         char ending = [01;35m[K0xFE[m[K;
+      |                       [01;35m[K^~~~[m[K
+In file included from [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:16[m[K:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kuint32_t SoloUno::soloRead(char)[m[K’:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:108:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+  108 |         char initiator = [01;35m[K0xFF[m[K;
+      |                          [01;35m[K^~~~[m[K
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:113:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+  113 |         char ending = [01;35m[K0xFE[m[K;
+      |                       [01;35m[K^~~~[m[K
+In file included from [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:16[m[K:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kuint64_t SoloUno::readSpeed()[m[K’:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:13:24:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K150[m[K’ to ‘[01m[K'\37777777626'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+   13 | #define SPEED_FEEDBACK [01;35m[K0x96[m[K
+      |                        [01;35m[K^~~~[m[K
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:134:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KSPEED_FEEDBACK[m[K’
+  134 |         uint64_t speed = soloRead([01;36m[KSPEED_FEEDBACK[m[K);
+      |                                   [01;36m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:16[m[K:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kvoid SoloUno::setTorqueFast(double)[m[K’:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:147:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdatt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  147 |         int [01;35m[Kdatt[m[K = data;
+      |             [01;35m[K^~~~[m[K
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kvoid SoloUno::setTorqueSlow(double)[m[K’:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:155:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdatt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  155 |         int [01;35m[Kdatt[m[K = data;
+      |             [01;35m[K^~~~[m[K
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:[m[K In member function ‘[01m[Kvoid FrontRightSOLO::timer_callback()[m[K’:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:37:16:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst char [8][m[K’ to ‘[01m[Kstd_msgs::msg::Float64_<std::allocator<void> >::_data_type[m[K’ {aka ‘[01m[Kdouble[m[K’} in assignment
+   37 |     msg.data = [01;31m[K"500 RPM"[m[K;  // Example data, replace with your actual data
+      |                [01;31m[K^~~~~~~~~[m[K
+      |                [01;31m[K|[m[K
+      |                [01;31m[Kconst char [8][m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:11[m[K:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:[m[K In member function ‘[01m[Kvoid CentralController::front_right_speed_callback(const Float64&) const[m[K’:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:107:90:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kc_str[m[K’ in ‘[01m[Kmsg.std_msgs::msg::Float64_<std::allocator<void> >::data[m[K’, which is of non-class type ‘[01m[Kconst _data_type[m[K’ {aka ‘[01m[Kconst double[m[K’}
+  107 |                 RCLCPP_INFO(this->get_logger(), "Read front right speed: '%s'", msg.data.[01;31m[Kc_str[m[K());
+      |                                                                                          [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/front_right_solo.dir/build.make:76: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/front_right_solo.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/central_controller.dir/build.make:76: CMakeFiles/central_controller.dir/src/CentralController.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/central_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

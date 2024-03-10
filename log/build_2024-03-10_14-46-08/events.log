@@ -1,0 +1,123 @@
+[0.000000] (-) TimerEvent: {}
+[0.000207] (digital_architecture) JobQueued: {'identifier': 'digital_architecture', 'dependencies': OrderedDict()}
+[0.000222] (digital_architecture) JobStarted: {'identifier': 'digital_architecture'}
+[0.025066] (digital_architecture) JobProgress: {'identifier': 'digital_architecture', 'progress': 'cmake'}
+[0.025717] (digital_architecture) JobProgress: {'identifier': 'digital_architecture', 'progress': 'build'}
+[0.025743] (digital_architecture) Command: {'cmd': ['/usr/bin/cmake', '--build', '/10march/SM-DSAP23-24/build/digital_architecture', '--', '-j24', '-l24'], 'cwd': '/10march/SM-DSAP23-24/build/digital_architecture', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/root'), ('OLDPWD', '/10march/SM-DSAP23-24/install'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/10march/SM-DSAP23-24/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('NAME', 'DESKTOP-Q52A56G'), ('WSL_INTEROP', '/run/WSL/367_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Oculus/Support/oculus-runtime:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/evanl/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/evanl/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/0/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/10march/SM-DSAP23-24/install/digital_architecture:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/10march/SM-DSAP23-24/build/digital_architecture'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/10march/SM-DSAP23-24/install/digital_architecture:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[0.045111] (digital_architecture) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target front_right_solo\x1b[0m\n'}
+[0.048444] (digital_architecture) StdoutLine: {'line': b'[ 22%] Built target imu\n'}
+[0.048643] (digital_architecture) StdoutLine: {'line': b'[ 44%] Built target front_right_servo_controller\n'}
+[0.049570] (digital_architecture) StdoutLine: {'line': b'[ 66%] Built target central_controller\n'}
+[0.051912] (digital_architecture) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o\x1b[0m\n'}
+[0.099515] (-) TimerEvent: {}
+[0.199875] (-) TimerEvent: {}
+[0.300176] (-) TimerEvent: {}
+[0.400485] (-) TimerEvent: {}
+[0.500761] (-) TimerEvent: {}
+[0.601029] (-) TimerEvent: {}
+[0.701366] (-) TimerEvent: {}
+[0.801634] (-) TimerEvent: {}
+[0.901907] (-) TimerEvent: {}
+[1.002272] (-) TimerEvent: {}
+[1.102580] (-) TimerEvent: {}
+[1.133262] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:14\x1b[m\x1b[K:\n'}
+[1.133391] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint SoloUno::soloWriteFast(char, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.133426] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:37:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K255\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777777'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.133463] (digital_architecture) StderrLine: {'line': b'   37 |         char initiator = \x1b[01;35m\x1b[K0xFF\x1b[m\x1b[K;\n'}
+[1.133485] (digital_architecture) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.133506] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:48:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K254\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777776'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.133529] (digital_architecture) StderrLine: {'line': b'   48 |         char ending = \x1b[01;35m\x1b[K0xFE\x1b[m\x1b[K;\n'}
+[1.133550] (digital_architecture) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.133571] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint SoloUno::soloWriteSlow(char, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.133591] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:68:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K255\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777777'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.133616] (digital_architecture) StderrLine: {'line': b'   68 |         char initiator = \x1b[01;35m\x1b[K0xFF\x1b[m\x1b[K;\n'}
+[1.133637] (digital_architecture) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.133657] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:79:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K254\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777776'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.133677] (digital_architecture) StderrLine: {'line': b'   79 |         char ending = \x1b[01;35m\x1b[K0xFE\x1b[m\x1b[K;\n'}
+[1.133697] (digital_architecture) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.134258] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:14\x1b[m\x1b[K:\n'}
+[1.134292] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kuint32_t SoloUno::soloRead(char)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.134318] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:114:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K255\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777777'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.134347] (digital_architecture) StderrLine: {'line': b'  114 |         char initiator = \x1b[01;35m\x1b[K0xFF\x1b[m\x1b[K;\n'}
+[1.134368] (digital_architecture) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.134389] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:119:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K254\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777776'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.134483] (digital_architecture) StderrLine: {'line': b'  119 |         char ending = \x1b[01;35m\x1b[K0xFE\x1b[m\x1b[K;\n'}
+[1.134513] (digital_architecture) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.134535] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:14\x1b[m\x1b[K:\n'}
+[1.134556] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kuint64_t SoloUno::readSpeed()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.134578] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:17:24:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K150\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777626'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.134604] (digital_architecture) StderrLine: {'line': b'   17 | #define SPEED_FEEDBACK \x1b[01;35m\x1b[K0x96\x1b[m\x1b[K\n'}
+[1.134626] (digital_architecture) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.134647] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:140:35:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KSPEED_FEEDBACK\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.134703] (digital_architecture) StderrLine: {'line': b'  140 |         uint64_t speed = soloRead(\x1b[01;36m\x1b[KSPEED_FEEDBACK\x1b[m\x1b[K);\n'}
+[1.134735] (digital_architecture) StderrLine: {'line': b'      |                                   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.134758] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:14\x1b[m\x1b[K:\n'}
+[1.134779] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SoloUno::setTorqueFast(double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.134801] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:153:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdatt\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.134824] (digital_architecture) StderrLine: {'line': b'  153 |         int \x1b[01;35m\x1b[Kdatt\x1b[m\x1b[K = data;\n'}
+[1.134845] (digital_architecture) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.134866] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SoloUno::setTorqueSlow(double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.134888] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:161:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdatt\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.134911] (digital_architecture) StderrLine: {'line': b'  161 |         int \x1b[01;35m\x1b[Kdatt\x1b[m\x1b[K = data;\n'}
+[1.134933] (digital_architecture) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.202702] (-) TimerEvent: {}
+[1.302983] (-) TimerEvent: {}
+[1.403302] (-) TimerEvent: {}
+[1.503585] (-) TimerEvent: {}
+[1.603925] (-) TimerEvent: {}
+[1.704207] (-) TimerEvent: {}
+[1.804510] (-) TimerEvent: {}
+[1.904811] (-) TimerEvent: {}
+[2.005073] (-) TimerEvent: {}
+[2.105336] (-) TimerEvent: {}
+[2.205600] (-) TimerEvent: {}
+[2.305924] (-) TimerEvent: {}
+[2.406250] (-) TimerEvent: {}
+[2.506541] (-) TimerEvent: {}
+[2.606844] (-) TimerEvent: {}
+[2.707115] (-) TimerEvent: {}
+[2.807371] (-) TimerEvent: {}
+[2.907664] (-) TimerEvent: {}
+[3.007962] (-) TimerEvent: {}
+[3.108230] (-) TimerEvent: {}
+[3.208478] (-) TimerEvent: {}
+[3.308764] (-) TimerEvent: {}
+[3.409015] (-) TimerEvent: {}
+[3.509271] (-) TimerEvent: {}
+[3.609607] (-) TimerEvent: {}
+[3.709896] (-) TimerEvent: {}
+[3.810229] (-) TimerEvent: {}
+[3.910527] (-) TimerEvent: {}
+[4.010833] (-) TimerEvent: {}
+[4.104337] (digital_architecture) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking CXX executable front_right_solo\x1b[0m\n'}
+[4.110912] (-) TimerEvent: {}
+[4.211150] (-) TimerEvent: {}
+[4.311420] (-) TimerEvent: {}
+[4.314925] (digital_architecture) StdoutLine: {'line': b'[100%] Built target front_right_solo\n'}
+[4.319742] (digital_architecture) CommandEnded: {'returncode': 0}
+[4.334520] (digital_architecture) JobProgress: {'identifier': 'digital_architecture', 'progress': 'install'}
+[4.338040] (digital_architecture) Command: {'cmd': ['/usr/bin/cmake', '--install', '/10march/SM-DSAP23-24/build/digital_architecture'], 'cwd': '/10march/SM-DSAP23-24/build/digital_architecture', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/root'), ('OLDPWD', '/10march/SM-DSAP23-24/install'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/10march/SM-DSAP23-24/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('NAME', 'DESKTOP-Q52A56G'), ('WSL_INTEROP', '/run/WSL/367_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Oculus/Support/oculus-runtime:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/evanl/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/evanl/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/0/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/10march/SM-DSAP23-24/install/digital_architecture:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/10march/SM-DSAP23-24/build/digital_architecture'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/10march/SM-DSAP23-24/install/digital_architecture:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[4.341499] (digital_architecture) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.341706] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/imu\n'}
+[4.341775] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller\n'}
+[4.341900] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_servo_controller\n'}
+[4.341964] (digital_architecture) StdoutLine: {'line': b'-- Installing: /10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_solo\n'}
+[4.343671] (digital_architecture) StdoutLine: {'line': b'-- Set runtime path of "/10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_solo" to ""\n'}
+[4.343706] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/package_run_dependencies/digital_architecture\n'}
+[4.343875] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/parent_prefix_path/digital_architecture\n'}
+[4.343940] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.sh\n'}
+[4.344022] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.dsv\n'}
+[4.344147] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.sh\n'}
+[4.344204] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.dsv\n'}
+[4.344231] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.bash\n'}
+[4.344255] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.sh\n'}
+[4.344278] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.zsh\n'}
+[4.344300] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.dsv\n'}
+[4.344321] (digital_architecture) StdoutLine: {'line': b'-- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.dsv\n'}
+[4.344343] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/packages/digital_architecture\n'}
+[4.344385] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig.cmake\n'}
+[4.344409] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig-version.cmake\n'}
+[4.344450] (digital_architecture) StdoutLine: {'line': b'-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.xml\n'}
+[4.345105] (digital_architecture) CommandEnded: {'returncode': 0}
+[4.405362] (digital_architecture) JobEnded: {'identifier': 'digital_architecture', 'rc': 0}
+[4.406161] (-) EventReactorShutdown: {}

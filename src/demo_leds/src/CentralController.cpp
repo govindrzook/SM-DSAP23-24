@@ -5,12 +5,12 @@
 #include <fstream>
 #include <iostream>
 
-
-#include </usr/include/libserial/SerialPort.h>
-
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
-#include "serial_testing.cpp"
+#include "std_msgs/msg/string.hpp"
+#include "std_msgs/msg/float64.hpp"
+
+
 using std::placeholders::_1;
 
 class CentralController : public rclcpp::Node
@@ -32,14 +32,14 @@ public:
 	gz_subscription = this->create_subscription<std_msgs::msg::String>(
       		"gZ", 10, std::bind(&CentralController::gz_callback, this, _1));
 	
-	front_right_speed_subscription = this->create_subscription<std_msgs::msg::String>(
+	front_right_speed_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"frontRightSpeed", 10, std::bind(&CentralController::front_right_speed_callback, this, _1));
 
 	pub1_ = create_publisher<std_msgs::msg::String>("frontRightSteerPosition", 10);
     pub2_ = create_publisher<std_msgs::msg::String>("frontRightBrakePosition", 10);
-	pub3_ = create_publisher<std_msgs::msg::String>("frontRightTorque", 10);
+	pub3_ = create_publisher<std_msgs::msg::Float64>("frontRightTorque", 10);
 
-	timer_ = create_wall_timer(std::chrono::milliseconds(1), std::bind(&CentralController::timer_callback, this));
+	timer_ = create_wall_timer(std::chrono::seconds(3), std::bind(&CentralController::timer_callback, this));
 
   }
 
@@ -48,17 +48,15 @@ private:
 	void timer_callback()
   {
 
-	RCLCPP_INFO(this->get_logger(), "testing: '%s'", test().c_str()); 
-
-
     // Create a message to publish
     auto msg = std_msgs::msg::String();
 	auto msg1 = std_msgs::msg::String();
-	auto msg2 = std_msgs::msg::String();
+	auto msg2 = std_msgs::msg::Float64();
 
     msg.data = "30 degrees";  // Static steering angle data
 	msg1.data = "55 degrees"; // static brake angle data
-	msg2.data = "1 Nm"; // static torque data
+
+	msg2.data = rand() % 32; // Random torque data
 
     // Publish to each topic
     pub1_->publish(msg); //front right steer position
@@ -98,9 +96,9 @@ private:
 		    
   }
 
-  void front_right_speed_callback(const std_msgs::msg::String & msg) const
+  void front_right_speed_callback(const std_msgs::msg::Float64 & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "Read front right speed: '%s'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "Front right BLDC speed reading: '%f'", msg.data);  
 		    
   }
 	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr ax_subscription;
@@ -111,11 +109,11 @@ private:
 	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr gy_subscription;
 	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr gz_subscription;
 
-	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr front_right_speed_subscription;
+	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr front_right_speed_subscription;
 
 	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub1_;
 	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub2_;
-	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub3_;
+	rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub3_;
   	rclcpp::TimerBase::SharedPtr timer_;
 
 };

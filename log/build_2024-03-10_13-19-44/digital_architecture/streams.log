@@ -1,0 +1,24 @@
+[0.027s] Invoking command in '/10march/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24
+[0.046s] [35m[1mConsolidate compiler generated dependencies of target front_right_solo[0m
+[0.049s] [ 50%] Built target imu
+[0.049s] [ 50%] Built target front_right_servo_controller
+[0.049s] [ 75%] Built target central_controller
+[0.052s] [ 87%] [32m[1mLinking CXX executable front_right_solo[0m
+[0.232s] /usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::SoloUno(char)':
+[0.232s] FrontRightSOLO.cpp:(.text._ZN7SoloUnoC2Ec[_ZN7SoloUnoC5Ec]+0x1e): undefined reference to `LibSerial::SerialPort::SerialPort()'
+[0.232s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUnoC2Ec[_ZN7SoloUnoC5Ec]+0x6a): undefined reference to `LibSerial::SerialPort::~SerialPort()'
+[0.233s] /usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::initSolo()':
+[0.233s] FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x6d): undefined reference to `LibSerial::SerialPort::Open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode const&)'
+[0.233s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x9f): undefined reference to `LibSerial::SerialPort::SetBaudRate(LibSerial::BaudRate const&)'
+[0.233s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0xb9): undefined reference to `LibSerial::SerialPort::SetCharacterSize(LibSerial::CharacterSize const&)'
+[0.233s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0xd3): undefined reference to `LibSerial::SerialPort::SetFlowControl(LibSerial::FlowControl const&)'
+[0.233s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0xed): undefined reference to `LibSerial::SerialPort::SetParity(LibSerial::Parity const&)'
+[0.233s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x107): undefined reference to `LibSerial::SerialPort::SetStopBits(LibSerial::StopBits const&)'
+[0.234s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x1cf): undefined reference to `LibSerial::SerialPort::Open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode const&)'
+[0.234s] /usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::~SoloUno()':
+[0.234s] FrontRightSOLO.cpp:(.text._ZN7SoloUnoD2Ev[_ZN7SoloUnoD5Ev]+0x28): undefined reference to `LibSerial::SerialPort::~SerialPort()'
+[0.249s] collect2: error: ld returned 1 exit status
+[0.250s] gmake[2]: *** [CMakeFiles/front_right_solo.dir/build.make:159: front_right_solo] Error 1
+[0.250s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/front_right_solo.dir/all] Error 2
+[0.250s] gmake: *** [Makefile:146: all] Error 2
+[0.251s] Invoked command in '/10march/SM-DSAP23-24/build/digital_architecture' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24

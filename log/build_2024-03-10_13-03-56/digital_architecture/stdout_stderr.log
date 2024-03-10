@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target central_controller[0m
+[ 25%] Built target imu
+[ 50%] Built target front_right_servo_controller
+[ 62%] [32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o[0m
+[ 87%] Built target central_controller
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:34:3:[m[K [01;31m[Kerror: [m[K‘[01m[KSoloUno[m[K’ does not name a type
+   34 |   [01;31m[KSoloUno[m[K solo1;
+      |   [01;31m[K^~~~~~~[m[K
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:[m[K In constructor ‘[01m[KFrontRightSOLO::FrontRightSOLO()[m[K’:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:20:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksolo1[m[K’ was not declared in this scope
+   20 |     [01;31m[Ksolo1[m[K.init();
+      |     [01;31m[K^~~~~[m[K
+gmake[2]: *** [CMakeFiles/front_right_solo.dir/build.make:76: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/front_right_solo.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

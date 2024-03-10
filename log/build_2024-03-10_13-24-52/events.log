@@ -1,0 +1,177 @@
+[0.000000] (-) TimerEvent: {}
+[0.000381] (digital_architecture) JobQueued: {'identifier': 'digital_architecture', 'dependencies': OrderedDict()}
+[0.000412] (digital_architecture) JobStarted: {'identifier': 'digital_architecture'}
+[0.026954] (digital_architecture) JobProgress: {'identifier': 'digital_architecture', 'progress': 'cmake'}
+[0.027128] (digital_architecture) JobProgress: {'identifier': 'digital_architecture', 'progress': 'build'}
+[0.027628] (digital_architecture) Command: {'cmd': ['/usr/bin/cmake', '--build', '/10march/SM-DSAP23-24/build/digital_architecture', '--', '-j24', '-l24'], 'cwd': '/10march/SM-DSAP23-24/build/digital_architecture', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/root'), ('OLDPWD', '/10march'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/10march/SM-DSAP23-24/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('NAME', 'DESKTOP-Q52A56G'), ('WSL_INTEROP', '/run/WSL/367_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Oculus/Support/oculus-runtime:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/evanl/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/evanl/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/0/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/10march/SM-DSAP23-24/install/digital_architecture:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/10march/SM-DSAP23-24/build/digital_architecture'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/10march/SM-DSAP23-24/install/digital_architecture:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[0.047926] (digital_architecture) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target front_right_solo\x1b[0m\n'}
+[0.051061] (digital_architecture) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o\x1b[0m\n'}
+[0.051166] (digital_architecture) StdoutLine: {'line': b'[ 62%] Built target imu\n'}
+[0.051195] (digital_architecture) StdoutLine: {'line': b'[ 62%] Built target front_right_servo_controller\n'}
+[0.053898] (digital_architecture) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o\x1b[0m\n'}
+[0.099833] (-) TimerEvent: {}
+[0.200100] (-) TimerEvent: {}
+[0.300364] (-) TimerEvent: {}
+[0.400623] (-) TimerEvent: {}
+[0.501035] (-) TimerEvent: {}
+[0.601333] (-) TimerEvent: {}
+[0.701640] (-) TimerEvent: {}
+[0.801952] (-) TimerEvent: {}
+[0.902274] (-) TimerEvent: {}
+[1.002585] (-) TimerEvent: {}
+[1.102997] (-) TimerEvent: {}
+[1.138914] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:1\x1b[m\x1b[K,\n'}
+[1.139046] (digital_architecture) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:16\x1b[m\x1b[K:\n'}
+[1.139077] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/libserial/SerialPort.h:55:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredefinition of \xe2\x80\x98\x1b[01m\x1b[Kclass LibSerial::SerialPort\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.139105] (digital_architecture) StderrLine: {'line': b'   55 |     class \x1b[01;31m\x1b[KSerialPort\x1b[m\x1b[K\n'}
+[1.139128] (digital_architecture) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.139151] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:9\x1b[m\x1b[K:\n'}
+[1.139174] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/libserial/SerialPort.h:55:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kprevious definition of \xe2\x80\x98\x1b[01m\x1b[Kclass LibSerial::SerialPort\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.139195] (digital_architecture) StderrLine: {'line': b'   55 |     class \x1b[01;36m\x1b[KSerialPort\x1b[m\x1b[K\n'}
+[1.139217] (digital_architecture) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.139239] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:1\x1b[m\x1b[K,\n'}
+[1.139260] (digital_architecture) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:16\x1b[m\x1b[K:\n'}
+[1.139282] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/local/include/libserial/SerialPort.h:502:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kredefinition of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Fn, class ... Args> typename std::result_of<_Functor(_ArgTypes ...)>::type LibSerial::call_with_retry(Fn, Args ...)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.139305] (digital_architecture) StderrLine: {'line': b'  502 |     \x1b[01;31m\x1b[Kcall_with_retry\x1b[m\x1b[K(Fn func, Args... args)\n'}
+[1.139327] (digital_architecture) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.139348] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:9\x1b[m\x1b[K:\n'}
+[1.139368] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/libserial/SerialPort.h:500:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Fn, class ... Args> typename std::result_of<_Functor(_ArgTypes ...)>::type LibSerial::call_with_retry(Fn, Args ...)\x1b[m\x1b[K\xe2\x80\x99 previously declared here\n'}
+[1.139392] (digital_architecture) StderrLine: {'line': b'  500 |     \x1b[01;36m\x1b[Kcall_with_retry\x1b[m\x1b[K(Fn func, Args... args)\n'}
+[1.139412] (digital_architecture) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.142547] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:16\x1b[m\x1b[K:\n'}
+[1.142708] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint SoloUno::soloWriteFast(char, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.142737] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:31:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K255\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777777'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.142765] (digital_architecture) StderrLine: {'line': b'   31 |         char initiator = \x1b[01;35m\x1b[K0xFF\x1b[m\x1b[K;\n'}
+[1.142787] (digital_architecture) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.142810] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:42:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K254\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777776'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.142834] (digital_architecture) StderrLine: {'line': b'   42 |         char ending = \x1b[01;35m\x1b[K0xFE\x1b[m\x1b[K;\n'}
+[1.142856] (digital_architecture) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.142877] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint SoloUno::soloWriteSlow(char, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.142898] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:62:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K255\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777777'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.142925] (digital_architecture) StderrLine: {'line': b'   62 |         char initiator = \x1b[01;35m\x1b[K0xFF\x1b[m\x1b[K;\n'}
+[1.142946] (digital_architecture) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.142966] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:73:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K254\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777776'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.142991] (digital_architecture) StderrLine: {'line': b'   73 |         char ending = \x1b[01;35m\x1b[K0xFE\x1b[m\x1b[K;\n'}
+[1.143011] (digital_architecture) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.143553] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:16\x1b[m\x1b[K:\n'}
+[1.143586] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kuint32_t SoloUno::soloRead(char)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.143610] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:108:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K255\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777777'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.143634] (digital_architecture) StderrLine: {'line': b'  108 |         char initiator = \x1b[01;35m\x1b[K0xFF\x1b[m\x1b[K;\n'}
+[1.143657] (digital_architecture) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.143680] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:113:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K254\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777776'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.143733] (digital_architecture) StderrLine: {'line': b'  113 |         char ending = \x1b[01;35m\x1b[K0xFE\x1b[m\x1b[K;\n'}
+[1.143805] (digital_architecture) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.143957] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:16\x1b[m\x1b[K:\n'}
+[1.143989] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kuint64_t SoloUno::readSpeed()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.144013] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:13:24:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K150\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777626'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.144037] (digital_architecture) StderrLine: {'line': b'   13 | #define SPEED_FEEDBACK \x1b[01;35m\x1b[K0x96\x1b[m\x1b[K\n'}
+[1.144059] (digital_architecture) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.144080] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:134:35:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KSPEED_FEEDBACK\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.144105] (digital_architecture) StderrLine: {'line': b'  134 |         uint64_t speed = soloRead(\x1b[01;36m\x1b[KSPEED_FEEDBACK\x1b[m\x1b[K);\n'}
+[1.144128] (digital_architecture) StderrLine: {'line': b'      |                                   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.144149] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/CentralController.cpp:16\x1b[m\x1b[K:\n'}
+[1.144170] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SoloUno::setTorqueFast(double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.144191] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:147:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdatt\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.144214] (digital_architecture) StderrLine: {'line': b'  147 |         int \x1b[01;35m\x1b[Kdatt\x1b[m\x1b[K = data;\n'}
+[1.144235] (digital_architecture) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.144257] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SoloUno::setTorqueSlow(double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.144278] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:155:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdatt\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.144300] (digital_architecture) StderrLine: {'line': b'  155 |         int \x1b[01;35m\x1b[Kdatt\x1b[m\x1b[K = data;\n'}
+[1.144321] (digital_architecture) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.150048] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:12\x1b[m\x1b[K:\n'}
+[1.150159] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint SoloUno::soloWriteFast(char, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.150185] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:31:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K255\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777777'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.150213] (digital_architecture) StderrLine: {'line': b'   31 |         char initiator = \x1b[01;35m\x1b[K0xFF\x1b[m\x1b[K;\n'}
+[1.150236] (digital_architecture) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.150258] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:42:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K254\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777776'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.150284] (digital_architecture) StderrLine: {'line': b'   42 |         char ending = \x1b[01;35m\x1b[K0xFE\x1b[m\x1b[K;\n'}
+[1.150306] (digital_architecture) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.150327] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint SoloUno::soloWriteSlow(char, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.150348] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:62:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K255\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777777'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.150371] (digital_architecture) StderrLine: {'line': b'   62 |         char initiator = \x1b[01;35m\x1b[K0xFF\x1b[m\x1b[K;\n'}
+[1.150393] (digital_architecture) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.150413] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:73:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K254\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777776'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.150435] (digital_architecture) StderrLine: {'line': b'   73 |         char ending = \x1b[01;35m\x1b[K0xFE\x1b[m\x1b[K;\n'}
+[1.150455] (digital_architecture) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.151137] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:12\x1b[m\x1b[K:\n'}
+[1.151210] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kuint32_t SoloUno::soloRead(char)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.151277] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:108:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K255\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777777'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.151314] (digital_architecture) StderrLine: {'line': b'  108 |         char initiator = \x1b[01;35m\x1b[K0xFF\x1b[m\x1b[K;\n'}
+[1.151390] (digital_architecture) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.151464] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:113:23:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K254\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777776'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.151542] (digital_architecture) StderrLine: {'line': b'  113 |         char ending = \x1b[01;35m\x1b[K0xFE\x1b[m\x1b[K;\n'}
+[1.151614] (digital_architecture) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.151770] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:12\x1b[m\x1b[K:\n'}
+[1.151804] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kuint64_t SoloUno::readSpeed()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.151829] (digital_architecture) StderrLine: {'line': b"\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:13:24:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Koverflow in conversion from \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 changes value from \xe2\x80\x98\x1b[01m\x1b[K150\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[K'\\37777777626'\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow\x07-Woverflow\x1b]8;;\x07\x1b[m\x1b[K]\n"}
+[1.151853] (digital_architecture) StderrLine: {'line': b'   13 | #define SPEED_FEEDBACK \x1b[01;35m\x1b[K0x96\x1b[m\x1b[K\n'}
+[1.151876] (digital_architecture) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.151898] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:134:35:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kin expansion of macro \xe2\x80\x98\x1b[01m\x1b[KSPEED_FEEDBACK\x1b[m\x1b[K\xe2\x80\x99\n'}
+[1.151920] (digital_architecture) StderrLine: {'line': b'  134 |         uint64_t speed = soloRead(\x1b[01;36m\x1b[KSPEED_FEEDBACK\x1b[m\x1b[K);\n'}
+[1.151942] (digital_architecture) StderrLine: {'line': b'      |                                   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[1.151966] (digital_architecture) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:12\x1b[m\x1b[K:\n'}
+[1.151988] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SoloUno::setTorqueFast(double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.152010] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:147:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdatt\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.152035] (digital_architecture) StderrLine: {'line': b'  147 |         int \x1b[01;35m\x1b[Kdatt\x1b[m\x1b[K = data;\n'}
+[1.152057] (digital_architecture) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.152078] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid SoloUno::setTorqueSlow(double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[1.152099] (digital_architecture) StderrLine: {'line': b'\x1b[01m\x1b[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:155:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdatt\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[1.152120] (digital_architecture) StderrLine: {'line': b'  155 |         int \x1b[01;35m\x1b[Kdatt\x1b[m\x1b[K = data;\n'}
+[1.152140] (digital_architecture) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[1.203153] (-) TimerEvent: {}
+[1.303532] (-) TimerEvent: {}
+[1.403849] (-) TimerEvent: {}
+[1.504218] (-) TimerEvent: {}
+[1.604492] (-) TimerEvent: {}
+[1.704829] (-) TimerEvent: {}
+[1.805108] (-) TimerEvent: {}
+[1.905379] (-) TimerEvent: {}
+[2.005671] (-) TimerEvent: {}
+[2.105995] (-) TimerEvent: {}
+[2.206322] (-) TimerEvent: {}
+[2.306622] (-) TimerEvent: {}
+[2.406894] (-) TimerEvent: {}
+[2.507246] (-) TimerEvent: {}
+[2.607550] (-) TimerEvent: {}
+[2.707908] (-) TimerEvent: {}
+[2.808215] (-) TimerEvent: {}
+[2.870331] (digital_architecture) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/central_controller.dir/build.make:76: CMakeFiles/central_controller.dir/src/CentralController.cpp.o] Error 1\n'}
+[2.870512] (digital_architecture) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:169: CMakeFiles/central_controller.dir/all] Error 2\n'}
+[2.870545] (digital_architecture) StderrLine: {'line': b'gmake[1]: *** Waiting for unfinished jobs....\n'}
+[2.908358] (-) TimerEvent: {}
+[3.008645] (-) TimerEvent: {}
+[3.108945] (-) TimerEvent: {}
+[3.209266] (-) TimerEvent: {}
+[3.309555] (-) TimerEvent: {}
+[3.409840] (-) TimerEvent: {}
+[3.510161] (-) TimerEvent: {}
+[3.610439] (-) TimerEvent: {}
+[3.710839] (-) TimerEvent: {}
+[3.811155] (-) TimerEvent: {}
+[3.911434] (-) TimerEvent: {}
+[4.011692] (-) TimerEvent: {}
+[4.111971] (-) TimerEvent: {}
+[4.177362] (digital_architecture) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking CXX executable front_right_solo\x1b[0m\n'}
+[4.212153] (-) TimerEvent: {}
+[4.312411] (-) TimerEvent: {}
+[4.354745] (digital_architecture) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::SoloUno(char)':\n"}
+[4.354915] (digital_architecture) StderrLine: {'line': b"FrontRightSOLO.cpp:(.text._ZN7SoloUnoC2Ec[_ZN7SoloUnoC5Ec]+0x1e): undefined reference to `LibSerial::SerialPort::SerialPort()'\n"}
+[4.355022] (digital_architecture) StderrLine: {'line': b"/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUnoC2Ec[_ZN7SoloUnoC5Ec]+0x6a): undefined reference to `LibSerial::SerialPort::~SerialPort()'\n"}
+[4.355204] (digital_architecture) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::initSolo()':\n"}
+[4.355280] (digital_architecture) StderrLine: {'line': b"FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x6d): undefined reference to `LibSerial::SerialPort::Open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode const&)'\n"}
+[4.355396] (digital_architecture) StderrLine: {'line': b"/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x9f): undefined reference to `LibSerial::SerialPort::SetBaudRate(LibSerial::BaudRate const&)'\n"}
+[4.355517] (digital_architecture) StderrLine: {'line': b"/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0xb9): undefined reference to `LibSerial::SerialPort::SetCharacterSize(LibSerial::CharacterSize const&)'\n"}
+[4.355642] (digital_architecture) StderrLine: {'line': b"/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0xd3): undefined reference to `LibSerial::SerialPort::SetFlowControl(LibSerial::FlowControl const&)'\n"}
+[4.355784] (digital_architecture) StderrLine: {'line': b"/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0xed): undefined reference to `LibSerial::SerialPort::SetParity(LibSerial::Parity const&)'\n"}
+[4.355916] (digital_architecture) StderrLine: {'line': b"/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x107): undefined reference to `LibSerial::SerialPort::SetStopBits(LibSerial::StopBits const&)'\n"}
+[4.356050] (digital_architecture) StderrLine: {'line': b"/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x1cf): undefined reference to `LibSerial::SerialPort::Open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode const&)'\n"}
+[4.356253] (digital_architecture) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::~SoloUno()':\n"}
+[4.356291] (digital_architecture) StderrLine: {'line': b"FrontRightSOLO.cpp:(.text._ZN7SoloUnoD2Ev[_ZN7SoloUnoD5Ev]+0x28): undefined reference to `LibSerial::SerialPort::~SerialPort()'\n"}
+[4.371883] (digital_architecture) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[4.372600] (digital_architecture) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/front_right_solo.dir/build.make:159: front_right_solo] Error 1\n'}
+[4.372710] (digital_architecture) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/front_right_solo.dir/all] Error 2\n'}
+[4.372816] (digital_architecture) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[4.373865] (digital_architecture) CommandEnded: {'returncode': 2}
+[4.411286] (digital_architecture) JobEnded: {'identifier': 'digital_architecture', 'rc': 2}
+[4.412481] (-) TimerEvent: {}
+[4.421704] (-) EventReactorShutdown: {}

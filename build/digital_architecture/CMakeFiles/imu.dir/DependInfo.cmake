@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/src/IMU.cpp" "CMakeFiles/imu.dir/src/IMU.cpp.o" "gcc" "CMakeFiles/imu.dir/src/IMU.cpp.o.d"
+  "/10march/SM-DSAP23-24/src/demo_leds/src/IMU.cpp" "CMakeFiles/imu.dir/src/IMU.cpp.o" "gcc" "CMakeFiles/imu.dir/src/IMU.cpp.o.d"
   )
 
 # Targets to which this target links.

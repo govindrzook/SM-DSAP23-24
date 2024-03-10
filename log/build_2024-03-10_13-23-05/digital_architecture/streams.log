@@ -1,0 +1,65 @@
+[0.026s] Invoking command in '/10march/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24
+[0.044s] [35m[1mConsolidate compiler generated dependencies of target front_right_solo[0m
+[0.048s] [ 25%] Built target imu
+[0.049s] [ 50%] Built target front_right_servo_controller
+[0.049s] [ 75%] Built target central_controller
+[0.051s] [ 87%] [32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o[0m
+[1.077s] In file included from [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:12[m[K:
+[1.077s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kint SoloUno::soloWriteFast(char, int)[m[K’:
+[1.077s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:31:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.077s]    31 |         char initiator = [01;35m[K0xFF[m[K;
+[1.077s]       |                          [01;35m[K^~~~[m[K
+[1.077s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:42:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.077s]    42 |         char ending = [01;35m[K0xFE[m[K;
+[1.077s]       |                       [01;35m[K^~~~[m[K
+[1.077s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kint SoloUno::soloWriteSlow(char, int)[m[K’:
+[1.077s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:62:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.077s]    62 |         char initiator = [01;35m[K0xFF[m[K;
+[1.077s]       |                          [01;35m[K^~~~[m[K
+[1.077s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:73:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.077s]    73 |         char ending = [01;35m[K0xFE[m[K;
+[1.077s]       |                       [01;35m[K^~~~[m[K
+[1.078s] In file included from [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:12[m[K:
+[1.078s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kuint32_t SoloUno::soloRead(char)[m[K’:
+[1.078s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:108:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.078s]   108 |         char initiator = [01;35m[K0xFF[m[K;
+[1.078s]       |                          [01;35m[K^~~~[m[K
+[1.078s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:113:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.078s]   113 |         char ending = [01;35m[K0xFE[m[K;
+[1.078s]       |                       [01;35m[K^~~~[m[K
+[1.078s] In file included from [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:12[m[K:
+[1.078s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kuint64_t SoloUno::readSpeed()[m[K’:
+[1.078s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:13:24:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K150[m[K’ to ‘[01m[K'\37777777626'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.078s]    13 | #define SPEED_FEEDBACK [01;35m[K0x96[m[K
+[1.078s]       |                        [01;35m[K^~~~[m[K
+[1.078s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:134:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KSPEED_FEEDBACK[m[K’
+[1.078s]   134 |         uint64_t speed = soloRead([01;36m[KSPEED_FEEDBACK[m[K);
+[1.078s]       |                                   [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.078s] In file included from [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:12[m[K:
+[1.078s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kvoid SoloUno::setTorqueFast(double)[m[K’:
+[1.078s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:147:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdatt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.078s]   147 |         int [01;35m[Kdatt[m[K = data;
+[1.078s]       |             [01;35m[K^~~~[m[K
+[1.078s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kvoid SoloUno::setTorqueSlow(double)[m[K’:
+[1.078s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:155:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdatt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.078s]   155 |         int [01;35m[Kdatt[m[K = data;
+[1.078s]       |             [01;35m[K^~~~[m[K
+[4.017s] [100%] [32m[1mLinking CXX executable front_right_solo[0m
+[4.194s] /usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::SoloUno(char)':
+[4.194s] FrontRightSOLO.cpp:(.text._ZN7SoloUnoC2Ec[_ZN7SoloUnoC5Ec]+0x1e): undefined reference to `LibSerial::SerialPort::SerialPort()'
+[4.195s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUnoC2Ec[_ZN7SoloUnoC5Ec]+0x6a): undefined reference to `LibSerial::SerialPort::~SerialPort()'
+[4.196s] /usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::initSolo()':
+[4.196s] FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x6d): undefined reference to `LibSerial::SerialPort::Open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode const&)'
+[4.196s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x9f): undefined reference to `LibSerial::SerialPort::SetBaudRate(LibSerial::BaudRate const&)'
+[4.196s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0xb9): undefined reference to `LibSerial::SerialPort::SetCharacterSize(LibSerial::CharacterSize const&)'
+[4.196s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0xd3): undefined reference to `LibSerial::SerialPort::SetFlowControl(LibSerial::FlowControl const&)'
+[4.196s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0xed): undefined reference to `LibSerial::SerialPort::SetParity(LibSerial::Parity const&)'
+[4.196s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x107): undefined reference to `LibSerial::SerialPort::SetStopBits(LibSerial::StopBits const&)'
+[4.196s] /usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x1cf): undefined reference to `LibSerial::SerialPort::Open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode const&)'
+[4.196s] /usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::~SoloUno()':
+[4.196s] FrontRightSOLO.cpp:(.text._ZN7SoloUnoD2Ev[_ZN7SoloUnoD5Ev]+0x28): undefined reference to `LibSerial::SerialPort::~SerialPort()'
+[4.210s] collect2: error: ld returned 1 exit status
+[4.211s] gmake[2]: *** [CMakeFiles/front_right_solo.dir/build.make:159: front_right_solo] Error 1
+[4.211s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/front_right_solo.dir/all] Error 2
+[4.211s] gmake: *** [Makefile:146: all] Error 2
+[4.214s] Invoked command in '/10march/SM-DSAP23-24/build/digital_architecture' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24

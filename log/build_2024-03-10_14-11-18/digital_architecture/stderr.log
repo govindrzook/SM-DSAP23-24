@@ -1,0 +1,10 @@
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:21:7:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kclass SoloUno[m[K’
+   21 | class [01;31m[KSoloUno[m[K {
+      |       [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:4[m[K:
+[01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.h:11:7:[m[K [01;36m[Knote: [m[Kprevious definition of ‘[01m[Kclass SoloUno[m[K’
+   11 | class [01;36m[KSoloUno[m[K {
+      |       [01;36m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/front_right_solo.dir/build.make:90: CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/front_right_solo.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

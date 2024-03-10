@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds
+CMAKE_SOURCE_DIR = /10march/SM-DSAP23-24/src/demo_leds
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture
+CMAKE_BINARY_DIR = /10march/SM-DSAP23-24/build/digital_architecture
 
 # Utility rule file for digital_architecture_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/digital_architecture_uninstall.dir/compiler_depend.make
 include CMakeFiles/digital_architecture_uninstall.dir/progress.make
 
 CMakeFiles/digital_architecture_uninstall:
-	/usr/bin/cmake -P /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /10march/SM-DSAP23-24/build/digital_architecture/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 digital_architecture_uninstall: CMakeFiles/digital_architecture_uninstall
 digital_architecture_uninstall: CMakeFiles/digital_architecture_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/digital_architecture_uninstall.dir/clean:
 .PHONY : CMakeFiles/digital_architecture_uninstall.dir/clean
 
 CMakeFiles/digital_architecture_uninstall.dir/depend:
-	cd /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds /home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/CMakeFiles/digital_architecture_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /10march/SM-DSAP23-24/build/digital_architecture && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /10march/SM-DSAP23-24/src/demo_leds /10march/SM-DSAP23-24/src/demo_leds /10march/SM-DSAP23-24/build/digital_architecture /10march/SM-DSAP23-24/build/digital_architecture /10march/SM-DSAP23-24/build/digital_architecture/CMakeFiles/digital_architecture_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/digital_architecture_uninstall.dir/depend
 

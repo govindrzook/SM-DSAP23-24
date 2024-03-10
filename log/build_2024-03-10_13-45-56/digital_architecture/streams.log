@@ -1,0 +1,13 @@
+[0.027s] Invoking command in '/10march/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24
+[0.048s] [ 55%] Built target imu
+[0.048s] [ 66%] Built target front_right_servo_controller
+[0.048s] [ 66%] Built target central_controller
+[0.048s] [ 77%] [32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o[0m
+[0.128s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:12:10:[m[K [01;31m[Kfatal error: [m[Ksrc/SOLOUno.h: No such file or directory
+[0.128s]    12 | #include [01;31m[K"src/SOLOUno.h"[m[K
+[0.128s]       |          [01;31m[K^~~~~~~~~~~~~~~[m[K
+[0.128s] compilation terminated.
+[0.129s] gmake[2]: *** [CMakeFiles/front_right_solo.dir/build.make:76: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o] Error 1
+[0.129s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/front_right_solo.dir/all] Error 2
+[0.129s] gmake: *** [Makefile:146: all] Error 2
+[0.131s] Invoked command in '/10march/SM-DSAP23-24/build/digital_architecture' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24

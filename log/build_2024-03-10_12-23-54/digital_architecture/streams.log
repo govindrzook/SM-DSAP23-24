@@ -1,0 +1,6 @@
+[0.024s] Invoking command in '/10march/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24
+[0.057s] [0mCMake Error: The current CMakeCache.txt directory /10march/SM-DSAP23-24/build/digital_architecture/CMakeCache.txt is different than the directory /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.068s] [0mCMake Error: The source directory "/home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds" does not exist.
+[0.069s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.073s] gmake: *** [Makefile:390: cmake_check_build_system] Error 1
+[0.074s] Invoked command in '/10march/SM-DSAP23-24/build/digital_architecture' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24

@@ -1,0 +1,5 @@
+[ 22%] Built target imu
+[ 44%] Built target central_controller
+[ 66%] Built target front_right_servo_controller
+[ 77%] [32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o[0m
+[ 88%] [32m[1mLinking CXX executable front_right_solo[0m

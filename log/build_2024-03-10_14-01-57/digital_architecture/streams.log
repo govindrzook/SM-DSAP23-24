@@ -1,0 +1,74 @@
+[0.028s] Invoking command in '/10march/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24
+[0.038s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.104s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.153s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.154s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.157s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.162s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.169s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.198s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.198s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.533s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.614s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.647s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.647s] -- Configured cppcheck include dirs: 
+[1.647s] -- Configured cppcheck exclude dirs and/or files: 
+[1.647s] -- Added test 'lint_cmake' to check CMake code style
+[1.647s] -- Added test 'uncrustify' to check C / C++ code style
+[1.647s] -- Configured uncrustify additional arguments: 
+[1.647s] -- Added test 'xmllint' to check XML markup files
+[1.648s] -- Configuring done
+[1.655s] -- Generating done
+[1.656s] -- Build files have been written to: /10march/SM-DSAP23-24/build/digital_architecture
+[1.669s] [35m[1mConsolidate compiler generated dependencies of target front_right_servo_controller[0m
+[1.669s] [35m[1mConsolidate compiler generated dependencies of target imu[0m
+[1.669s] [35m[1mConsolidate compiler generated dependencies of target central_controller[0m
+[1.670s] [35m[1mConsolidate compiler generated dependencies of target front_right_solo[0m
+[1.675s] [ 77%] Built target front_right_servo_controller
+[1.675s] [ 77%] [32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o[0m
+[1.675s] [ 77%] Built target central_controller
+[1.675s] [ 77%] Built target imu
+[1.864s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kint SoloUno::soloWriteFast(char, int)[m[K’:
+[1.864s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:32:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.864s]    32 |         char initiator = [01;35m[K0xFF[m[K;
+[1.864s]       |                          [01;35m[K^~~~[m[K
+[1.864s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:43:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.864s]    43 |         char ending = [01;35m[K0xFE[m[K;
+[1.864s]       |                       [01;35m[K^~~~[m[K
+[1.864s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kint SoloUno::soloWriteSlow(char, int)[m[K’:
+[1.864s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:63:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.864s]    63 |         char initiator = [01;35m[K0xFF[m[K;
+[1.864s]       |                          [01;35m[K^~~~[m[K
+[1.864s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:74:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.864s]    74 |         char ending = [01;35m[K0xFE[m[K;
+[1.864s]       |                       [01;35m[K^~~~[m[K
+[1.865s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kuint32_t SoloUno::soloRead(char)[m[K’:
+[1.865s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:109:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.865s]   109 |         char initiator = [01;35m[K0xFF[m[K;
+[1.865s]       |                          [01;35m[K^~~~[m[K
+[1.865s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:114:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.865s]   114 |         char ending = [01;35m[K0xFE[m[K;
+[1.865s]       |                       [01;35m[K^~~~[m[K
+[1.865s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kuint64_t SoloUno::readSpeed()[m[K’:
+[1.865s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:14:24:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K150[m[K’ to ‘[01m[K'\37777777626'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[1.865s]    14 | #define SPEED_FEEDBACK [01;35m[K0x96[m[K
+[1.865s]       |                        [01;35m[K^~~~[m[K
+[1.865s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:135:35:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KSPEED_FEEDBACK[m[K’
+[1.865s]   135 |         uint64_t speed = soloRead([01;36m[KSPEED_FEEDBACK[m[K);
+[1.865s]       |                                   [01;36m[K^~~~~~~~~~~~~~[m[K
+[1.865s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kvoid SoloUno::setTorqueFast(double)[m[K’:
+[1.865s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:148:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdatt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.865s]   148 |         int [01;35m[Kdatt[m[K = data;
+[1.865s]       |             [01;35m[K^~~~[m[K
+[1.865s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kvoid SoloUno::setTorqueSlow(double)[m[K’:
+[1.865s] [01m[K/10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:156:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdatt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.866s]   156 |         int [01;35m[Kdatt[m[K = data;
+[1.866s]       |             [01;35m[K^~~~[m[K
+[1.910s] [ 88%] [32m[1mLinking CXX executable front_right_solo[0m
+[2.090s] /usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `main':
+[2.090s] FrontRightSOLO.cpp:(.text+0xa5): undefined reference to `SoloUno::SoloUno(char)'
+[2.106s] collect2: error: ld returned 1 exit status
+[2.107s] gmake[2]: *** [CMakeFiles/front_right_solo.dir/build.make:175: front_right_solo] Error 1
+[2.107s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/front_right_solo.dir/all] Error 2
+[2.107s] gmake: *** [Makefile:146: all] Error 2
+[2.108s] Invoked command in '/10march/SM-DSAP23-24/build/digital_architecture' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24

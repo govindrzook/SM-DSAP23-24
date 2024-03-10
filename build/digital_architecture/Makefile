@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds
+CMAKE_SOURCE_DIR = /10march/SM-DSAP23-24/src/demo_leds
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture
+CMAKE_BINARY_DIR = /10march/SM-DSAP23-24/build/digital_architecture
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/CMakeFiles /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /10march/SM-DSAP23-24/build/digital_architecture/CMakeFiles /10march/SM-DSAP23-24/build/digital_architecture//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /10march/SM-DSAP23-24/build/digital_architecture/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -345,6 +345,30 @@ src/IMU.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imu.dir/build.make CMakeFiles/imu.dir/src/IMU.cpp.s
 .PHONY : src/IMU.cpp.s
 
+src/SOLOUno.o: src/SOLOUno.cpp.o
+.PHONY : src/SOLOUno.o
+
+# target to build an object file
+src/SOLOUno.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/front_right_solo.dir/build.make CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o
+.PHONY : src/SOLOUno.cpp.o
+
+src/SOLOUno.i: src/SOLOUno.cpp.i
+.PHONY : src/SOLOUno.i
+
+# target to preprocess a source file
+src/SOLOUno.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/front_right_solo.dir/build.make CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.i
+.PHONY : src/SOLOUno.cpp.i
+
+src/SOLOUno.s: src/SOLOUno.cpp.s
+.PHONY : src/SOLOUno.s
+
+# target to generate assembly for a file
+src/SOLOUno.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/front_right_solo.dir/build.make CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.s
+.PHONY : src/SOLOUno.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -376,6 +400,9 @@ help:
 	@echo "... src/IMU.o"
 	@echo "... src/IMU.i"
 	@echo "... src/IMU.s"
+	@echo "... src/SOLOUno.o"
+	@echo "... src/SOLOUno.i"
+	@echo "... src/SOLOUno.s"
 .PHONY : help
 
 

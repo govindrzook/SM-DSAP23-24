@@ -1,0 +1,5 @@
+[35m[1mConsolidate compiler generated dependencies of target front_right_solo[0m
+[ 44%] Built target front_right_servo_controller
+[ 44%] [32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o[0m
+[ 55%] Built target imu
+[ 88%] Built target front_right_solo

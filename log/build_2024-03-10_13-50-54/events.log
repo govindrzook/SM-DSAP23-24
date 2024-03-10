@@ -1,0 +1,115 @@
+[0.000000] (-) TimerEvent: {}
+[0.001390] (digital_architecture) JobQueued: {'identifier': 'digital_architecture', 'dependencies': OrderedDict()}
+[0.001423] (digital_architecture) JobStarted: {'identifier': 'digital_architecture'}
+[0.024791] (digital_architecture) JobProgress: {'identifier': 'digital_architecture', 'progress': 'cmake'}
+[0.025709] (digital_architecture) JobProgress: {'identifier': 'digital_architecture', 'progress': 'build'}
+[0.025805] (digital_architecture) Command: {'cmd': ['/usr/bin/cmake', '--build', '/10march/SM-DSAP23-24/build/digital_architecture', '--', '-j24', '-l24'], 'cwd': '/10march/SM-DSAP23-24/build/digital_architecture', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'root'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/root'), ('OLDPWD', '/10march'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/0/bus'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/10march/SM-DSAP23-24/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'root'), ('NAME', 'DESKTOP-Q52A56G'), ('WSL_INTEROP', '/run/WSL/367_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files/Oculus/Support/oculus-runtime:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files/Git/cmd:/mnt/c/Users/evanl/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/evanl/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/0/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/10march/SM-DSAP23-24/install/digital_architecture:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/10march/SM-DSAP23-24/build/digital_architecture'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/10march/SM-DSAP23-24/install/digital_architecture:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[0.037088] (digital_architecture) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099796] (-) TimerEvent: {}
+[0.104932] (digital_architecture) StdoutLine: {'line': b'-- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.159702] (digital_architecture) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.160762] (digital_architecture) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.163962] (digital_architecture) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.169444] (digital_architecture) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.176928] (digital_architecture) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.199907] (-) TimerEvent: {}
+[0.205738] (digital_architecture) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.206346] (digital_architecture) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.300029] (-) TimerEvent: {}
+[0.400307] (-) TimerEvent: {}
+[0.500576] (-) TimerEvent: {}
+[0.600847] (-) TimerEvent: {}
+[0.701116] (-) TimerEvent: {}
+[0.801486] (-) TimerEvent: {}
+[0.901828] (-) TimerEvent: {}
+[1.002101] (-) TimerEvent: {}
+[1.102378] (-) TimerEvent: {}
+[1.202708] (-) TimerEvent: {}
+[1.303009] (-) TimerEvent: {}
+[1.403282] (-) TimerEvent: {}
+[1.503546] (-) TimerEvent: {}
+[1.603816] (-) TimerEvent: {}
+[1.704141] (-) TimerEvent: {}
+[1.804420] (-) TimerEvent: {}
+[1.904685] (-) TimerEvent: {}
+[2.004954] (-) TimerEvent: {}
+[2.073840] (digital_architecture) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.105067] (-) TimerEvent: {}
+[2.158444] (digital_architecture) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.190855] (digital_architecture) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.191051] (digital_architecture) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[2.191088] (digital_architecture) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.191196] (digital_architecture) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.191486] (digital_architecture) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.191523] (digital_architecture) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.191570] (digital_architecture) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.191931] (digital_architecture) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.200542] (digital_architecture) StdoutLine: {'line': b'-- Generating done\n'}
+[2.203071] (digital_architecture) StdoutLine: {'line': b'-- Build files have been written to: /10march/SM-DSAP23-24/build/digital_architecture\n'}
+[2.205171] (-) TimerEvent: {}
+[2.217037] (digital_architecture) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target imu\x1b[0m\n'}
+[2.217290] (digital_architecture) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target front_right_solo\x1b[0m\n'}
+[2.217335] (digital_architecture) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target front_right_servo_controller\x1b[0m\n'}
+[2.217662] (digital_architecture) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target central_controller\x1b[0m\n'}
+[2.225027] (digital_architecture) StdoutLine: {'line': b'[ 11%] \x1b[32m\x1b[1mLinking CXX executable central_controller\x1b[0m\n'}
+[2.225156] (digital_architecture) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o\x1b[0m\n'}
+[2.225189] (digital_architecture) StdoutLine: {'line': b'[ 44%] Built target imu\n'}
+[2.225781] (digital_architecture) StdoutLine: {'line': b'[ 66%] Built target front_right_servo_controller\n'}
+[2.305300] (-) TimerEvent: {}
+[2.405595] (-) TimerEvent: {}
+[2.505881] (-) TimerEvent: {}
+[2.514919] (digital_architecture) StdoutLine: {'line': b'[ 77%] Built target central_controller\n'}
+[2.606018] (-) TimerEvent: {}
+[2.706305] (-) TimerEvent: {}
+[2.806587] (-) TimerEvent: {}
+[2.906893] (-) TimerEvent: {}
+[3.007275] (-) TimerEvent: {}
+[3.107613] (-) TimerEvent: {}
+[3.207942] (-) TimerEvent: {}
+[3.308289] (-) TimerEvent: {}
+[3.408658] (-) TimerEvent: {}
+[3.508955] (-) TimerEvent: {}
+[3.609248] (-) TimerEvent: {}
+[3.709541] (-) TimerEvent: {}
+[3.809848] (-) TimerEvent: {}
+[3.910182] (-) TimerEvent: {}
+[4.010549] (-) TimerEvent: {}
+[4.110882] (-) TimerEvent: {}
+[4.211360] (-) TimerEvent: {}
+[4.311689] (-) TimerEvent: {}
+[4.411971] (-) TimerEvent: {}
+[4.512273] (-) TimerEvent: {}
+[4.612615] (-) TimerEvent: {}
+[4.712926] (-) TimerEvent: {}
+[4.813196] (-) TimerEvent: {}
+[4.913542] (-) TimerEvent: {}
+[5.013857] (-) TimerEvent: {}
+[5.114196] (-) TimerEvent: {}
+[5.214549] (-) TimerEvent: {}
+[5.314934] (-) TimerEvent: {}
+[5.415225] (-) TimerEvent: {}
+[5.515549] (-) TimerEvent: {}
+[5.615828] (-) TimerEvent: {}
+[5.716232] (-) TimerEvent: {}
+[5.816522] (-) TimerEvent: {}
+[5.916828] (-) TimerEvent: {}
+[6.017191] (-) TimerEvent: {}
+[6.117608] (-) TimerEvent: {}
+[6.217900] (-) TimerEvent: {}
+[6.318188] (-) TimerEvent: {}
+[6.418622] (-) TimerEvent: {}
+[6.518904] (-) TimerEvent: {}
+[6.619201] (-) TimerEvent: {}
+[6.682493] (digital_architecture) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking CXX executable front_right_solo\x1b[0m\n'}
+[6.719368] (-) TimerEvent: {}
+[6.819690] (-) TimerEvent: {}
+[6.877968] (digital_architecture) StderrLine: {'line': b"/usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `main':\n"}
+[6.878124] (digital_architecture) StderrLine: {'line': b"FrontRightSOLO.cpp:(.text+0xa5): undefined reference to `SoloUno::SoloUno(char)'\n"}
+[6.893671] (digital_architecture) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[6.894376] (digital_architecture) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/front_right_solo.dir/build.make:175: front_right_solo] Error 1\n'}
+[6.894516] (digital_architecture) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/front_right_solo.dir/all] Error 2\n'}
+[6.895189] (digital_architecture) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[6.895732] (digital_architecture) CommandEnded: {'returncode': 2}
+[6.920234] (-) TimerEvent: {}
+[6.935632] (digital_architecture) JobEnded: {'identifier': 'digital_architecture', 'rc': 2}
+[6.946120] (-) EventReactorShutdown: {}

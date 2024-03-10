@@ -1,8 +1,8 @@
-# Install script for directory: /home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds
+# Install script for directory: /10march/SM-DSAP23-24/src/demo_leds
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/sysmodel/13feb/SM-DSAP23-24/install/digital_architecture")
+  set(CMAKE_INSTALL_PREFIX "/10march/SM-DSAP23-24/install/digital_architecture")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,7 +49,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/digital_architecture/imu"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/digital_architecture" TYPE EXECUTABLE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/imu")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/digital_architecture" TYPE EXECUTABLE FILES "/10march/SM-DSAP23-24/build/digital_architecture/imu")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/digital_architecture/imu" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/digital_architecture/imu")
     file(RPATH_CHANGE
@@ -69,7 +69,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/digital_architecture/central_controller"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/digital_architecture" TYPE EXECUTABLE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/central_controller")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/digital_architecture" TYPE EXECUTABLE FILES "/10march/SM-DSAP23-24/build/digital_architecture/central_controller")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/digital_architecture/central_controller" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/digital_architecture/central_controller")
     file(RPATH_CHANGE
@@ -89,7 +89,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/digital_architecture/front_right_servo_controller"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/digital_architecture" TYPE EXECUTABLE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/front_right_servo_controller")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/digital_architecture" TYPE EXECUTABLE FILES "/10march/SM-DSAP23-24/build/digital_architecture/front_right_servo_controller")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/digital_architecture/front_right_servo_controller" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/digital_architecture/front_right_servo_controller")
     file(RPATH_CHANGE
@@ -109,7 +109,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/digital_architecture/front_right_solo"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/digital_architecture" TYPE EXECUTABLE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/front_right_solo")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/digital_architecture" TYPE EXECUTABLE FILES "/10march/SM-DSAP23-24/build/digital_architecture/front_right_solo")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/digital_architecture/front_right_solo" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/digital_architecture/front_right_solo")
     file(RPATH_CHANGE
@@ -123,11 +123,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/digital_architecture")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/10march/SM-DSAP23-24/build/digital_architecture/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/digital_architecture")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/digital_architecture")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/10march/SM-DSAP23-24/build/digital_architecture/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/digital_architecture")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -135,7 +135,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture/environment" TYPE FILE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture/environment" TYPE FILE FILES "/10march/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -143,42 +143,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture/environment" TYPE FILE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture/environment" TYPE FILE FILES "/10march/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture" TYPE FILE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture" TYPE FILE FILES "/10march/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture" TYPE FILE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture" TYPE FILE FILES "/10march/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture" TYPE FILE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture" TYPE FILE FILES "/10march/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture" TYPE FILE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture" TYPE FILE FILES "/10march/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture" TYPE FILE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture" TYPE FILE FILES "/10march/SM-DSAP23-24/build/digital_architecture/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/ament_cmake_index/share/ament_index/resource_index/packages/digital_architecture")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/10march/SM-DSAP23-24/build/digital_architecture/ament_cmake_index/share/ament_index/resource_index/packages/digital_architecture")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture/cmake" TYPE FILE FILES
-    "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/ament_cmake_core/digital_architectureConfig.cmake"
-    "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/ament_cmake_core/digital_architectureConfig-version.cmake"
+    "/10march/SM-DSAP23-24/build/digital_architecture/ament_cmake_core/digital_architectureConfig.cmake"
+    "/10march/SM-DSAP23-24/build/digital_architecture/ament_cmake_core/digital_architectureConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture" TYPE FILE FILES "/home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/digital_architecture" TYPE FILE FILES "/10march/SM-DSAP23-24/src/demo_leds/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -189,5 +189,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/10march/SM-DSAP23-24/build/digital_architecture/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

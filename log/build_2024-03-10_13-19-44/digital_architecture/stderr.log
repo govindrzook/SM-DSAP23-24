@@ -1,0 +1,17 @@
+/usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::SoloUno(char)':
+FrontRightSOLO.cpp:(.text._ZN7SoloUnoC2Ec[_ZN7SoloUnoC5Ec]+0x1e): undefined reference to `LibSerial::SerialPort::SerialPort()'
+/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUnoC2Ec[_ZN7SoloUnoC5Ec]+0x6a): undefined reference to `LibSerial::SerialPort::~SerialPort()'
+/usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::initSolo()':
+FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x6d): undefined reference to `LibSerial::SerialPort::Open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode const&)'
+/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x9f): undefined reference to `LibSerial::SerialPort::SetBaudRate(LibSerial::BaudRate const&)'
+/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0xb9): undefined reference to `LibSerial::SerialPort::SetCharacterSize(LibSerial::CharacterSize const&)'
+/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0xd3): undefined reference to `LibSerial::SerialPort::SetFlowControl(LibSerial::FlowControl const&)'
+/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0xed): undefined reference to `LibSerial::SerialPort::SetParity(LibSerial::Parity const&)'
+/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x107): undefined reference to `LibSerial::SerialPort::SetStopBits(LibSerial::StopBits const&)'
+/usr/bin/ld: FrontRightSOLO.cpp:(.text._ZN7SoloUno8initSoloEv[_ZN7SoloUno8initSoloEv]+0x1cf): undefined reference to `LibSerial::SerialPort::Open(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode const&)'
+/usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::~SoloUno()':
+FrontRightSOLO.cpp:(.text._ZN7SoloUnoD2Ev[_ZN7SoloUnoD5Ev]+0x28): undefined reference to `LibSerial::SerialPort::~SerialPort()'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/front_right_solo.dir/build.make:159: front_right_solo] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/front_right_solo.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

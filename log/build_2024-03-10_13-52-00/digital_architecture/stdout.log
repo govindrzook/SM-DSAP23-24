@@ -1,0 +1,5 @@
+[35m[1mConsolidate compiler generated dependencies of target front_right_solo[0m
+[ 22%] Built target central_controller
+[ 44%] Built target imu
+[ 66%] Built target front_right_servo_controller
+[ 77%] [32m[1mLinking CXX executable front_right_solo[0m

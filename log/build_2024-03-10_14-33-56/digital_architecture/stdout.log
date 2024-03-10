@@ -1,0 +1,27 @@
+[ 33%] Built target central_controller
+[ 44%] Built target imu
+[ 66%] Built target front_right_servo_controller
+[ 77%] [32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o[0m
+[ 88%] [32m[1mLinking CXX executable front_right_solo[0m
+[100%] Built target front_right_solo
+-- Install configuration: ""
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/imu
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_servo_controller
+-- Installing: /10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_solo
+-- Set runtime path of "/10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_solo" to ""
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/package_run_dependencies/digital_architecture
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/parent_prefix_path/digital_architecture
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.sh
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.dsv
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.sh
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.dsv
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.bash
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.sh
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.zsh
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.dsv
+-- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.dsv
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/packages/digital_architecture
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig.cmake
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig-version.cmake
+-- Up-to-date: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.xml

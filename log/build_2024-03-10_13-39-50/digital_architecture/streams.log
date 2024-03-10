@@ -1,0 +1,16 @@
+[0.027s] Invoking command in '/10march/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24
+[0.045s] [35m[1mConsolidate compiler generated dependencies of target front_right_solo[0m
+[0.048s] [ 25%] Built target central_controller
+[0.048s] [ 50%] Built target front_right_servo_controller
+[0.048s] [ 75%] Built target imu
+[0.051s] [ 87%] [32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o[0m
+[4.123s] [100%] [32m[1mLinking CXX executable front_right_solo[0m
+[4.297s] /usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `main':
+[4.297s] FrontRightSOLO.cpp:(.text+0xa5): undefined reference to `SoloUno::SoloUno(char)'
+[4.297s] /usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::~SoloUno()':
+[4.297s] FrontRightSOLO.cpp:(.text._ZN7SoloUnoD2Ev[_ZN7SoloUnoD5Ev]+0x28): undefined reference to `LibSerial::SerialPort::~SerialPort()'
+[4.313s] collect2: error: ld returned 1 exit status
+[4.314s] gmake[2]: *** [CMakeFiles/front_right_solo.dir/build.make:159: front_right_solo] Error 1
+[4.314s] gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/front_right_solo.dir/all] Error 2
+[4.314s] gmake: *** [Makefile:146: all] Error 2
+[4.316s] Invoked command in '/10march/SM-DSAP23-24/build/digital_architecture' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24

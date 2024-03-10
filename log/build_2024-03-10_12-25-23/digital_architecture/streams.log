@@ -1,0 +1,83 @@
+[0.019s] Invoking command in '/10march/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /10march/SM-DSAP23-24/src/demo_leds -DCMAKE_INSTALL_PREFIX=/10march/SM-DSAP23-24/install/digital_architecture
+[0.123s] -- The C compiler identification is GNU 11.4.0
+[0.300s] -- The CXX compiler identification is GNU 11.4.0
+[0.417s] -- Detecting C compiler ABI info
+[0.474s] -- Detecting C compiler ABI info - done
+[0.477s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.478s] -- Detecting C compile features
+[0.478s] -- Detecting C compile features - done
+[0.481s] -- Detecting CXX compiler ABI info
+[0.541s] -- Detecting CXX compiler ABI info - done
+[0.545s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.545s] -- Detecting CXX compile features
+[0.545s] -- Detecting CXX compile features - done
+[0.551s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.635s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.689s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.765s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.769s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.776s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.788s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.802s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.849s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.851s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.301s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.774s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.669s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.676s] -- Looking for pthread.h
+[2.733s] -- Looking for pthread.h - found
+[2.733s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.791s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.791s] -- Found Threads: TRUE  
+[2.894s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.938s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.938s] -- Configured cppcheck include dirs: 
+[2.938s] -- Configured cppcheck exclude dirs and/or files: 
+[2.939s] -- Added test 'lint_cmake' to check CMake code style
+[2.940s] -- Added test 'uncrustify' to check C / C++ code style
+[2.940s] -- Configured uncrustify additional arguments: 
+[2.940s] -- Added test 'xmllint' to check XML markup files
+[2.941s] -- Configuring done
+[2.950s] -- Generating done
+[2.951s] -- Build files have been written to: /10march/SM-DSAP23-24/build/digital_architecture
+[2.956s] Invoked command in '/10march/SM-DSAP23-24/build/digital_architecture' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /10march/SM-DSAP23-24/src/demo_leds -DCMAKE_INSTALL_PREFIX=/10march/SM-DSAP23-24/install/digital_architecture
+[2.957s] Invoking command in '/10march/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24
+[2.976s] [ 12%] [32mBuilding CXX object CMakeFiles/imu.dir/src/IMU.cpp.o[0m
+[2.976s] [ 25%] [32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o[0m
+[2.976s] [ 37%] [32mBuilding CXX object CMakeFiles/front_right_servo_controller.dir/src/FrontRightServoController.cpp.o[0m
+[2.976s] [ 50%] [32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o[0m
+[5.256s] [ 62%] [32m[1mLinking CXX executable imu[0m
+[5.411s] [ 62%] Built target imu
+[7.170s] [ 75%] [32m[1mLinking CXX executable front_right_servo_controller[0m
+[7.342s] [ 87%] [32m[1mLinking CXX executable front_right_solo[0m
+[7.368s] [ 87%] Built target front_right_servo_controller
+[7.400s] [100%] [32m[1mLinking CXX executable central_controller[0m
+[7.551s] [100%] Built target front_right_solo
+[7.613s] [100%] Built target central_controller
+[7.617s] Invoked command in '/10march/SM-DSAP23-24/build/digital_architecture' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /10march/SM-DSAP23-24/build/digital_architecture -- -j24 -l24
+[7.634s] Invoking command in '/10march/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /10march/SM-DSAP23-24/build/digital_architecture
+[7.637s] -- Install configuration: ""
+[7.637s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/imu
+[7.638s] -- Set runtime path of "/10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/imu" to ""
+[7.638s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller
+[7.640s] -- Set runtime path of "/10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller" to ""
+[7.640s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_servo_controller
+[7.641s] -- Set runtime path of "/10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_servo_controller" to ""
+[7.641s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_solo
+[7.642s] -- Set runtime path of "/10march/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_solo" to ""
+[7.643s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/package_run_dependencies/digital_architecture
+[7.643s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/parent_prefix_path/digital_architecture
+[7.643s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.sh
+[7.643s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.dsv
+[7.643s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.sh
+[7.643s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.dsv
+[7.643s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.bash
+[7.644s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.sh
+[7.644s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.zsh
+[7.644s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.dsv
+[7.644s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.dsv
+[7.644s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/packages/digital_architecture
+[7.644s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig.cmake
+[7.644s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig-version.cmake
+[7.644s] -- Installing: /10march/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.xml
+[7.645s] Invoked command in '/10march/SM-DSAP23-24/build/digital_architecture' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /10march/SM-DSAP23-24/build/digital_architecture

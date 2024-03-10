@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds
+CMAKE_SOURCE_DIR = /10march/SM-DSAP23-24/src/demo_leds
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture
+CMAKE_BINARY_DIR = /10march/SM-DSAP23-24/build/digital_architecture
 
 # Include any dependencies generated for this target.
 include CMakeFiles/front_right_solo.dir/depend.make
@@ -70,27 +70,43 @@ include CMakeFiles/front_right_solo.dir/progress.make
 include CMakeFiles/front_right_solo.dir/flags.make
 
 CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: CMakeFiles/front_right_solo.dir/flags.make
-CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: /home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp
+CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: /10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp
 CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: CMakeFiles/front_right_solo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o -MF CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o.d -o CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o -c /home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/10march/SM-DSAP23-24/build/digital_architecture/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o -MF CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o.d -o CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o -c /10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp
 
 CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp > CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp > CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.i
 
 CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp -o CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /10march/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp -o CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.s
+
+CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o: CMakeFiles/front_right_solo.dir/flags.make
+CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o: /10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp
+CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o: CMakeFiles/front_right_solo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/10march/SM-DSAP23-24/build/digital_architecture/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o -MF CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o.d -o CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o -c /10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp
+
+CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp > CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.i
+
+CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /10march/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp -o CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.s
 
 # Object files for target front_right_solo
 front_right_solo_OBJECTS = \
-"CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o"
+"CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o" \
+"CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o"
 
 # External object files for target front_right_solo
 front_right_solo_EXTERNAL_OBJECTS =
 
 front_right_solo: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o
+front_right_solo: CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o
 front_right_solo: CMakeFiles/front_right_solo.dir/build.make
 front_right_solo: /opt/ros/humble/lib/librclcpp.so
 front_right_solo: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
@@ -155,7 +171,7 @@ front_right_solo: /opt/ros/humble/lib/librosidl_runtime_c.so
 front_right_solo: /opt/ros/humble/lib/librcutils.so
 front_right_solo: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 front_right_solo: CMakeFiles/front_right_solo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable front_right_solo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/10march/SM-DSAP23-24/build/digital_architecture/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable front_right_solo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/front_right_solo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -167,6 +183,6 @@ CMakeFiles/front_right_solo.dir/clean:
 .PHONY : CMakeFiles/front_right_solo.dir/clean
 
 CMakeFiles/front_right_solo.dir/depend:
-	cd /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds /home/sysmodel/13feb/SM-DSAP23-24/src/demo_leds /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture/CMakeFiles/front_right_solo.dir/DependInfo.cmake --color=$(COLOR)
+	cd /10march/SM-DSAP23-24/build/digital_architecture && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /10march/SM-DSAP23-24/src/demo_leds /10march/SM-DSAP23-24/src/demo_leds /10march/SM-DSAP23-24/build/digital_architecture /10march/SM-DSAP23-24/build/digital_architecture /10march/SM-DSAP23-24/build/digital_architecture/CMakeFiles/front_right_solo.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/front_right_solo.dir/depend
 
