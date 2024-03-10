@@ -172,11 +172,11 @@ public:
 
     }
 
-    void setSpeedSlow(double data){
+    int setSpeedSlow(double data){
         
 
         int dat = floor(data); // Speed reference uses unsigned int for the data.
-        soloWriteSlow(SPEED_REFERENCE, dat);
+        return soloWriteSlow(SPEED_REFERENCE, dat);
         
     }
 private:
