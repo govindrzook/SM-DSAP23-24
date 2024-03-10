@@ -1,9 +1,0 @@
-[31mCMake Error at CMakeLists.txt:7 (target_include_directories):
-  target_include_directories called with incorrect number of arguments
-
-[0m
-[31mCMake Error at CMakeLists.txt:15 (target_include_directories):
-  target_include_directories called with incorrect number of arguments
-
-[0m
-gmake: *** [Makefile:390: cmake_check_build_system] Error 1

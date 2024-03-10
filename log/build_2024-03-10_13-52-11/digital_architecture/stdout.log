@@ -1,4 +1,0 @@
-[ 22%] [32m[1mLinking CXX executable front_right_solo[0m
-[ 33%] Built target front_right_servo_controller
-[ 77%] Built target imu
-[ 77%] Built target central_controller

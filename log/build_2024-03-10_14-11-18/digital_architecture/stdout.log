@@ -1,5 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target front_right_solo[0m
-[ 33%] Built target imu
-[ 44%] Built target central_controller
-[ 66%] Built target front_right_servo_controller
-[ 77%] [32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o[0m

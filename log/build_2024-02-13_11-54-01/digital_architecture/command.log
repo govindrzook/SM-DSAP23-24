@@ -1,4 +1,0 @@
-Invoking command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture -- -j8 -l8
-Invoked command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture -- -j8 -l8
-Invoking command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture
-Invoked command in '/home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/sysmodel/13feb/SM-DSAP23-24/build/digital_architecture

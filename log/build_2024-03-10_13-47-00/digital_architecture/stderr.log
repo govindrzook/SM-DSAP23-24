@@ -1,8 +1,0 @@
-/usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `main':
-FrontRightSOLO.cpp:(.text+0xa5): undefined reference to `SoloUno::SoloUno(char)'
-/usr/bin/ld: CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o: in function `SoloUno::~SoloUno()':
-FrontRightSOLO.cpp:(.text._ZN7SoloUnoD2Ev[_ZN7SoloUnoD5Ev]+0x28): undefined reference to `LibSerial::SerialPort::~SerialPort()'
-collect2: error: ld returned 1 exit status
-gmake[2]: *** [CMakeFiles/front_right_solo.dir/build.make:175: front_right_solo] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:221: CMakeFiles/front_right_solo.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2
