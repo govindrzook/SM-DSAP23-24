@@ -18,6 +18,7 @@
     <depend>std_msgs</depend>
     <depend>fstream</depend>
     <depend>iostream</depend>
+    <depend>libserial-dev</depend>
 
   </export>
 </package>
