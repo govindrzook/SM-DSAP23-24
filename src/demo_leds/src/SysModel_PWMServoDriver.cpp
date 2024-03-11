@@ -13,7 +13,11 @@
 
 
 SysModel_PWMServoDriver::SysModel_PWMServoDriver()
-    : _i2caddr(PCA9685_I2C_ADDRESS) {}
+    : _i2caddr(PCA9685_I2C_ADDRESS) {
+
+	    begin();
+	    setFreq(50); // default frequency
+    }
    
 
 void delay(int milliseconds)
