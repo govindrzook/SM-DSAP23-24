@@ -7,8 +7,8 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
-#include "std_msgs/msg/string.hpp"
 #include "std_msgs/msg/float64.hpp"
+#include "std_msgs/msg/u_int8.hpp"
 
 
 using std::placeholders::_1;
@@ -38,8 +38,8 @@ public:
 	front_right_speed_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"frontRightSpeed", 10, std::bind(&CentralController::front_right_speed_callback, this, _1));
 
-	pub1_ = create_publisher<std_msgs::msg::String>("frontRightSteerPosition", 10);
-    pub2_ = create_publisher<std_msgs::msg::String>("frontRightBrakePosition", 10);
+	pub1_ = create_publisher<std_msgs::msg::UInt8>("frontRightSteerPosition", 10);
+   	pub2_ = create_publisher<std_msgs::msg::UInt8>("frontRightBrakePosition", 10);
 	pub3_ = create_publisher<std_msgs::msg::Float64>("frontRightTorque", 10);
 
 	timer_ = create_wall_timer(std::chrono::seconds(3), std::bind(&CentralController::timer_callback, this));
@@ -52,17 +52,16 @@ private:
   {
 
     // Create a message to publish
-    auto msg = std_msgs::msg::String();
-	auto msg1 = std_msgs::msg::String();
+    	auto msg = std_msgs::msg::UInt8();
+	auto msg1 = std_msgs::msg::UInt8();
 	auto msg2 = std_msgs::msg::Float64();
 
-    msg.data = "30 degrees";  // Static steering angle data
-	msg1.data = "55 degrees"; // static brake angle data
-
+    	msg.data = 70;  // Static steering angle data
+	msg1.data = 90; // static brake angle data
 	msg2.data = rand() % 32; // Random torque data
 
     // Publish to each topic
-    pub1_->publish(msg); //front right steer position
+    	pub1_->publish(msg); //front right steer position
 	pub2_->publish(msg1); // front right brake position
 	pub3_->publish(msg2); // front right torque
     
@@ -121,8 +120,8 @@ private:
 	
 	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr front_right_speed_subscription;
 
-	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub1_;
-	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub2_;
+	rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr pub1_;
+	rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr pub2_;
 	rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub3_;
   	rclcpp::TimerBase::SharedPtr timer_;
 
