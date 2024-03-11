@@ -7,6 +7,7 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
+#include "std_msgs/msg/u_int8.hpp"
 
 #include "SysModel_PWMServoDriver.cpp"
 
@@ -18,10 +19,10 @@ public:
   FrontRightServoController()
   : Node("front_right_servo_controller")
   {
-    front_right_steering_position_subscription = this->create_subscription<std_msgs::msg::String>(
+    front_right_steering_position_subscription = this->create_subscription<std_msgs::msg::Uint8>(
       		"frontRightSteerPosition", 10, std::bind(&FrontRightServoController::steering_position_callback, this, _1));
 	
-    front_right_brake_position_subscription = this->create_subscription<std_msgs::msg::String>(
+    front_right_brake_position_subscription = this->create_subscription<std_msgs::msg::Uint8>(
       		"frontRightBrakePosition", 10, std::bind(&FrontRightServoController::brake_position_callback, this, _1));
 
 	  
@@ -37,27 +38,27 @@ private:
 
 
 
-  void steering_position_callback(const std_msgs::msg::String & msg)
+  void steering_position_callback(const std_msgs::msg::Uint8 & msg)
   {
 	  // SysModel_PWMServoDriver servo_steer;
 	  // servo_steer.begin();
 	  // double buffer = std::stod(msg.data);
 	  servo_steer.setAngle(0,45);  	
-	  RCLCPP_INFO(this->get_logger(), "Steering position: '%s'", msg.data.c_str());  
+	  RCLCPP_INFO(this->get_logger(), "Steering position: '%u'", msg.data);  
 		    
   }
- void brake_position_callback(const std_msgs::msg::String & msg)
+ void brake_position_callback(const std_msgs::msg::Uint8 & msg)
   {	  
 	  // SysModel_PWMServoDriver servo_brake;
 	  // servo_brake.begin();
 	  // double buffer = std::stod(msg.data);
 	  servo_brake.setAngle(1,90);  
-	  RCLCPP_INFO(this->get_logger(), "Brake position: '%s'", msg.data.c_str());  
+	  RCLCPP_INFO(this->get_logger(), "Brake position: '%u'", msg.data);  
 		    
   }
  
-	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr front_right_steering_position_subscription;
-	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr front_right_brake_position_subscription;
+	rclcpp::Subscription<std_msgs::msg::Uint8>::SharedPtr front_right_steering_position_subscription;
+	rclcpp::Subscription<std_msgs::msg::Uint8>::SharedPtr front_right_brake_position_subscription;
 
 };
 
