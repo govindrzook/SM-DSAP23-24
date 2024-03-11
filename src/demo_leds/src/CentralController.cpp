@@ -60,7 +60,7 @@ private:
 
     	msg.data = steer_++;  // Static steering angle data
 	msg1.data = brake_++; // static brake angle data
-	msg2.data = rand() % 32; // Random torque data
+	msg2.data = rand() % 3000; // Random torque data
 
     // Publish to each topic
     	pub1_->publish(msg); //front right steer position
