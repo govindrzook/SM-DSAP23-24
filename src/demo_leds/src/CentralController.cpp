@@ -70,38 +70,38 @@ private:
 
   void ax_callback(const std_msgs::msg::Float64 & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "aX: '%s'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "aX: '%f'", msg.data.c_str());  
 		    
   }
  void ay_callback(const std_msgs::msg::Float64 & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "aY: '%s'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "aY: '%f'", msg.data.c_str());  
 		    
   }
  void az_callback(const std_msgs::msg::Float64 & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "aZ: '%s'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "aZ: '%f'", msg.data.c_str());  
 		    
   }
  void gx_callback(const std_msgs::msg::Float64 & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "gX: '%s'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "gX: '%f'", msg.data);  
 		    
   }
  void gy_callback(const std_msgs::msg::Float64 & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "gY: '%s'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "gY: '%f'", msg.data);  
 		    
   }
  void gz_callback(const std_msgs::msg::Float64 & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "gZ: '%s'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "gZ: '%f'", msg.data);  
 		    
   }
 
 	void temp_callback(const std_msgs::msg::Float64 & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "temp: '%s'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "temp: '%f'", msg.data);  
 		    
   }
   void front_right_speed_callback(const std_msgs::msg::Float64 & msg) const
