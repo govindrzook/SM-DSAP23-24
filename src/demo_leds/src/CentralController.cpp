@@ -15,7 +15,7 @@ class CentralController : public rclcpp::Node
 {
 public:
   CentralController()
-  : Node("central_controller")
+  : Node("central_controller"), steer_(0), brake_(180)
   {
     	ax_subscription = this->create_subscription<std_msgs::msg::String>(
       		"aX", 10, std::bind(&CentralController::ax_callback, this, _1));
@@ -42,22 +42,31 @@ public:
   }
 
 private:
+	int steer_;
+	int brake_;
 
 	void timer_callback()
   {
     // Create a message to publish
-    auto msg = std_msgs::msg::UInt8();
+    	auto msg = std_msgs::msg::UInt8();
 	auto msg1 = std_msgs::msg::UInt8();
 	auto msg2 = std_msgs::msg::String();
 
-    msg.data = 45;  // Static steering angle data
-	msg1.data = 90; // static brake angle data
+	msg.data = steer_ + 15;  // Static steering angle data
+	msg1.data = brake_ - 15; // static brake angle data
 	msg2.data = "1 Nm"; // static torque data
 
     // Publish to each topic
     pub1_->publish(msg); //front right steer position
 	pub2_->publish(msg1); // front right brake position
 	pub3_->publish(msg2); // front right torque
+
+	if(msg.data == 180){
+		steer_ = 0;
+	}
+	if(msg1.data == 0){
+		brake_ = 180 ;
+	}
     
   }
 
