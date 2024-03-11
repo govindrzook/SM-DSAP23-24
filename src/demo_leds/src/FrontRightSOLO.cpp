@@ -9,8 +9,8 @@
 #include "std_msgs/msg/string.hpp"
 #include "std_msgs/msg/float64.hpp"
 
-#include </usr/local/include/libserial/SerialPort.h>
-//#include </usr/include/libserial/SerialPort.h>
+// #include </usr/local/include/libserial/SerialPort.h>
+#include </usr/include/libserial/SerialPort.h>
 #include "SOLOUno.cpp"
 
 using std::placeholders::_1;
