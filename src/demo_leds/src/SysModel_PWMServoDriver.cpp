@@ -65,7 +65,7 @@ void SysModel_PWMServoDriver::setFreq(float freq){
     writeReg(PCA9685_PRESCALE, prescale); // set the prescaler
     wakeup();
 
-    std::cout << "Prescale Value: 0x" << std::hex << (int)prescale << std::endl;
+   // std::cout << "Prescale Value: 0x" << std::hex << (int)prescale << std::endl;
     _freq = freq;
     
 }
@@ -158,7 +158,7 @@ uint8_t SysModel_PWMServoDriver::readReg(uint8_t regNum){
         exit(1);
     }
  
-    printf("Data read from register %x: 0x%x\n",regNum, data);
+    //printf("Data read from register %x: 0x%x\n",regNum, data);
  
     close(file);
     
