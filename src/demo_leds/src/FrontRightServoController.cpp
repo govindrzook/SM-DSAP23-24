@@ -35,6 +35,8 @@ public:
 private:
 	SysModel_PWMServoDriver servo_steer;
 	SysModel_PWMServoDriver servo_brake;
+	size_t steer_output = 0;
+	size_t brake_output = 8;
 
 
 
@@ -43,7 +45,7 @@ private:
 	  // SysModel_PWMServoDriver servo_steer;
 	  // servo_steer.begin();
 	  // double buffer = std::stod(msg.data);
-	  servo_steer.setAngle(0,45);  	
+	  servo_steer.setAngle(steer_output,45);  	
 	  RCLCPP_INFO(this->get_logger(), "Steering position: '%u'", msg.data);  
 		    
   }
@@ -52,7 +54,7 @@ private:
 	  // SysModel_PWMServoDriver servo_brake;
 	  // servo_brake.begin();
 	  // double buffer = std::stod(msg.data);
-	  servo_brake.setAngle(1,90);  
+	  servo_brake.setAngle(brake_output,90);  
 	  RCLCPP_INFO(this->get_logger(), "Brake position: '%u'", msg.data);  
 		    
   }
