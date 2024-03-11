@@ -70,17 +70,17 @@ private:
 
   void ax_callback(const std_msgs::msg::Float64 & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "aX: '%f'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "aX: '%f'", msg.data);  
 		    
   }
  void ay_callback(const std_msgs::msg::Float64 & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "aY: '%f'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "aY: '%f'", msg.data);  
 		    
   }
  void az_callback(const std_msgs::msg::Float64 & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "aZ: '%f'", msg.data.c_str());  
+	    	RCLCPP_INFO(this->get_logger(), "aZ: '%f'", msg.data);  
 		    
   }
  void gx_callback(const std_msgs::msg::Float64 & msg) const
