@@ -1,5 +1,7 @@
-#include </usr/local/include/libserial/SerialPort.h>
-#include </usr/local/include/libserial/SerialPortConstants.h>
+// #include </usr/local/include/libserial/SerialPort.h>
+// #include </usr/local/include/libserial/SerialPortConstants.h>
+#include </usr/include/libserial/SerialPort.h>
+#include </usr/include/libserial/SerialPortConstants.h>
 
 //#include "SOLOUno.h"
 
