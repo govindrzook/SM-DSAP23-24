@@ -19,10 +19,10 @@ public:
   FrontRightServoController()
   : Node("front_right_servo_controller")
   {
-    front_right_steering_position_subscription = this->create_subscription<std_msgs::msg::Uint8>(
+    front_right_steering_position_subscription = this->create_subscription<std_msgs::msg::UInt8>(
       		"frontRightSteerPosition", 10, std::bind(&FrontRightServoController::steering_position_callback, this, _1));
 	
-    front_right_brake_position_subscription = this->create_subscription<std_msgs::msg::Uint8>(
+    front_right_brake_position_subscription = this->create_subscription<std_msgs::msg::UInt8>(
       		"frontRightBrakePosition", 10, std::bind(&FrontRightServoController::brake_position_callback, this, _1));
 
 	  
@@ -38,7 +38,7 @@ private:
 
 
 
-  void steering_position_callback(const std_msgs::msg::Uint8 & msg)
+  void steering_position_callback(const std_msgs::msg::UInt8 & msg)
   {
 	  // SysModel_PWMServoDriver servo_steer;
 	  // servo_steer.begin();
@@ -47,7 +47,7 @@ private:
 	  RCLCPP_INFO(this->get_logger(), "Steering position: '%u'", msg.data);  
 		    
   }
- void brake_position_callback(const std_msgs::msg::Uint8 & msg)
+ void brake_position_callback(const std_msgs::msg::UInt8 & msg)
   {	  
 	  // SysModel_PWMServoDriver servo_brake;
 	  // servo_brake.begin();
@@ -57,8 +57,8 @@ private:
 		    
   }
  
-	rclcpp::Subscription<std_msgs::msg::Uint8>::SharedPtr front_right_steering_position_subscription;
-	rclcpp::Subscription<std_msgs::msg::Uint8>::SharedPtr front_right_brake_position_subscription;
+	rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr front_right_steering_position_subscription;
+	rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr front_right_brake_position_subscription;
 
 };
 
