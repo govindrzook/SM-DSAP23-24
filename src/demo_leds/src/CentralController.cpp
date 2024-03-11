@@ -19,19 +19,22 @@ public:
   CentralController()
   : Node("central_controller")
   {
-    	ax_subscription = this->create_subscription<std_msgs::msg::String>(
+    	ax_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"aX", 10, std::bind(&CentralController::ax_callback, this, _1));
-	ay_subscription = this->create_subscription<std_msgs::msg::String>(
+	ay_subscription = this->create_subscription<std_msgs::msg::Float64(
       		"aY", 10, std::bind(&CentralController::ay_callback, this, _1));
-	az_subscription = this->create_subscription<std_msgs::msg::String>(
+	az_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"aZ", 10, std::bind(&CentralController::az_callback, this, _1));
-	gx_subscription = this->create_subscription<std_msgs::msg::String>(
+	gx_subscription = this->create_subscription<std_msgs::msg::Float64(
       		"gX", 10, std::bind(&CentralController::gx_callback, this, _1));
-	gy_subscription = this->create_subscription<std_msgs::msg::String>(
+	gy_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"gY", 10, std::bind(&CentralController::gy_callback, this, _1));
-	gz_subscription = this->create_subscription<std_msgs::msg::String>(
+	gz_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"gZ", 10, std::bind(&CentralController::gz_callback, this, _1));
-	
+	  
+	temp_subscription = this->create_subscription<std_msgs::msg::Float64(
+      		"temp", 10, std::bind(&CentralController::temp_callback, this, _1));
+	  
 	front_right_speed_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"frontRightSpeed", 10, std::bind(&CentralController::front_right_speed_callback, this, _1));
 
@@ -65,50 +68,57 @@ private:
     
   }
 
-  void ax_callback(const std_msgs::msg::String & msg) const
+  void ax_callback(const std_msgs::msg::Float64 & msg) const
   {
 	    	RCLCPP_INFO(this->get_logger(), "aX: '%s'", msg.data.c_str());  
 		    
   }
- void ay_callback(const std_msgs::msg::String & msg) const
+ void ay_callback(const std_msgs::msg::Float64 & msg) const
   {
 	    	RCLCPP_INFO(this->get_logger(), "aY: '%s'", msg.data.c_str());  
 		    
   }
- void az_callback(const std_msgs::msg::String & msg) const
+ void az_callback(const std_msgs::msg::Float64 & msg) const
   {
 	    	RCLCPP_INFO(this->get_logger(), "aZ: '%s'", msg.data.c_str());  
 		    
   }
- void gx_callback(const std_msgs::msg::String & msg) const
+ void gx_callback(const std_msgs::msg::Float64 & msg) const
   {
 	    	RCLCPP_INFO(this->get_logger(), "gX: '%s'", msg.data.c_str());  
 		    
   }
- void gy_callback(const std_msgs::msg::String & msg) const
+ void gy_callback(const std_msgs::msg::Float64 & msg) const
   {
 	    	RCLCPP_INFO(this->get_logger(), "gY: '%s'", msg.data.c_str());  
 		    
   }
- void gz_callback(const std_msgs::msg::String & msg) const
+ void gz_callback(const std_msgs::msg::Float64 & msg) const
   {
 	    	RCLCPP_INFO(this->get_logger(), "gZ: '%s'", msg.data.c_str());  
 		    
   }
 
+	void temp_callback(const std_msgs::msg::Float64 & msg) const
+  {
+	    	RCLCPP_INFO(this->get_logger(), "temp: '%s'", msg.data.c_str());  
+		    
+  }
   void front_right_speed_callback(const std_msgs::msg::Float64 & msg) const
   {
 	    	RCLCPP_INFO(this->get_logger(), "Front right BLDC speed reading: '%f'", msg.data);  
 		    
   }
-	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr ax_subscription;
-	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr ay_subscription;
-	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr az_subscription;
+	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr ax_subscription;
+	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr ay_subscription;
+	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr az_subscription;
 
-	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr gx_subscription;
-	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr gy_subscription;
-	rclcpp::Subscription<std_msgs::msg::String>::SharedPtr gz_subscription;
+	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr gx_subscription;
+	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr gy_subscription;
+	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr gz_subscription;
 
+	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr temp_subscription;
+	
 	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr front_right_speed_subscription;
 
 	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub1_;
