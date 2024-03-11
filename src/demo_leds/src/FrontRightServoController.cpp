@@ -25,14 +25,14 @@ public:
       		"frontRightBrakePosition", 10, std::bind(&FrontRightServoController::brake_position_callback, this, _1));
 
 	  
-	  	servo_steer.begin();
-		servo_brake.begin();
-	  	servo_steer.setFreq(50);
+	 //  	servo_steer.begin();
+		// servo_brake.begin();
+	 //  	servo_steer.setFreq(50);
     
   }
 
 private:
-SysModel_PWMServoDriver servo_steer;
+	SysModel_PWMServoDriver servo_steer;
 	SysModel_PWMServoDriver servo_brake;
 
 
