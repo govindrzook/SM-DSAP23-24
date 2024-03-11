@@ -16,6 +16,7 @@ public:
     pub4_ = create_publisher<std_msgs::msg::Float64>("gX", 10);
     pub5_ = create_publisher<std_msgs::msg::Float64>("gY", 10);
     pub6_ = create_publisher<std_msgs::msg::Float64>("gZ", 10);
+    pub7_ = create_publisher<std_msgs::msg::Float64>("temp", 10);
 
     // Create a timer to update the topics every 1 ms
     timer_ = create_wall_timer(std::chrono::milliseconds(1), std::bind(&IMU::timer_callback, this));
@@ -50,6 +51,7 @@ private:
     pub4_->publish(msg3);
     pub5_->publish(msg4);
     pub6_->publish(msg5);
+    pub7_->publish(msg6);
   }
 
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub1_;
@@ -58,6 +60,7 @@ private:
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub4_;
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub5_;
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub6_;
+  rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub7_;
 
 
   rclcpp::TimerBase::SharedPtr timer_;
