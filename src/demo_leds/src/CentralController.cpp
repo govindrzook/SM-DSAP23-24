@@ -21,18 +21,18 @@ public:
   {
     	ax_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"aX", 10, std::bind(&CentralController::ax_callback, this, _1));
-	ay_subscription = this->create_subscription<std_msgs::msg::Float64(
+	ay_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"aY", 10, std::bind(&CentralController::ay_callback, this, _1));
 	az_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"aZ", 10, std::bind(&CentralController::az_callback, this, _1));
-	gx_subscription = this->create_subscription<std_msgs::msg::Float64(
+	gx_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"gX", 10, std::bind(&CentralController::gx_callback, this, _1));
 	gy_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"gY", 10, std::bind(&CentralController::gy_callback, this, _1));
 	gz_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"gZ", 10, std::bind(&CentralController::gz_callback, this, _1));
 	  
-	temp_subscription = this->create_subscription<std_msgs::msg::Float64(
+	temp_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"temp", 10, std::bind(&CentralController::temp_callback, this, _1));
 	  
 	front_right_speed_subscription = this->create_subscription<std_msgs::msg::Float64>(
