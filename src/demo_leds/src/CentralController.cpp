@@ -17,7 +17,7 @@ class CentralController : public rclcpp::Node
 {
 public:
   CentralController()
-  : Node("central_controller"), steer_(0), brake_(0)
+  : Node("central_controller"), steer_(85), brake_(85)
   {
     	ax_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"aX", 10, std::bind(&CentralController::ax_callback, this, _1));
