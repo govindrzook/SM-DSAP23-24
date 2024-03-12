@@ -38,15 +38,15 @@ private:
   {
     auto msg = std_msgs::msg::Float64();
 
-    msg.data = rand() % 30000;  // Example data, replace with your actual data
-    //msg.data = soloPtr->readSpeed();
+    //msg.data = rand() % 30000;  // Example data, replace with your actual data
+    msg.data = soloPtr->readSpeed();
     pub1_->publish(msg); 
   }
 
   void front_right_torque_callback(const std_msgs::msg::Float64 & msg) const
   {
-	    	RCLCPP_INFO(this->get_logger(), "Received speed command: '%f'", msg.data); 
-        //int result = soloPtr->setSpeedSlow(msg.data); 
+	RCLCPP_INFO(this->get_logger(), "Received speed command: '%f'", msg.data); 
+        int result = soloPtr->setSpeedSlow(msg.data); 
 
         //if(result){
         //    RCLCPP_INFO(this->get_logger(), "Error code: '%d'", result);
