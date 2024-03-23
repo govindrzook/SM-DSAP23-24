@@ -17,6 +17,10 @@ find_package(std_msgs REQUIRED)
 add_executable(imu src/IMU.cpp)
 ament_target_dependencies(imu rclcpp std_msgs)
 
+add_executable(logger src/Logger.cpp)
+ament_target_dependencies(logger rclcpp std_msgs)
+
+
 add_executable(central_controller src/CentralController.cpp)
 ament_target_dependencies(central_controller rclcpp std_msgs)
 
@@ -46,5 +50,6 @@ install(TARGETS
   central_controller
   front_right_servo_controller
   front_right_solo
+  logger
   DESTINATION lib/${PROJECT_NAME})
 ament_package()
