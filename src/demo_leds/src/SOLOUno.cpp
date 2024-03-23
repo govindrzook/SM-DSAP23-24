@@ -107,7 +107,7 @@ public:
          }
     }
 
-    uint32_t soloRead(char cmd) {   
+    std::string soloRead(char cmd) {   
 
         serial_port.FlushIOBuffers();
         serial_port.FlushInputBuffer();
