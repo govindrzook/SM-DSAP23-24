@@ -39,9 +39,29 @@ private:
 
   void steering_position_callback(const std_msgs::msg::UInt8 & msg)
   {
-	  
-	  servo_steer.setAngle(steer_output,msg.data);  	
-	  RCLCPP_INFO(this->get_logger(), "Steering position: '%u'", msg.data);  
+	char input;
+	std::cout << "---Enter 'F' if yout want to test the frequency output.\n" ;
+	std::cout << "---Enter 'A' if yout want to test the angle output.\n" ;
+	std::cout << "---Enter 'S' if yout want to stop testing.\n" ;
+	
+	std::scanf(" %c",&input);
+	switch(input){
+		case 'F':
+			std::cout << "Test F\n" ;
+			break;
+		case 'A':
+			std::cout << "Test A\n" ;
+			break;
+		case 'S':
+			std::cout << "Test S\n" ;
+			break;
+		default:
+			std::cout << "Test S\n" ;
+			break;
+
+	}	
+	servo_steer.setAngle(steer_output,msg.data);  	
+	RCLCPP_INFO(this->get_logger(), "Steering position: '%u'", msg.data);  
 		    
   }
  void brake_position_callback(const std_msgs::msg::UInt8 & msg)
