@@ -15,6 +15,10 @@
 
 using std::placeholders::_1;
 
+int direction;
+int lastSpeedCommand = 5000; // Impossible last speed for initial value.
+int lastDirection = 2; // Impossible direction for initial value.
+
 class FrontRightSOLO : public rclcpp::Node
 {
 public:
@@ -33,24 +37,42 @@ public:
 private:
 
   SoloUno* soloPtr;
+  
 
 	void timer_callback()
   {
     auto msg = std_msgs::msg::Float64();
 
-    //msg.data = rand() % 30000;  // Example data, replace with your actual data
     msg.data = soloPtr->readSpeed();
     pub1_->publish(msg); 
   }
 
   void front_right_torque_callback(const std_msgs::msg::Float64 & msg) const
   {
-	RCLCPP_INFO(this->get_logger(), "Received speed command: '%f'", msg.data); 
-        int result = soloPtr->setSpeedSlow(msg.data); 
+	RCLCPP_INFO(this->get_logger(), "SOLO received speed command: '%f'", msg.data); 
+        if(msg.data >= 1){
+          direction = 1;
+        }
+        else{
+          direction = 0;
+        }
 
-        //if(result){
-        //    RCLCPP_INFO(this->get_logger(), "Error code: '%d'", result);
-        //}     
+        if(direction != lastDirection){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
+          soloPtr->setDirectionSlow(direction);
+          lastDirection = direction;
+        }
+        else{
+          RCLCPP_INFO(this->get_logger(), "SOLO received consecutive direction commands");
+        }
+
+        if(msg.data != lastSpeedCommand){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
+          int result = soloPtr->setSpeedSlow(msg.data);
+          lastSpeedCommand = (int) msg.data;
+        }
+        else{
+          RCLCPP_INFO(this->get_logger(), "SOLO received consecutive speed command of: ", msg.data);
+        }
+  
   }
  
 	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr front_right_torque_subscription;

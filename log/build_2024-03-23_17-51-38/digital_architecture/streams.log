@@ -1,0 +1,169 @@
+[0.037s] Invoking command in '/home/adding_change_dir_ws/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds -DCMAKE_INSTALL_PREFIX=/home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture
+[0.107s] -- The C compiler identification is GNU 11.4.0
+[0.296s] -- The CXX compiler identification is GNU 11.4.0
+[0.420s] -- Detecting C compiler ABI info
+[0.476s] -- Detecting C compiler ABI info - done
+[0.479s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.480s] -- Detecting C compile features
+[0.480s] -- Detecting C compile features - done
+[0.482s] -- Detecting CXX compiler ABI info
+[0.542s] -- Detecting CXX compiler ABI info - done
+[0.546s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.546s] -- Detecting CXX compile features
+[0.546s] -- Detecting CXX compile features - done
+[0.548s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.629s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.670s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.732s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.734s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.738s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.745s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.756s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.790s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.792s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.236s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.717s] -- Found FastRTPS: /opt/ros/humble/include  
+[2.576s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.581s] -- Looking for pthread.h
+[2.640s] -- Looking for pthread.h - found
+[2.640s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[2.697s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[2.698s] -- Found Threads: TRUE  
+[2.784s] -- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[2.823s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.823s] -- Configured cppcheck include dirs: 
+[2.823s] -- Configured cppcheck exclude dirs and/or files: 
+[2.824s] -- Added test 'lint_cmake' to check CMake code style
+[2.824s] -- Added test 'uncrustify' to check C / C++ code style
+[2.824s] -- Configured uncrustify additional arguments: 
+[2.825s] -- Added test 'xmllint' to check XML markup files
+[2.825s] -- Configuring done
+[2.837s] -- Generating done
+[2.838s] -- Build files have been written to: /home/adding_change_dir_ws/SM-DSAP23-24/build/digital_architecture
+[2.843s] Invoked command in '/home/adding_change_dir_ws/SM-DSAP23-24/build/digital_architecture' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds -DCMAKE_INSTALL_PREFIX=/home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture
+[2.844s] Invoking command in '/home/adding_change_dir_ws/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/adding_change_dir_ws/SM-DSAP23-24/build/digital_architecture -- -j24 -l24
+[2.864s] [  9%] [32mBuilding CXX object CMakeFiles/central_controller.dir/src/CentralController.cpp.o[0m
+[2.864s] [ 18%] [32mBuilding CXX object CMakeFiles/logger.dir/src/Logger.cpp.o[0m
+[2.864s] [ 27%] [32mBuilding CXX object CMakeFiles/imu.dir/src/IMU.cpp.o[0m
+[2.864s] [ 36%] [32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/FrontRightSOLO.cpp.o[0m
+[2.864s] [ 45%] [32mBuilding CXX object CMakeFiles/front_right_servo_controller.dir/src/FrontRightServoController.cpp.o[0m
+[2.865s] [ 54%] [32mBuilding CXX object CMakeFiles/front_right_solo.dir/src/SOLOUno.cpp.o[0m
+[3.190s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kint SoloUno::soloWriteFast(char, int)[m[K’:
+[3.190s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:41:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[3.190s]    41 |         char initiator = [01;35m[K0xFF[m[K;
+[3.190s]       |                          [01;35m[K^~~~[m[K
+[3.190s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:52:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[3.190s]    52 |         char ending = [01;35m[K0xFE[m[K;
+[3.190s]       |                       [01;35m[K^~~~[m[K
+[3.190s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kint SoloUno::soloWriteSlow(char, int)[m[K’:
+[3.190s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:72:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[3.190s]    72 |         char initiator = [01;35m[K0xFF[m[K;
+[3.190s]       |                          [01;35m[K^~~~[m[K
+[3.190s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:83:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[3.190s]    83 |         char ending = [01;35m[K0xFE[m[K;
+[3.190s]       |                       [01;35m[K^~~~[m[K
+[3.191s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kstd::string SoloUno::soloRead(char)[m[K’:
+[3.191s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:118:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[3.192s]   118 |         char initiator = [01;35m[K0xFF[m[K;
+[3.192s]       |                          [01;35m[K^~~~[m[K
+[3.192s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:123:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[3.192s]   123 |         char ending = [01;35m[K0xFE[m[K;
+[3.192s]       |                       [01;35m[K^~~~[m[K
+[3.192s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kint SoloUno::readSpeed()[m[K’:
+[3.192s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:19:24:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K150[m[K’ to ‘[01m[K'\37777777626'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[3.192s]    19 | #define SPEED_FEEDBACK [01;35m[K0x96[m[K
+[3.192s]       |                        [01;35m[K^~~~[m[K
+[3.192s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:143:49:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KSPEED_FEEDBACK[m[K’
+[3.192s]   143 |         int velocity = formatSpeedRead(soloRead([01;36m[KSPEED_FEEDBACK[m[K));
+[3.192s]       |                                                 [01;36m[K^~~~~~~~~~~~~~[m[K
+[3.192s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kvoid SoloUno::setTorqueFast(double)[m[K’:
+[3.192s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:156:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdatt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.192s]   156 |         int [01;35m[Kdatt[m[K = data;
+[3.192s]       |             [01;35m[K^~~~[m[K
+[3.192s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kvoid SoloUno::setTorqueSlow(double)[m[K’:
+[3.192s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:164:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdatt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[3.192s]   164 |         int [01;35m[Kdatt[m[K = data;
+[3.192s]       |             [01;35m[K^~~~[m[K
+[4.566s] In file included from [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:14[m[K:
+[4.566s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kint SoloUno::soloWriteFast(char, int)[m[K’:
+[4.566s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:41:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[4.566s]    41 |         char initiator = [01;35m[K0xFF[m[K;
+[4.566s]       |                          [01;35m[K^~~~[m[K
+[4.566s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:52:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[4.566s]    52 |         char ending = [01;35m[K0xFE[m[K;
+[4.566s]       |                       [01;35m[K^~~~[m[K
+[4.566s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kint SoloUno::soloWriteSlow(char, int)[m[K’:
+[4.566s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:72:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[4.566s]    72 |         char initiator = [01;35m[K0xFF[m[K;
+[4.566s]       |                          [01;35m[K^~~~[m[K
+[4.566s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:83:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[4.566s]    83 |         char ending = [01;35m[K0xFE[m[K;
+[4.566s]       |                       [01;35m[K^~~~[m[K
+[4.567s] In file included from [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:14[m[K:
+[4.567s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kstd::string SoloUno::soloRead(char)[m[K’:
+[4.567s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:118:26:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K255[m[K’ to ‘[01m[K'\37777777777'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[4.567s]   118 |         char initiator = [01;35m[K0xFF[m[K;
+[4.567s]       |                          [01;35m[K^~~~[m[K
+[4.567s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:123:23:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K254[m[K’ to ‘[01m[K'\37777777776'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[4.567s]   123 |         char ending = [01;35m[K0xFE[m[K;
+[4.567s]       |                       [01;35m[K^~~~[m[K
+[4.567s] In file included from [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:14[m[K:
+[4.567s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kint SoloUno::readSpeed()[m[K’:
+[4.567s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:19:24:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Kint[m[K’ to ‘[01m[Kchar[m[K’ changes value from ‘[01m[K150[m[K’ to ‘[01m[K'\37777777626'[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[4.567s]    19 | #define SPEED_FEEDBACK [01;35m[K0x96[m[K
+[4.568s]       |                        [01;35m[K^~~~[m[K
+[4.568s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:143:49:[m[K [01;36m[Knote: [m[Kin expansion of macro ‘[01m[KSPEED_FEEDBACK[m[K’
+[4.568s]   143 |         int velocity = formatSpeedRead(soloRead([01;36m[KSPEED_FEEDBACK[m[K));
+[4.568s]       |                                                 [01;36m[K^~~~~~~~~~~~~~[m[K
+[4.568s] In file included from [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:14[m[K:
+[4.568s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kvoid SoloUno::setTorqueFast(double)[m[K’:
+[4.568s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:156:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdatt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.568s]   156 |         int [01;35m[Kdatt[m[K = data;
+[4.568s]       |             [01;35m[K^~~~[m[K
+[4.568s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:[m[K In member function ‘[01m[Kvoid SoloUno::setTorqueSlow(double)[m[K’:
+[4.568s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/SOLOUno.cpp:164:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdatt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.568s]   164 |         int [01;35m[Kdatt[m[K = data;
+[4.568s]       |             [01;35m[K^~~~[m[K
+[4.602s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:[m[K In member function ‘[01m[Kvoid FrontRightSOLO::front_right_torque_callback(const Float64&) const[m[K’:
+[4.602s] [01m[K/home/adding_change_dir_ws/SM-DSAP23-24/src/demo_leds/src/FrontRightSOLO.cpp:49:13:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kresult[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.602s]    49 |         int [01;35m[Kresult[m[K = soloPtr->setSpeedSlow(msg.data);
+[4.602s]       |             [01;35m[K^~~~~~[m[K
+[5.637s] [ 63%] [32m[1mLinking CXX executable imu[0m
+[5.800s] [ 63%] Built target imu
+[7.583s] [ 72%] [32m[1mLinking CXX executable front_right_servo_controller[0m
+[7.769s] [ 81%] [32m[1mLinking CXX executable front_right_solo[0m
+[7.788s] [ 81%] Built target front_right_servo_controller
+[7.949s] [ 90%] [32m[1mLinking CXX executable central_controller[0m
+[7.979s] [ 90%] Built target front_right_solo
+[8.161s] [ 90%] Built target central_controller
+[8.764s] [100%] [32m[1mLinking CXX executable logger[0m
+[9.025s] [100%] Built target logger
+[9.031s] Invoked command in '/home/adding_change_dir_ws/SM-DSAP23-24/build/digital_architecture' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/adding_change_dir_ws/SM-DSAP23-24/build/digital_architecture -- -j24 -l24
+[9.048s] Invoking command in '/home/adding_change_dir_ws/SM-DSAP23-24/build/digital_architecture': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/adding_change_dir_ws/SM-DSAP23-24/build/digital_architecture
+[9.051s] -- Install configuration: ""
+[9.051s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/imu
+[9.051s] -- Set runtime path of "/home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/imu" to ""
+[9.051s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller
+[9.053s] -- Set runtime path of "/home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/central_controller" to ""
+[9.053s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_servo_controller
+[9.054s] -- Set runtime path of "/home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_servo_controller" to ""
+[9.055s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_solo
+[9.056s] -- Set runtime path of "/home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/front_right_solo" to ""
+[9.056s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/logger
+[9.058s] -- Set runtime path of "/home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/lib/digital_architecture/logger" to ""
+[9.058s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/package_run_dependencies/digital_architecture
+[9.058s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/parent_prefix_path/digital_architecture
+[9.059s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.sh
+[9.059s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/ament_prefix_path.dsv
+[9.059s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.sh
+[9.059s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/environment/path.dsv
+[9.059s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.bash
+[9.059s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.sh
+[9.059s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.zsh
+[9.059s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/local_setup.dsv
+[9.059s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.dsv
+[9.060s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/ament_index/resource_index/packages/digital_architecture
+[9.060s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig.cmake
+[9.060s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/cmake/digital_architectureConfig-version.cmake
+[9.060s] -- Installing: /home/adding_change_dir_ws/SM-DSAP23-24/install/digital_architecture/share/digital_architecture/package.xml
+[9.061s] Invoked command in '/home/adding_change_dir_ws/SM-DSAP23-24/build/digital_architecture' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/adding_change_dir_ws/SM-DSAP23-24/build/digital_architecture
