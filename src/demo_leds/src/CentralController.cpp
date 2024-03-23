@@ -49,6 +49,7 @@ public:
 private:
 	size_t steer_;
 	size_t brake_;
+	size_t inc = 15;
 
 	void timer_callback()
   {
@@ -58,8 +59,8 @@ private:
 	auto msg1 = std_msgs::msg::UInt8();
 	auto msg2 = std_msgs::msg::Float64();
 
-    	msg.data = steer_++;  // Static steering angle data
-	msg1.data = brake_++; // static brake angle data
+    	msg.data = steer_ + inc;  // Static steering angle data
+	msg1.data = brake_ + inc; // static brake angle data
 	msg2.data = rand() % 3000; // Random torque data
 
     // Publish to each topic
