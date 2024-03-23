@@ -183,20 +183,24 @@ public:
     }
 private:
     
-    uint32_t formatRead(std::string reading){
-        
-        uint32_t formattedInt = 0;
+     int formatSpeedRead(std::string reading){
+
+        int formattedInt = 0;
 
         unsigned char b0 = static_cast<unsigned char>(reading[4]);
         unsigned char b1 = static_cast<unsigned char>(reading[5]);
         unsigned char b2 = static_cast<unsigned char>(reading[6]);
         unsigned char b3 = static_cast<unsigned char>(reading[7]);
+        
+        formattedInt = (static_cast<uint32_t>(b0) << 24) | (static_cast<uint32_t>(b1) << 16) |
+                       (static_cast<uint32_t>(b2) << 8) | static_cast<uint32_t>(b3);
 
-        formattedInt = (static_cast<uint32_t>(b0) << 24) |
-                       (static_cast<uint32_t>(b1) << 16) |
-                       (static_cast<uint32_t>(b2) << 8) |
-                       static_cast<uint32_t>(b3);
+        if(b0 >= 0x80){ // If data is negative.
 
+            formattedInt = (static_cast<uint32_t>(b2) << 8) | static_cast<uint32_t>(b3); // Only include last 2 bytes as max speed is |30 000| which is less than 0xFFFF.
+            formattedInt *= -1; // Invert the sign of the final number.
+        }
+        
         return formattedInt;
     }
 
