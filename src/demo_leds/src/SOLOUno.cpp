@@ -17,6 +17,8 @@
 #define SPEED_REFERENCE 0x05
 #define TORQUE_REFERENCE 0x04
 #define SPEED_FEEDBACK 0x96
+#define MOTOR_DIRECTION 0x0C
+
 #define PORT_NAME "/dev/ttyACM0"    // A SOLO UNO typically enumerates as ttyACM0.
 #define PORT_NAME_2 "/dev/ttyACM1"  // A SOLO UNO may enumerate as ttyACM1 if a solo uno is already connected.
 
@@ -178,6 +180,27 @@ public:
 
         int dat = floor(data); // Speed reference uses unsigned int for the data.
         return soloWriteSlow(SPEED_REFERENCE, dat);
+        
+    }
+    void setDirectionFast(double data){
+        
+        int dat = floor(data); // Direction uses unsigned int for the data. (0 or 1)
+        soloWriteFast(MOTOR_DIRECTION, dat);
+        
+    }
+
+    int setDirectionSlow(double data){ // Inputs greater than 0 yield clockwise. Inputs less than 1 yield a counter-clockwise rotation.
+
+        int dat;
+
+        if(data >= 1){
+            dat = 1;
+        }
+        else{
+            dat = 0;
+        }
+        
+        return soloWriteSlow(MOTOR_DIRECTION, dat);
         
     }
 private:
