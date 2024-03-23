@@ -131,17 +131,16 @@ public:
          }
   
         std::string reading;
-        serial_port.Read(reading, 10, 50);
-        uint32_t formattedRead = formatRead(reading);  
-        return formattedRead;
+        serial_port.Read(reading, 10, 50);  
+        return reading;
 
     }
 
-    uint64_t readSpeed() {
+    int readSpeed() {
 
-        uint64_t speed = soloRead(SPEED_FEEDBACK);
+        int velocity = formatSpeedRead(soloRead(SPEED_FEEDBACK));
 
-        return speed;
+        return velocity;
 
     }
 
@@ -204,6 +203,22 @@ private:
         return formattedInt;
     }
 
+    static uint32_t formatRead(std::string reading){
+        uint32_t formattedInt = 0;
+
+        unsigned char b0 = static_cast<unsigned char>(reading[4]);
+        unsigned char b1 = static_cast<unsigned char>(reading[5]);
+        unsigned char b2 = static_cast<unsigned char>(reading[6]);
+        unsigned char b3 = static_cast<unsigned char>(reading[7]);
+
+        formattedInt = (static_cast<uint32_t>(b0) << 24) |
+                       (static_cast<uint32_t>(b1) << 16) |
+                       (static_cast<uint32_t>(b2) << 8) |
+                       static_cast<uint32_t>(b3);
+        //std::cout << "Formatted int: " << formattedInt << std::endl;
+
+        return formattedInt;
+    }
     void initSolo() {
          try {
              serial_port.Open(PORT_NAME);
