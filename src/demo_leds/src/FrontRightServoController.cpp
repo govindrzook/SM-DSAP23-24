@@ -82,7 +82,7 @@ int main(int argc, char * argv[])
 	
 
   rclcpp::init(argc, argv);
-  rclcpp::spin_once(std::make_shared<FrontRightServoController>());
+  rclcpp::spin(std::make_shared<FrontRightServoController>());
   rclcpp::shutdown();
   return 0;
 }
