@@ -39,6 +39,7 @@ private:
 
   void steering_position_callback(const std_msgs::msg::UInt8 & msg)
   {
+	  /*
 	char input;
 	std::cout << "---Enter 'F' if yout want to test the frequency output.\n" ;
 	std::cout << "---Enter 'A' if yout want to test the angle output.\n" ;
@@ -60,6 +61,8 @@ private:
 			break;
 
 	}	
+
+	  */
 	servo_steer.setAngle(steer_output,msg.data);  	
 	RCLCPP_INFO(this->get_logger(), "Steering position: '%u'", msg.data);  
 		    
