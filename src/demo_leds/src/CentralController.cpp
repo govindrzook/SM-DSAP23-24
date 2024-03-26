@@ -13,11 +13,15 @@
 
 using std::placeholders::_1;
 
+int steerData[10] = {135, 140, 145, 150, 155, 160, 165, 170, 175, 180};
+int brakeAngle[10] = {130, 120, 110, 100, 90, 80, 70, 60, 50, 40};
+int servoIndex = 0;
+
 class CentralController : public rclcpp::Node
 {
 public:
   CentralController()
-  : Node("central_controller"), steer_(90), brake_(130)
+  : Node("central_controller"), steer_(155), brake_(130)
   {
     	ax_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"aX", 10, std::bind(&CentralController::ax_callback, this, _1));
@@ -49,7 +53,6 @@ public:
 private:
 	size_t steer_;
 	size_t brake_;
-	size_t inc = 15;
 
 	void timer_callback()
   {
@@ -59,8 +62,8 @@ private:
 	auto msg1 = std_msgs::msg::UInt8();
 	auto msg2 = std_msgs::msg::Float64();
 
-    	msg.data = steer_;  // Static steering angle data
-	msg1.data = brake_; // static brake angle data
+    	msg.data = steerData[servoIndex++];  // Static steering angle data
+	msg1.data = brakeData[servoIndex++]; // static brake angle data
 	msg2.data = rand() % 3000; // Random torque data
 
     // Publish to each topic
