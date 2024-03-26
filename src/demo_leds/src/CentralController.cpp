@@ -13,7 +13,7 @@
 
 using std::placeholders::_1;
 
-int steerData[10] = {135, 140, 145, 150, 155, 160, 165, 170, 175, 180};
+int steerAngle[10] = {135, 140, 145, 150, 155, 160, 165, 170, 175, 180};
 int brakeAngle[10] = {130, 120, 110, 100, 90, 80, 70, 60, 50, 40};
 int servoIndex = 0;
 
@@ -62,8 +62,8 @@ private:
 	auto msg1 = std_msgs::msg::UInt8();
 	auto msg2 = std_msgs::msg::Float64();
 
-    	msg.data = steerData[servoIndex++];  // Static steering angle data
-	msg1.data = brakeData[servoIndex++]; // static brake angle data
+    	msg.data = steerAngle[servoIndex++];  // Static steering angle data
+	msg1.data = brakeAngle[servoIndex++]; // static brake angle data
 	msg2.data = rand() % 3000; // Random torque data
 
     // Publish to each topic
