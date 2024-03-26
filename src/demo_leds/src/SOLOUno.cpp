@@ -14,11 +14,19 @@
 #include <cmath>
 #include <bitset>
 
-#define SPEED_REFERENCE 0x05
-#define TORQUE_REFERENCE 0x04
-#define SPEED_FEEDBACK 0x96
-#define MOTOR_DIRECTION 0x0C
+#define SET_SPEED_REFERENCE 0x05
+#define SET_TORQUE_REFERENCE 0x04
+#define READ_SPEED_FEEDBACK 0x96
+#define SET_MOTOR_DIRECTION 0x0C
 #define EMERGENCY_STOP 0x08
+
+#define SET_CONTROL_MODE_TYPE 0x16
+#define SET_TORQUE_PROPORTIONAL_GAIN 0x17
+#define SET_TORQUE_INTEGRAL_GAIN 0x18
+
+#define SET_SPEED_CONTROL_PROPORTIONAL_GAIN 0x0A
+#define SET_SPEED_CONTROL_INTEGRAL_GAIN  0x0B
+#define SET_MOTOR_TYPE 0x15
 
 #define PORT_NAME "/dev/ttyACM0"    // A SOLO UNO typically enumerates as ttyACM0.
 #define PORT_NAME_2 "/dev/ttyACM1"  // A SOLO UNO may enumerate as ttyACM1 if a solo uno is already connected.
@@ -138,7 +146,7 @@ public:
     }
 
     int readSpeed() {
-        uint32_t soloData = getDataFromSoloPacket(soloRead(SPEED_FEEDBACK)); // Get 8 data bytes from the returned packet.
+        uint32_t soloData = getDataFromSoloPacket(soloRead(READ_SPEED_FEEDBACK)); // Get 8 data bytes from the returned packet.
         int velocity = soloInt32toInt(soloData); // Convert the 8 bytes to a usable Int.
         return velocity; // Positive is clockwise, negative is counter-clockwise.
 
@@ -152,21 +160,21 @@ public:
     void setTorqueFast(double data){
 
         int dat = doubleToFixedPoint(data); // Torque reference uses fixed point 32-17 for the data.
-        soloWriteFast(TORQUE_REFERENCE, dat);
+        soloWriteFast(SET_TORQUE_REFERENCE, dat);
 
     }
 
     void setTorqueSlow(double data){
 
         int dat = doubleToFixedPoint(data); // Torque reference uses fixed point 32-17 for the data.
-        soloWriteSlow(TORQUE_REFERENCE, dat);
+        soloWriteSlow(SET_TORQUE_REFERENCE, dat);
       
     }
 
     void setSpeedFast(double data){
 
         int dat = floor(data); // Speed reference uses unsigned int for the data.
-        soloWriteFast(SPEED_REFERENCE, dat);
+        soloWriteFast(SET_SPEED_REFERENCE, dat);
 
 
     }
@@ -175,13 +183,13 @@ public:
         
 
         int dat = floor(data); // Speed reference uses unsigned int for the data.
-        return soloWriteSlow(SPEED_REFERENCE, dat);
+        return soloWriteSlow(SET_SPEED_REFERENCE, dat);
         
     }
     void setDirectionFast(double data){
         
         int dat = floor(data); // Direction uses unsigned int for the data. (0 or 1)
-        soloWriteFast(MOTOR_DIRECTION, dat);
+        soloWriteFast(SET_MOTOR_DIRECTION, dat);
         
     }
 
@@ -196,10 +204,18 @@ public:
             dat = 0;
         }
         
-        return soloWriteSlow(MOTOR_DIRECTION, dat);
+        return soloWriteSlow(SET_MOTOR_DIRECTION, dat);
         
     }
 
+    int setMotorType(u_int32_t motorType){
+        soloWriteSlow(SET_MOTOR_TYPE, motorType);
+    }
+
+    int setControlModeType(u_int32_t controlType){
+        soloWriteSlow(SET_CONTROL_MODE_TYPE, controlType);
+    }
+    
     void emergencyStop(){
         while(1){
             soloWriteFast(EMERGENCY_STOP, 0x00000000); // Send 0's to Estop command indefinitely to gaurantee* success.
