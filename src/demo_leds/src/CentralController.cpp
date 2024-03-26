@@ -62,14 +62,16 @@ private:
 	auto msg1 = std_msgs::msg::UInt8();
 	auto msg2 = std_msgs::msg::Float64();
 
-    	msg.data = steerAngle[servoIndex++];  // Static steering angle data
-	msg1.data = brakeAngle[servoIndex++]; // static brake angle data
+    	msg.data = steerAngle[servoIndex];  // Static steering angle data
+	msg1.data = brakeAngle[servoIndex]; // static brake angle data
 	msg2.data = rand() % 3000; // Random torque data
 
     // Publish to each topic
     	pub1_->publish(msg); //front right steer position
 	pub2_->publish(msg1); // front right brake position
 	pub3_->publish(msg2); // front right torque
+
+	  servoIndex++;
     
   }
 
