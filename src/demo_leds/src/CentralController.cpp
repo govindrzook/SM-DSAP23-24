@@ -13,9 +13,6 @@
 
 using std::placeholders::_1;
 
-int speeds[20] = {10, 20, 40, 60, 100, 60, 40, 20, 10, 0, -10, -20, -40, -60, -100, -60, -40, -20, -10, 0};
-int speedsIndex = 0;
-
 class CentralController : public rclcpp::Node
 {
 public:
@@ -53,6 +50,9 @@ private:
 	size_t steer_;
 	size_t brake_;
 
+	double speeds[20] = {10, 20, 40, 60, 100, 60, 40, 20, 10, 0, -10, -20, -40, -60, -100, -60, -40, -20, -10, 0};
+	int speedsIndex = 0;
+
 	void timer_callback()
   	{
 
@@ -71,6 +71,12 @@ private:
 	pub3_->publish(msg2); // front right torque
 
     speedsIndex++;
+
+	if(speedsIndex > 20){
+		speedsIndex = 0; // Reset speed array index.
+	}
+
+	RCLCPP_INFO(this->get_logger(), "BLDC Speed: '%f'", msg2.data); 
 
   	}
 
