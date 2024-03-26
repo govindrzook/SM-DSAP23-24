@@ -14,6 +14,8 @@
 #include "SOLOUno.cpp"
 
 using std::placeholders::_1;
+int[] speeds = {10, 20, 40, 60, 100, 60, 40, 20, 10, 0, -10, -20, -40, -60, -100, -60, -40, -20, -10, 0 };
+int speedsIntex = 0;
 
 int direction;
 int lastSpeedCommand = 5000; // Impossible last speed for initial value.
@@ -49,29 +51,30 @@ private:
 
   void front_right_torque_callback(const std_msgs::msg::Float64 & msg) const
   {
-	RCLCPP_INFO(this->get_logger(), "SOLO received speed command: '%f'", msg.data); 
-        if(msg.data >= 1){
-          direction = 1;
-        }
-        else{
-          direction = 0;
-        }
+	    RCLCPP_INFO(this->get_logger(), "SOLO received speed command: '%f'", msg.data); 
 
-        if(direction != lastDirection){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
-          soloPtr->setDirectionSlow(direction);
-          lastDirection = direction;
-        }
-        else{
-          RCLCPP_INFO(this->get_logger(), "SOLO received consecutive direction commands");
-        }
+      if(msg.data >= 1){
+        direction = 1;
+      }
+      else{
+        direction = 0;
+      }
 
-        if(msg.data != lastSpeedCommand){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
-          int result = soloPtr->setSpeedSlow(msg.data);
-          lastSpeedCommand = (int) msg.data;
-        }
-        else{
-          RCLCPP_INFO(this->get_logger(), "SOLO received consecutive speed command of: ", msg.data);
-        }
+      if(direction != lastDirection){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
+        soloPtr->setDirectionSlow(direction);
+        lastDirection = direction;
+      }
+      else{
+        RCLCPP_INFO(this->get_logger(), "SOLO received consecutive direction commands");
+      }
+
+      if(msg.data != lastSpeedCommand){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
+        int result = soloPtr->setSpeedSlow(msg.data);
+        lastSpeedCommand = (int) msg.data;
+      }
+      else{
+        RCLCPP_INFO(this->get_logger(), "SOLO received consecutive speed command of: ", msg.data);
+      }
   
   }
  

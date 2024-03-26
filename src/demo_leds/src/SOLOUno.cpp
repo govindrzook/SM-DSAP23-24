@@ -1,9 +1,9 @@
 // #include </usr/local/include/libserial/SerialPort.h>
 // #include </usr/local/include/libserial/SerialPortConstants.h>
+
 #include </usr/include/libserial/SerialPort.h>
 //#include </usr/include/libserial/SerialPortConstants.h>
 
-//#include "SOLOUno.h"
 
 #include <cstdlib>
 #include <fstream>
@@ -18,6 +18,7 @@
 #define TORQUE_REFERENCE 0x04
 #define SPEED_FEEDBACK 0x96
 #define MOTOR_DIRECTION 0x0C
+#define EMERGENCY_STOP 0x08
 
 #define PORT_NAME "/dev/ttyACM0"    // A SOLO UNO typically enumerates as ttyACM0.
 #define PORT_NAME_2 "/dev/ttyACM1"  // A SOLO UNO may enumerate as ttyACM1 if a solo uno is already connected.
@@ -29,9 +30,7 @@ public:
         this->address = add;
         initSolo();
     }
-    static int staticTesting(){
-        return 100;
-    }
+
     int soloWriteFast(char cmd, int data) {
      
         serial_port.FlushIOBuffers();
@@ -139,10 +138,9 @@ public:
     }
 
     int readSpeed() {
-
-        int velocity = formatSpeedRead(soloRead(SPEED_FEEDBACK));
-
-        return velocity;
+        uint32_t soloData = getDataFromSoloPacket(soloRead(SPEED_FEEDBACK)); // Get 8 data bytes from the returned packet.
+        int velocity = soloInt32toInt(soloData); // Convert the 8 bytes to a usable Int.
+        return velocity; // Positive is clockwise, negative is counter-clockwise.
 
     }
 
@@ -153,7 +151,6 @@ public:
     }
     void setTorqueFast(double data){
 
-        int datt = data;
         int dat = doubleToFixedPoint(data); // Torque reference uses fixed point 32-17 for the data.
         soloWriteFast(TORQUE_REFERENCE, dat);
 
@@ -161,7 +158,6 @@ public:
 
     void setTorqueSlow(double data){
 
-        int datt = data;
         int dat = doubleToFixedPoint(data); // Torque reference uses fixed point 32-17 for the data.
         soloWriteSlow(TORQUE_REFERENCE, dat);
       
@@ -203,44 +199,30 @@ public:
         return soloWriteSlow(MOTOR_DIRECTION, dat);
         
     }
-private:
-    
-     int formatSpeedRead(std::string reading){
 
-        int formattedInt = 0;
-
-        unsigned char b0 = static_cast<unsigned char>(reading[4]);
-        unsigned char b1 = static_cast<unsigned char>(reading[5]);
-        unsigned char b2 = static_cast<unsigned char>(reading[6]);
-        unsigned char b3 = static_cast<unsigned char>(reading[7]);
-        
-        formattedInt = (static_cast<uint32_t>(b0) << 24) | (static_cast<uint32_t>(b1) << 16) |
-                       (static_cast<uint32_t>(b2) << 8) | static_cast<uint32_t>(b3);
-
-        if(b0 >= 0x80){ // If data is negative.
-
-            formattedInt = (static_cast<uint32_t>(b2) << 8) | static_cast<uint32_t>(b3); // Only include last 2 bytes as max speed is |30 000| which is less than 0xFFFF.
-            formattedInt *= -1; // Invert the sign of the final number.
+    void emergencyStop(){
+        while(1){
+            soloWriteFast(EMERGENCY_STOP, 0x00000000); // Send 0's to Estop command indefinitely to gaurantee* success.
         }
-        
-        return formattedInt;
     }
+private:
 
-    static uint32_t formatRead(std::string reading){
-        uint32_t formattedInt = 0;
+    uint32_t getDataFromSoloPacket(std::string reading){ // Getting 8 DATA bytes from SOLO packet
+        
+        uint32_t data = 0;
 
         unsigned char b0 = static_cast<unsigned char>(reading[4]);
         unsigned char b1 = static_cast<unsigned char>(reading[5]);
         unsigned char b2 = static_cast<unsigned char>(reading[6]);
         unsigned char b3 = static_cast<unsigned char>(reading[7]);
 
-        formattedInt = (static_cast<uint32_t>(b0) << 24) |
+        data = (static_cast<uint32_t>(b0) << 24) |
                        (static_cast<uint32_t>(b1) << 16) |
                        (static_cast<uint32_t>(b2) << 8) |
                        static_cast<uint32_t>(b3);
         //std::cout << "Formatted int: " << formattedInt << std::endl;
 
-        return formattedInt;
+        return data;
     }
     void initSolo() {
          try {
@@ -262,6 +244,21 @@ private:
 
         std::this_thread::sleep_for(std::chrono::seconds(1)); // Add delay to ensure the port is ready.
 
+    }
+
+    int soloInt32toInt(uint32_t soloData){
+        // This function takes data from a solo packet and will return a usable integer from the signed 
+        // data in a solo packet. This is intended to be used for reads such as Speed Feedback, which can be signed.
+    
+
+        if(soloData < 0x7FFFFFFF){ // If MSB of SOLO Data packet is 0: (data is positive)
+            return (int) soloData; // The data calculated above will be correct.
+        }
+        else{
+            int negativeData = 0xFFFFFFFF - soloData + 0x1; // Conversion from 2's compliment to integer.
+            negativeData = negativeData*-1; // Invert result since it represents a negative number.
+            return negativeData;
+        }
     }
     double fixedPointToDouble(int data){
             // This process was built with guidance from the official SOLO UNO communication manual.
