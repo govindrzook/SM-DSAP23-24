@@ -14,8 +14,6 @@
 #include "SOLOUno.cpp"
 
 using std::placeholders::_1;
-int[] speeds = {10, 20, 40, 60, 100, 60, 40, 20, 10, 0, -10, -20, -40, -60, -100, -60, -40, -20, -10, 0 };
-int speedsIntex = 0;
 
 int direction;
 int lastSpeedCommand = 5000; // Impossible last speed for initial value.
@@ -32,7 +30,7 @@ public:
 
 	  pub1_ = create_publisher<std_msgs::msg::Float64>("frontRightSpeed", 10);
 
-	  timer_ = create_wall_timer(std::chrono::seconds(3), std::bind(&FrontRightSOLO::timer_callback, this));
+	  timer_ = create_wall_timer(std::chrono::seconds(1), std::bind(&FrontRightSOLO::timer_callback, this));
     soloPtr = new SoloUno(0x00);
   }
 

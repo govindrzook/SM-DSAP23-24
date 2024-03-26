@@ -13,6 +13,9 @@
 
 using std::placeholders::_1;
 
+int speeds[20] = {10, 20, 40, 60, 100, 60, 40, 20, 10, 0, -10, -20, -40, -60, -100, -60, -40, -20, -10, 0 };
+int speedsIntex = 0;
+
 class CentralController : public rclcpp::Node
 {
 public:
