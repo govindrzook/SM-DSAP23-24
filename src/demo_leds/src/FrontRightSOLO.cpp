@@ -45,24 +45,27 @@ private:
 
     msg.data = soloPtr->readSpeed();
  
-    RCLCPP_INFO(this->get_logger(), "Speed reading: '%f'", msg.data); 
+    //RCLCPP_INFO(this->get_logger(), "Speed reading: '%f'", msg.data); 
     pub1_->publish(msg); 
   }
 
   void front_right_torque_callback(const std_msgs::msg::Float64 & msg) const
   {
-	    RCLCPP_INFO(this->get_logger(), "SOLO received speed command: '%f'", msg.data); 
+	  RCLCPP_INFO(this->get_logger(), "SOLO received speed command: '%f'", msg.data); 
 
       if(msg.data >= 1){
+        printf("Direction is 1 from ths speed.\n");
         direction = 1;
       }
       else{
+        printf("Direction is 0 from ths speed.\n");
         direction = 0;
       }
 
       if(direction != lastDirection){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
-        //soloPtr->setDirectionSlow(direction);
-        soloPtr->setDirectionFast(direction);
+        soloPtr->setDirectionSlow(direction);
+        printf("Unique direction has been written.\n");
+        //soloPtr->setDirectionFast(direction);
         lastDirection = direction;
       }
       else{
@@ -70,9 +73,10 @@ private:
       }
 
       if(msg.data != lastSpeedCommand){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
-        //int result = soloPtr->setSpeedSlow(msg.data);
-        soloPtr->setSpeedFast(msg.data);
+        int result = soloPtr->setSpeedSlow(msg.data);
+        //soloPtr->setSpeedFast(msg.data);
         lastSpeedCommand = (int) msg.data;
+        printf("Unique speed has been written.\n");
       }
       else{
         RCLCPP_INFO(this->get_logger(), "SOLO received consecutive speed command of: ", msg.data);

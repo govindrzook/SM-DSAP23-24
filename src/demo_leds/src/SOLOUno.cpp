@@ -141,7 +141,11 @@ public:
          }
   
         std::string reading;
-        serial_port.Read(reading, 10, 500);
+        try {
+             serial_port.Read(reading, 10, 500);
+         } catch (const LibSerial::ReadTimeout&) {
+            std::cout << "SOLO UNO READ TIMEOUT" << std::endl;
+         }
          
         return reading;
 
