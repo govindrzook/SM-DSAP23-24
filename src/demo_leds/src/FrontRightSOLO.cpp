@@ -54,22 +54,22 @@ private:
 	  RCLCPP_INFO(this->get_logger(), "SOLO received speed command: '%f'", msg.data); 
 
       if(msg.data >= 1){
-        printf("Direction is 1 from ths speed.\n");
+        //printf("Direction is 1 from ths speed.\n");
         direction = 1;
       }
       else{
-        printf("Direction is 0 from ths speed.\n");
+        //printf("Direction is 0 from ths speed.\n");
         direction = 0;
       }
 
       if(direction != lastDirection){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
         soloPtr->setDirectionSlow(direction);
-        printf("Unique direction has been written.\n");
+        //printf("Unique direction has been written.\n");
         //soloPtr->setDirectionFast(direction);
         lastDirection = direction;
       }
       else{
-        RCLCPP_INFO(this->get_logger(), "SOLO received consecutive direction commands");
+        //RCLCPP_INFO(this->get_logger(), "SOLO received consecutive direction commands");
       }
 
       if(msg.data != lastSpeedCommand){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
@@ -77,10 +77,10 @@ private:
         int result = soloPtr->setSpeedSlow(100);
         //soloPtr->setSpeedFast(msg.data);
         lastSpeedCommand = (int) msg.data;
-        printf("Unique speed has been written.\n");
+        //printf("Unique speed has been written.\n");
       }
       else{
-        RCLCPP_INFO(this->get_logger(), "SOLO received consecutive speed command of: ", msg.data);
+        //RCLCPP_INFO(this->get_logger(), "SOLO received consecutive speed command of: ", msg.data);
       }
   
   }
