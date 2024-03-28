@@ -44,6 +44,8 @@ private:
     auto msg = std_msgs::msg::Float64();
 
     msg.data = soloPtr->readSpeed();
+ 
+    RCLCPP_INFO(this->get_logger(), "Speed reading: '%f'", msg.data); 
     pub1_->publish(msg); 
   }
 
@@ -59,7 +61,8 @@ private:
       }
 
       if(direction != lastDirection){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
-        soloPtr->setDirectionSlow(direction);
+        //soloPtr->setDirectionSlow(direction);
+        soloPtr->setDirectionFast(direction);
         lastDirection = direction;
       }
       else{
@@ -67,7 +70,8 @@ private:
       }
 
       if(msg.data != lastSpeedCommand){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
-        int result = soloPtr->setSpeedSlow(msg.data);
+        //int result = soloPtr->setSpeedSlow(msg.data);
+        soloPtr->setSpeedFast(msg.data);
         lastSpeedCommand = (int) msg.data;
       }
       else{

@@ -50,7 +50,7 @@ private:
 	size_t steer_;
 	size_t brake_;
 
-	double speeds[20] = {10, 20, 40, 60, 100, 60, 40, 20, 10, 0, -10, -20, -40, -60, -100, -60, -40, -20, -10, 0};
+	double speeds[22] = {0, 2, 4, 6, 8, 10, 8, 6, 4, 2, 0, 0, -2, -4, -6, -8, -10, -8, -6, -4, -2, 0};
 	int speedsIndex = 0;
 
 	void timer_callback()
@@ -72,7 +72,7 @@ private:
 
     speedsIndex++;
 
-	if(speedsIndex > 20){
+	if(speedsIndex > 22){
 		speedsIndex = 0; // Reset speed array index.
 	}
 
