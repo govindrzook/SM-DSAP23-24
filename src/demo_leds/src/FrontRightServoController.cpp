@@ -13,6 +13,9 @@
 
 using std::placeholders::_1;
 
+size_t prev_steer = 0;
+size_t prev_brake = 0;
+
 class FrontRightServoController : public rclcpp::Node
 {
 public:
@@ -39,16 +42,23 @@ private:
 
   void steering_position_callback(const std_msgs::msg::UInt8 & msg)
   {
-	 
-	servo_steer.setAngle(steer_output,msg.data);  	
-	RCLCPP_INFO(this->get_logger(), "Steering position: '%u'", msg.data);  
+	if(prev_steer != msg.data){
+		servo_steer.setAngle(steer_output,msg.data);  	
+		RCLCPP_INFO(this->get_logger(), "Steering position: '%u' , Prev: '%u' ", msg.data,prev_steer);
+	}
+	  
+	prev_steer = msg.data;
+	
 		    
   }
  void brake_position_callback(const std_msgs::msg::UInt8 & msg)
-  {	  
-	 
+{
+	if(prev_brake != msg.data){
 	  servo_brake.setAngle(brake_output,msg.data);  
-	  RCLCPP_INFO(this->get_logger(), "Brake position: '%u'", msg.data);  
+	  RCLCPP_INFO(this->get_logger(), "Brake position: '%u' , Prev: '%u' ", msg.data,prev_brake);  
+	}
+
+	prev_brake = msg.data;
 		    
   }
  
