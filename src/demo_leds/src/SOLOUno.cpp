@@ -106,7 +106,11 @@ public:
                                    std::string(1, data_byte[6]) + std::string(1, data_byte[7]) + std::string(1, data_byte[8]) +
                                    std::string(1, data_byte[9]);
 
-        serial_port.Read(reading, 10, 50);
+        try {
+             serial_port.Read(reading, 10, 500);
+         } catch (const LibSerial::ReadTimeout&) {
+            std::cout << "SOLO UNO READ TIMEOUT" << std::endl;
+         }
 
          if (reading != writtenValue) {
              std::cout << "SOLO UNO WRITE ERROR" << std::endl;
