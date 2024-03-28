@@ -43,8 +43,15 @@ private:
   void steering_position_callback(const std_msgs::msg::UInt8 & msg)
   {
 	if(prev_steer != msg.data){
-		servo_steer.setAngle(steer_output,msg.data);  	
-		RCLCPP_INFO(this->get_logger(), "Steering position: '%u' , Prev: '%u' ", msg.data,prev_steer);
+		if(msg.data >= 130 && msg.data <= 180){
+			servo_steer.setAngle(steer_output,msg.data);  	
+			RCLCPP_INFO(this->get_logger(), "Steering position: '%u' , Prev: '%u' ", msg.data,prev_steer);
+		}else{
+			printf("Steering angle is out of range.\n");
+		}
+		
+	}else{
+		printf("Steering angle input is the same as the previous one.\n");
 	}
 	  
 	prev_steer = msg.data;
@@ -54,8 +61,14 @@ private:
  void brake_position_callback(const std_msgs::msg::UInt8 & msg)
 {
 	if(prev_brake != msg.data){
-	  servo_brake.setAngle(brake_output,msg.data);  
-	  RCLCPP_INFO(this->get_logger(), "Brake position: '%u' , Prev: '%u' ", msg.data,prev_brake);  
+		if(msg.data <= 130 && msg.data >= 40){
+			  servo_brake.setAngle(brake_output,msg.data);  
+			  RCLCPP_INFO(this->get_logger(), "Brake position: '%u' , Prev: '%u' ", msg.data,prev_brake);  
+		}else{
+			printf("Braking angle is out of range.\n");
+		}
+	}else{
+		printf("Braking angle input is the same as the previous one.\n");
 	}
 
 	prev_brake = msg.data;
