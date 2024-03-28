@@ -73,7 +73,8 @@ private:
       }
 
       if(msg.data != lastSpeedCommand){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
-        int result = soloPtr->setSpeedSlow(msg.data);
+        //int result = soloPtr->setSpeedSlow(msg.data);
+        int result = soloPtr->setSpeedSlow(100);
         //soloPtr->setSpeedFast(msg.data);
         lastSpeedCommand = (int) msg.data;
         printf("Unique speed has been written.\n");
