@@ -50,7 +50,7 @@ private:
 	size_t steer_;
 	size_t brake_;
 
-	double speeds[10] = {1, 40, 100, 40, 0, 0, -40, -100, -40, -1};
+	double speeds[10] = {1, 100, 200, 100, 0, 0, -100, -200, -100, -1};
 	int speedsIndex = 0;
 
 	void timer_callback()
