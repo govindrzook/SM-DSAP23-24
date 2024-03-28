@@ -56,11 +56,15 @@ private:
       if(msg.data >= 1){
         //printf("Direction is 1 from ths speed.\n");
         direction = 1;
+        //soloPtr->setDirectionSlow(direction);
       }
-      else{
+      else if(msg.data < 0){
         //printf("Direction is 0 from ths speed.\n");
         direction = 0;
+        //soloPtr->setDirectionSlow(direction);
       }
+
+     
 
       if(direction != lastDirection){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
         soloPtr->setDirectionSlow(direction);
@@ -74,7 +78,7 @@ private:
 
       if(msg.data != lastSpeedCommand){ // Ensure that the current command is not the same as the last to avoid unneccessary writes.
         //int result = soloPtr->setSpeedSlow(msg.data);
-        int result = soloPtr->setSpeedSlow(100);
+         int result = soloPtr->setSpeedSlow(abs(msg.data));
         //soloPtr->setSpeedFast(msg.data);
         lastSpeedCommand = (int) msg.data;
         //printf("Unique speed has been written.\n");

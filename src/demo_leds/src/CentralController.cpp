@@ -42,15 +42,16 @@ public:
    	pub2_ = create_publisher<std_msgs::msg::UInt8>("frontRightBrakePosition", 10);
 	pub3_ = create_publisher<std_msgs::msg::Float64>("frontRightTorque", 10);
 
-	timer_ = create_wall_timer(std::chrono::seconds(3), std::bind(&CentralController::timer_callback, this));
+	timer_ = create_wall_timer(std::chrono::seconds(5), std::bind(&CentralController::timer_callback, this));
 
   }
 
 private:
 	size_t steer_;
 	size_t brake_;
+	const static int arraySize = 17;
 
-	double speeds[10] = {1, 100, 200, 100, 0, 0, -100, -200, -100, -1};
+	double speeds[arraySize] = {0, 50, 100, 150, 150, 200, 150, 100, 50, 0, -50,-100, -150, -200, -150, -100, -50};
 	int speedsIndex = 0;
 
 	void timer_callback()
@@ -72,7 +73,7 @@ private:
 
     
 
-	if(speedsIndex >= 9){
+	if(speedsIndex >= arraySize -1){
 		speedsIndex = 0; // Reset speed array index.
 	}
 	else{

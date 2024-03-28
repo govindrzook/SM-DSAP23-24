@@ -1,2 +1,0 @@
-Invoking command in '/home/sysmodel/28march_ws/SM-DSAP23-24/build/digital_architecture': /usr/bin/cmake /home/sysmodel/28march_ws/SM-DSAP23-24/src/demo_leds -DCMAKE_INSTALL_PREFIX=/home/sysmodel/28march_ws/SM-DSAP23-24/install/digital_architecture
-Invoked command in '/home/sysmodel/28march_ws/SM-DSAP23-24/build/digital_architecture' returned '1': /usr/bin/cmake /home/sysmodel/28march_ws/SM-DSAP23-24/src/demo_leds -DCMAKE_INSTALL_PREFIX=/home/sysmodel/28march_ws/SM-DSAP23-24/install/digital_architecture
