@@ -5,9 +5,11 @@
 #include <fstream>
 #include <iostream>
 
+#include <stdio.h>
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 #include "std_msgs/msg/u_int8.hpp"
+
 
 #include "SysModel_PWMServoDriver.cpp"
 
@@ -45,7 +47,8 @@ private:
 	if(prev_steer != msg.data){
 		if(msg.data >= 130 && msg.data <= 180){
 			servo_steer.setAngle(steer_output,msg.data);  	
-			RCLCPP_INFO(this->get_logger(), "Steering position: '%u' , Prev: '%u' ", msg.data,prev_steer);
+			RCLCPP_INFO(this->get_logger(), "Steering position: '%u'", msg.data);
+			printf("Prev: %d\n",prev_steer);
 		}else{
 			printf("Steering angle is out of range.\n");
 		}
@@ -62,8 +65,9 @@ private:
 {
 	if(prev_brake != msg.data){
 		if(msg.data <= 130 && msg.data >= 40){
-			  servo_brake.setAngle(brake_output,msg.data);  
-			  RCLCPP_INFO(this->get_logger(), "Brake position: '%u' , Prev: '%u' ", msg.data,prev_brake);  
+			servo_brake.setAngle(brake_output,msg.data);  
+			RCLCPP_INFO(this->get_logger(), "Brake position: '%u'", msg.data);  
+			printf("Prev: %d\n",prev_brake);
 		}else{
 			printf("Braking angle is out of range.\n");
 		}
