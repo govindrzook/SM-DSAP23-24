@@ -50,7 +50,7 @@ private:
 	size_t steer_;
 	size_t brake_;
 
-	double speeds[22] = {0, 40, 45, 50, 60, 100, 60, 50, 45,  40, 0, 0, -40, -45, -50, -60, -100, -60, -50, -45,  -40, 0};
+	double speeds[10] = {1, 40, 100, 40, 0, 0, -40, -100, -40, -1};
 	int speedsIndex = 0;
 
 	void timer_callback()
@@ -70,13 +70,16 @@ private:
 	pub2_->publish(msg1); // front right brake position
 	pub3_->publish(msg2); // front right torque
 
-    speedsIndex++;
+    
 
-	if(speedsIndex > 22){
+	if(speedsIndex >= 9){
 		speedsIndex = 0; // Reset speed array index.
 	}
+	else{
+		speedsIndex++;
+	}
 
-	RCLCPP_INFO(this->get_logger(), "BLDC Speed: '%f'", msg2.data); 
+	//RCLCPP_INFO(this->get_logger(), "BLDC Speed: '%f'", msg2.data); 
 
   	}
 
@@ -117,7 +120,7 @@ private:
   	}
   	void front_right_speed_callback(const std_msgs::msg::Float64 & msg) const
   	{
-		RCLCPP_INFO(this->get_logger(), "Front right BLDC speed reading: '%f'", msg.data);  	    
+		RCLCPP_INFO(this->get_logger(), "Front right BLDC speed feedback: '%f'", msg.data);  	    
   	}
 
 	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr ax_subscription;

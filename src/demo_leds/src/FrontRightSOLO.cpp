@@ -19,6 +19,7 @@ int direction;
 int lastSpeedCommand = 5000; // Impossible last speed for initial value.
 int lastDirection = 2; // Impossible direction for initial value.
 
+
 class FrontRightSOLO : public rclcpp::Node
 {
 public:
@@ -33,12 +34,11 @@ public:
 	  timer_ = create_wall_timer(std::chrono::seconds(1), std::bind(&FrontRightSOLO::timer_callback, this));
     soloPtr = new SoloUno(0x00);
   }
-
+  
 private:
 
   SoloUno* soloPtr;
   
-
 	void timer_callback()
   {
     auto msg = std_msgs::msg::Float64();
@@ -97,5 +97,6 @@ int main(int argc, char * argv[])
   rclcpp::init(argc, argv);
   rclcpp::spin(std::make_shared<FrontRightSOLO>());
   rclcpp::shutdown();
+
   return 0;
 }
