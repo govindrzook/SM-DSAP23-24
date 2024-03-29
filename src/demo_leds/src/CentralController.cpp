@@ -15,7 +15,7 @@ using std::placeholders::_1;
 int arraySize = 10;
 int steerAngle[arraySize] = {135, 140, 145, 150, 155, 160, 165, 170, 175, 180};
 int brakeAngle[arraySize] = {130, 120, 110, 100, 90, 80, 70, 60, 50, 40};
-int steerAngleRepeated[10] = {135, 140, 140, 150, 155,165, 165, 170, 175, 180};
+int steerAngleRepeated[arraySize] = {135, 140, 140, 150, 155,165, 165, 170, 175, 180};
 int servoIndex = 0;
 
 
