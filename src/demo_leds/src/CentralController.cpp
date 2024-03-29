@@ -72,11 +72,11 @@ private:
 	pub2_->publish(msg1); // front right brake position
 	pub3_->publish(msg2); // front right torque
 
-	if(servoIndex < 10){
-		servoIndex++;
-	}else{
-		servoIndex = 0;
-	}
+	// if(servoIndex < 10){
+	// 	servoIndex++;
+	// }else{
+	// 	servoIndex = 0;
+	// }
 
 	  printf("servoIndex: %d\n",servoIndex);
     
