@@ -77,6 +77,8 @@ private:
 	}else{
 		servoIndex = 0;
 	}
+
+	  printf("servoIndex: %d\n",servoIndex);
     
   }
 
