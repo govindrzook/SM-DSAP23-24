@@ -45,6 +45,7 @@ public:
 	pub3_ = create_publisher<std_msgs::msg::Float64>("frontRightTorque", 10);
 
 	timer_ = create_wall_timer(std::chrono::seconds(5), std::bind(&CentralController::timer_callback, this));
+	timer_steer = create_wall_timer(std::chrono::seconds(1), std::bind(&CentralController::timer_steer_callback, this));
 
   }
 
@@ -62,11 +63,29 @@ private:
 	int speedsIndex = 0;
 	int brakeFlag;
 
-	void timer_callback()
-  	{
+	void timer_steer_callback(){
+
+		auto msg = std_msgs::msg::UInt8();
+
+		msg.data = steerAngle[servoIndex];  // Static steering angle data
+
+		pub1_->publish(msg); //front right steer position
+
+		if(servoIndex >= servoArraySize - 1){
+			servoIndex = 0;
+		}else{
+			servoIndex++;
+		}
+		
+	}
+
+
+
+	void timer_callback(){
+
 	
 	// Create a message to publish
-	auto msg = std_msgs::msg::UInt8();
+	
 	auto msg1 = std_msgs::msg::UInt8();
 	auto msg2 = std_msgs::msg::Float64();
 
@@ -76,22 +95,18 @@ if(speeds[speedsIndex] == 0){
 	msg1.data = 130;
 }
 		
-    	msg.data = steerAngle[servoIndex];  // Static steering angle data
+    	
 	// msg1.data = brakeAngle[servoIndex]; // static brake angle data
 	msg2.data = speeds[speedsIndex]; // Set speed to be current index in speeds array for demo.
 
 	
 
     // Publish to each topic
-    	pub1_->publish(msg); //front right steer position
+    	
 	pub2_->publish(msg1); // front right brake position
 	pub3_->publish(msg2); // front right torque
 
-	if(servoIndex >= servoArraySize - 1){
-		servoIndex = 0;
-	}else{
-		servoIndex++;
-	}
+	
 
 	  printf("servoIndex: %d\n",servoIndex);
 
@@ -164,6 +179,7 @@ if(speeds[speedsIndex] == 0){
 	rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr pub2_;
 	rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub3_;
   	rclcpp::TimerBase::SharedPtr timer_;
+	rclcpp::TimerBase::SharedPtr timer_steer;
 
 };
 
