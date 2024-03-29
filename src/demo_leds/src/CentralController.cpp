@@ -58,7 +58,7 @@ private:
 
 
 
-int servoArraySize = 10;
+const static int servoArraySize = 10;
 int steerAngle[servoArraySize] = {135, 140, 145, 150, 155, 160, 165, 170, 175, 180};
 int brakeAngle[servoArraySize] = {130, 120, 110, 100, 90, 80, 70, 60, 50, 40};
 int steerAngleRepeated[servoArraySize] = {135, 140, 140, 150, 155,165, 165, 170, 175, 180};
