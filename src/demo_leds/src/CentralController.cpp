@@ -13,11 +13,13 @@
 
 using std::placeholders::_1;
 
+
+
 class CentralController : public rclcpp::Node
 {
 public:
   CentralController()
-  : Node("central_controller"), steer_(85), brake_(85)
+  : Node("central_controller"), steer_(155), brake_(130)
   {
     	ax_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"aX", 10, std::bind(&CentralController::ax_callback, this, _1));
@@ -54,6 +56,14 @@ private:
 	double speeds[arraySize] = {0, 100, 100, 150, 150, 200, 150, 100, 100, 0, -100,-100, -150, -200, -150, -100, -100};
 	int speedsIndex = 0;
 
+
+
+int servoArraySize = 10;
+int steerAngle[servoArraySize] = {135, 140, 145, 150, 155, 160, 165, 170, 175, 180};
+int brakeAngle[servoArraySize] = {130, 120, 110, 100, 90, 80, 70, 60, 50, 40};
+int steerAngleRepeated[servoArraySize] = {135, 140, 140, 150, 155,165, 165, 170, 175, 180};
+int servoIndex = 0;
+
 	void timer_callback()
   	{
 
@@ -62,14 +72,24 @@ private:
 	auto msg1 = std_msgs::msg::UInt8();
 	auto msg2 = std_msgs::msg::Float64();
 
-    msg.data = steer_++;  // steering angle data
-	msg1.data = brake_++; //  brake angle data
+
+    	msg.data = steerAngle[servoIndex];  // Static steering angle data
+	msg1.data = brakeAngle[servoIndex]; // static brake angle data
 	msg2.data = speeds[speedsIndex]; // Set speed to be current index in speeds array for demo.
+
 
     // Publish to each topic
     	pub1_->publish(msg); //front right steer position
 	pub2_->publish(msg1); // front right brake position
 	pub3_->publish(msg2); // front right torque
+
+	if(servoIndex >= servoArraySize - 1){
+		servoIndex = 0;
+	}else{
+		servoIndex++;
+	}
+
+	  printf("servoIndex: %d\n",servoIndex);
 
     
 
