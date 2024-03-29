@@ -105,7 +105,11 @@ public:
                                    std::string(1, data_byte[6]) + std::string(1, data_byte[7]) + std::string(1, data_byte[8]) +
                                    std::string(1, data_byte[9]);
 
-        serial_port.Read(reading, 10, 1);
+        try {
+             serial_port.Read(reading, 10, 500);
+         } catch (const LibSerial::ReadTimeout&) {
+            std::cout << "SOLO UNO READ TIMEOUT" << std::endl;
+         }
 
          if (reading != writtenValue) {
              std::cout << "SOLO UNO WRITE ERROR" << std::endl;
@@ -140,7 +144,12 @@ public:
          }
   
         std::string reading;
-        serial_port.Read(reading, 10, 50);  
+        try {
+             serial_port.Read(reading, 10, 500);
+         } catch (const LibSerial::ReadTimeout&) {
+            std::cout << "SOLO UNO READ TIMEOUT" << std::endl;
+         }
+         
         return reading;
 
     }
@@ -221,7 +230,6 @@ public:
             soloWriteFast(EMERGENCY_STOP, 0x00000000); // Send 0's to Estop command indefinitely to gaurantee* success.
         }
     }
-private:
 
     uint32_t getDataFromSoloPacket(std::string reading){ // Getting 8 DATA bytes from SOLO packet
         
@@ -240,6 +248,10 @@ private:
 
         return data;
     }
+
+private:
+
+    
     void initSolo() {
          try {
              serial_port.Open(PORT_NAME);

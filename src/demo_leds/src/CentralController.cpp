@@ -42,15 +42,16 @@ public:
    	pub2_ = create_publisher<std_msgs::msg::UInt8>("frontRightBrakePosition", 10);
 	pub3_ = create_publisher<std_msgs::msg::Float64>("frontRightTorque", 10);
 
-	timer_ = create_wall_timer(std::chrono::seconds(3), std::bind(&CentralController::timer_callback, this));
+	timer_ = create_wall_timer(std::chrono::seconds(5), std::bind(&CentralController::timer_callback, this));
 
   }
 
 private:
 	size_t steer_;
 	size_t brake_;
+	const static int arraySize = 17;
 
-	double speeds[20] = {10, 20, 40, 60, 100, 60, 40, 20, 10, 0, -10, -20, -40, -60, -100, -60, -40, -20, -10, 0};
+	double speeds[arraySize] = {0, 50, 100, 150, 150, 200, 150, 100, 50, 0, -50,-100, -150, -200, -150, -100, -50};
 	int speedsIndex = 0;
 
 	void timer_callback()
@@ -70,13 +71,16 @@ private:
 	pub2_->publish(msg1); // front right brake position
 	pub3_->publish(msg2); // front right torque
 
-    speedsIndex++;
+    
 
-	if(speedsIndex > 20){
+	if(speedsIndex >= arraySize -1){
 		speedsIndex = 0; // Reset speed array index.
 	}
+	else{
+		speedsIndex++;
+	}
 
-	RCLCPP_INFO(this->get_logger(), "BLDC Speed: '%f'", msg2.data); 
+	//RCLCPP_INFO(this->get_logger(), "BLDC Speed: '%f'", msg2.data); 
 
   	}
 
@@ -117,7 +121,7 @@ private:
   	}
   	void front_right_speed_callback(const std_msgs::msg::Float64 & msg) const
   	{
-		RCLCPP_INFO(this->get_logger(), "Front right BLDC speed reading: '%f'", msg.data);  	    
+		RCLCPP_INFO(this->get_logger(), "Front right BLDC speed feedback: '%f'", msg.data);  	    
   	}
 
 	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr ax_subscription;
