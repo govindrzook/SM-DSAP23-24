@@ -12,11 +12,7 @@
 
 
 using std::placeholders::_1;
-int arraySize = 10;
-int steerAngle[arraySize] = {135, 140, 145, 150, 155, 160, 165, 170, 175, 180};
-int brakeAngle[arraySize] = {130, 120, 110, 100, 90, 80, 70, 60, 50, 40};
-int steerAngleRepeated[arraySize] = {135, 140, 140, 150, 155,165, 165, 170, 175, 180};
-int servoIndex = 0;
+
 
 
 class CentralController : public rclcpp::Node
@@ -48,82 +44,106 @@ public:
    	pub2_ = create_publisher<std_msgs::msg::UInt8>("frontRightBrakePosition", 10);
 	pub3_ = create_publisher<std_msgs::msg::Float64>("frontRightTorque", 10);
 
-	timer_ = create_wall_timer(std::chrono::seconds(3), std::bind(&CentralController::timer_callback, this));
+	timer_ = create_wall_timer(std::chrono::seconds(5), std::bind(&CentralController::timer_callback, this));
 
   }
 
 private:
 	size_t steer_;
 	size_t brake_;
+	const static int arraySize = 17;
+
+	double speeds[arraySize] = {0, 100, 100, 150, 150, 200, 150, 100, 100, 0, -100,-100, -150, -200, -150, -100, -100};
+	int speedsIndex = 0;
+
+
+
+int servoArraySize = 10;
+int steerAngle[servoArraySize] = {135, 140, 145, 150, 155, 160, 165, 170, 175, 180};
+int brakeAngle[servoArraySize] = {130, 120, 110, 100, 90, 80, 70, 60, 50, 40};
+int steerAngleRepeated[servoArraySize] = {135, 140, 140, 150, 155,165, 165, 170, 175, 180};
+int servoIndex = 0;
 
 	void timer_callback()
-  {
+  	{
 
     // Create a message to publish
-    	auto msg = std_msgs::msg::UInt8();
+    auto msg = std_msgs::msg::UInt8();
 	auto msg1 = std_msgs::msg::UInt8();
 	auto msg2 = std_msgs::msg::Float64();
 
+
     	msg.data = steerAngle[servoIndex];  // Static steering angle data
 	msg1.data = brakeAngle[servoIndex]; // static brake angle data
-	msg2.data = rand() % 3000; // Random torque data
+	msg2.data = speeds[speedsIndex]; // Set speed to be current index in speeds array for demo.
+
 
     // Publish to each topic
     	pub1_->publish(msg); //front right steer position
 	pub2_->publish(msg1); // front right brake position
 	pub3_->publish(msg2); // front right torque
 
-	if(servoIndex >= arraySize - 1){
+	if(servoIndex >= servoArraySize - 1){
 		servoIndex = 0;
 	}else{
 		servoIndex++;
 	}
 
 	  printf("servoIndex: %d\n",servoIndex);
-    
-  }
 
-  void ax_callback(const std_msgs::msg::Float64 & msg) const
-  {
-	    	RCLCPP_INFO(this->get_logger(), "aX: '%f'", msg.data);  
+    
+
+	if(speedsIndex >= arraySize -1){
+		speedsIndex = 0; // Reset speed array index.
+	}
+	else{
+		speedsIndex++;
+	}
+
+	//RCLCPP_INFO(this->get_logger(), "BLDC Speed: '%f'", msg2.data); 
+
+  	}
+
+  	void ax_callback(const std_msgs::msg::Float64 & msg) const
+  	{
+	    RCLCPP_INFO(this->get_logger(), "aX: '%f'", msg.data);  
 		    
-  }
- void ay_callback(const std_msgs::msg::Float64 & msg) const
-  {
-	    	RCLCPP_INFO(this->get_logger(), "aY: '%f'", msg.data);  
+  	}
+ 	void ay_callback(const std_msgs::msg::Float64 & msg) const
+  	{
+	    RCLCPP_INFO(this->get_logger(), "aY: '%f'", msg.data);  
 		    
-  }
- void az_callback(const std_msgs::msg::Float64 & msg) const
-  {
-	    	RCLCPP_INFO(this->get_logger(), "aZ: '%f'", msg.data);  
+  	}
+ 	void az_callback(const std_msgs::msg::Float64 & msg) const
+  	{
+	    RCLCPP_INFO(this->get_logger(), "aZ: '%f'", msg.data);  
 		    
-  }
- void gx_callback(const std_msgs::msg::Float64 & msg) const
-  {
-	    	RCLCPP_INFO(this->get_logger(), "gX: '%f'", msg.data);  
+  	}
+ 	void gx_callback(const std_msgs::msg::Float64 & msg) const
+  	{
+	    RCLCPP_INFO(this->get_logger(), "gX: '%f'", msg.data);  
 		    
-  }
- void gy_callback(const std_msgs::msg::Float64 & msg) const
-  {
-	    	RCLCPP_INFO(this->get_logger(), "gY: '%f'", msg.data);  
+  	}
+ 	void gy_callback(const std_msgs::msg::Float64 & msg) const
+  	{
+	    RCLCPP_INFO(this->get_logger(), "gY: '%f'", msg.data);  
 		    
-  }
- void gz_callback(const std_msgs::msg::Float64 & msg) const
-  {
-	    	RCLCPP_INFO(this->get_logger(), "gZ: '%f'", msg.data);  
+  	}
+ 	void gz_callback(const std_msgs::msg::Float64 & msg) const
+  	{
+	    RCLCPP_INFO(this->get_logger(), "gZ: '%f'", msg.data);  
 		    
-  }
+  	}
 
 	void temp_callback(const std_msgs::msg::Float64 & msg) const
-  {
-	    	RCLCPP_INFO(this->get_logger(), "temp: '%f'", msg.data);  
-		    
-  }
-  void front_right_speed_callback(const std_msgs::msg::Float64 & msg) const
-  {
-	    	RCLCPP_INFO(this->get_logger(), "Front right BLDC speed reading: '%f'", msg.data);  
-		    
-  }
+  	{
+	    RCLCPP_INFO(this->get_logger(), "temp: '%f'", msg.data);      
+  	}
+  	void front_right_speed_callback(const std_msgs::msg::Float64 & msg) const
+  	{
+		RCLCPP_INFO(this->get_logger(), "Front right BLDC speed feedback: '%f'", msg.data);  	    
+  	}
+
 	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr ax_subscription;
 	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr ay_subscription;
 	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr az_subscription;
