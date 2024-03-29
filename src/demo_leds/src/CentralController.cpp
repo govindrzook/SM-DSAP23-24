@@ -61,20 +61,21 @@ private:
 	const static int arraySize = 17;
 	double speeds[arraySize] = {100, 100, 150, 150, 200, 150, 100, 100, 0, -100,-100, -150, -200, -150, -100, -100, 0};
 	int speedsIndex = 0;
-	int brakeFlag;
+	int brakeFlag = 0;
 
 	void timer_steer_callback(){
-
-		auto msg = std_msgs::msg::UInt8();
-
-		msg.data = steerAngle[servoIndex];  // Static steering angle data
-
-		pub1_->publish(msg); //front right steer position
-
-		if(servoIndex >= servoArraySize - 1){
-			servoIndex = 0;
-		}else{
-			servoIndex++;
+		if(brakeFlag == 0){
+			auto msg = std_msgs::msg::UInt8();
+	
+			msg.data = steerAngle[servoIndex];  // Static steering angle data
+	
+			pub1_->publish(msg); //front right steer position
+	
+			if(servoIndex >= servoArraySize - 1){
+				servoIndex = 0;
+			}else{
+				servoIndex++;
+			}
 		}
 		
 	}
@@ -90,9 +91,11 @@ private:
 	auto msg2 = std_msgs::msg::Float64();
 
 if(speeds[speedsIndex] == 0){
-	msg1.data = 100;
+	msg1.data = 100; //braking
+	brakeFlag = 1;
 }else{
 	msg1.data = 130;
+	brakeFlag = 0;
 }
 		
     	
