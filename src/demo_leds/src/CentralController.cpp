@@ -52,14 +52,15 @@ public:
 private:
 	size_t steer_;
 	size_t brake_;
-	
-	const static int servoArraySize = 10;
-	int steerAngle[servoArraySize] = {135, 140, 145, 150, 155, 160, 165, 170, 175, 180};
-	int brakeAngle[servoArraySize] = {130, 120, 110, 100, 90, 80, 70, 60, 50, 40};
+
+	const static int steerArraySize = 19;	
+	const static int brakeArraySize = 10;
+	int steerAngle[steerArraySize] = {135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 175, 170, 165, 160, 155, 150, 145, 140, 135};
+	int brakeAngle[brakeArraySize] = {130, 120, 110, 100, 90, 80, 70, 60, 50, 40};
 	int servoIndex = 0;
 	
 	const static int arraySize = 17;
-	double speeds[arraySize] = {100, 100, 150, 150, 200, 150, 100, 100, 0, -100,-100, -150, -200, -150, -100, -100, 0};
+	double speeds[arraySize] = {100, 125, 150, 150, 200, 150, 125, 100, 0, -100,-125, -150, -200, -150, -125, -100, 0};
 	int speedsIndex = 0;
 	int brakeFlag = 0;
 
@@ -71,7 +72,7 @@ private:
 	
 			pub1_->publish(msg); //front right steer position
 	
-			if(servoIndex >= servoArraySize - 1){
+			if(servoIndex >= steerArraySize - 1){
 				servoIndex = 0;
 			}else{
 				servoIndex++;
@@ -94,7 +95,7 @@ if(speeds[speedsIndex] == 0){
 	msg1.data = 100; //braking
 	brakeFlag = 1;
 }else{
-	msg1.data = 130;
+	msg1.data = 130; // 0% braking
 	brakeFlag = 0;
 }
 		
