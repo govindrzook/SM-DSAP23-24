@@ -51,7 +51,7 @@ private:
 	size_t brake_;
 	const static int arraySize = 17;
 
-	double speeds[arraySize] = {0, 50, 100, 150, 150, 200, 150, 100, 50, 0, -50,-100, -150, -200, -150, -100, -50};
+	double speeds[arraySize] = {0, 100, 100, 150, 150, 200, 150, 100, 100, 0, -100,-100, -150, -200, -150, -100, -100};
 	int speedsIndex = 0;
 
 	void timer_callback()
