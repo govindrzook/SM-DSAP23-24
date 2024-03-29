@@ -51,32 +51,36 @@ public:
 private:
 	size_t steer_;
 	size_t brake_;
+	
+	const static int servoArraySize = 10;
+	int steerAngle[servoArraySize] = {135, 140, 145, 150, 155, 160, 165, 170, 175, 180};
+	int brakeAngle[servoArraySize] = {130, 120, 110, 100, 90, 80, 70, 60, 50, 40};
+	int servoIndex = 0;
+	
 	const static int arraySize = 17;
-
-	double speeds[arraySize] = {0, 100, 100, 150, 150, 200, 150, 100, 100, 0, -100,-100, -150, -200, -150, -100, -100};
+	double speeds[arraySize] = {100, 100, 150, 150, 200, 150, 100, 100, 0, -100,-100, -150, -200, -150, -100, -100, 0};
 	int speedsIndex = 0;
-
-
-
-const static int servoArraySize = 10;
-int steerAngle[servoArraySize] = {135, 140, 145, 150, 155, 160, 165, 170, 175, 180};
-int brakeAngle[servoArraySize] = {130, 120, 110, 100, 90, 80, 70, 60, 50, 40};
-int steerAngleRepeated[servoArraySize] = {135, 140, 140, 150, 155,165, 165, 170, 175, 180};
-int servoIndex = 0;
+	int brakeFlag;
 
 	void timer_callback()
   	{
-
-    // Create a message to publish
-    auto msg = std_msgs::msg::UInt8();
+	
+	// Create a message to publish
+	auto msg = std_msgs::msg::UInt8();
 	auto msg1 = std_msgs::msg::UInt8();
 	auto msg2 = std_msgs::msg::Float64();
 
-
+if(speeds[speedsIndex] == 0){
+	msg1.data = 100;
+}else{
+	msg1.data = 130;
+}
+		
     	msg.data = steerAngle[servoIndex];  // Static steering angle data
-	msg1.data = brakeAngle[servoIndex]; // static brake angle data
+	// msg1.data = brakeAngle[servoIndex]; // static brake angle data
 	msg2.data = speeds[speedsIndex]; // Set speed to be current index in speeds array for demo.
 
+	
 
     // Publish to each topic
     	pub1_->publish(msg); //front right steer position
