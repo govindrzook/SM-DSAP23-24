@@ -77,7 +77,9 @@ private:
 			}else{
 				servoIndex++;
 			}
+			printf("servoIndex: %d\n",servoIndex);
 		}
+		
 		
 	}
 
@@ -112,7 +114,7 @@ if(speeds[speedsIndex] == 0){
 
 	
 
-	  printf("servoIndex: %d\n",servoIndex);
+	  
 
     
 
