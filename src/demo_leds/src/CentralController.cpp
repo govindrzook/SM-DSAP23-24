@@ -17,6 +17,7 @@ int key = 5;
 int speed = 0;
 int steer = 155;
 int brake = 130;
+int input;
 
 // Create a message to publish
 	auto msg = std_msgs::msg::UInt8();
@@ -63,79 +64,110 @@ private:
 	
 
 	void timer_callback(){
-// while(flag){
-			printf("Enter '1' if you want to change the speed.\n");
-			printf("Enter '2' if you want to change the the steering angle.\n");
-			printf("Enter '3' if you want to change the set the braking angle.\n");
-			printf("Enter '4' if you want to display all the output values.\n");
-			printf("Enter '0' if you want to stop\n");
-			scanf(" %d",&key);
-			
-			switch(key){
-				case 0:
-					flag = 0;
-					printf("STOP.\n");
-					rclcpp::shutdown();
-					break;
-
-				case 1:
-					printf("Please enter the speed in RPM [min - max]\n.");
-					scanf(" %d",&speed);
-					printf("Speed: %d\n",speed);
-
-					// rclcpp::spin_some(std::make_shared<CentralController>());
-					break;
-				
-				case 2:
-					printf("Please enter the steering angle [130 to 180]\n.");
-					scanf(" %d",&steer);
-					printf("Steer: %d\n",steer);
-					// rclcpp::spin_some(std::make_shared<CentralController>());
-					break;
-
-				case 3:
-					printf("Please enter the braking angle [40 to 130]\n.");
-					scanf(" %d",&brake);
-					printf("Brake: %d\n",brake);
-					// rclcpp::spin_some(std::make_shared<CentralController>());
-					break;
-				
-				case 4:
-					printf("OUTPUTS\n.");
-					// rclcpp::spin_some(std::make_shared<CentralController>());
-					break;
-
-				default:
-					printf("Invalid key. Please try again.\n");
-					break;
-			}
 	
-	
+		printf("Select from the following options:\n")
+		printf("  '1' if you want to change the speed.\n");
+		printf("  '2' if you want to change the the steering angle.\n");
+		printf("  '3' if you want to change the set the braking angle.\n");
+		printf("  '4' if you want to display all the output values.\n");
+		printf("  '0' if you want to stop\n\n");
+		scanf(" %d",&key);
 		
-	switch(key){
-		case 1:
-			msg2.data = speed;
-			break;
-		case 2:
-			msg.data = steer;
-			break;
-		case 3:
-			msg1.data = brake;
-			break;
-		default:
-			printf("No changes.\n");
-			break;
+		switch(key){
+			int signal = 1;
+			case 0:
+				flag = 0;
+				printf("STOP\n");
+				rclcpp::shutdown();
+				break;
 
-	}
+			case 1:
+				while(signal){
+					printf(">> Please enter the speed in RPM (CCW) [100 - 200 ] or (CW) [-100 to -200]\n.");
+					printf(">> To return to the previous menu, enter -1.\n");
+					scanf(" %d",&input);
 
-// }
+					if(input == -1){ 
+						signal = 0;
+						return; // speed is the same
+					}else if((input >= 100 && input <=200) || (input <= -100 && input >= -200) || (input == 0)){
+						speed = input;
+					}else{
+						printf("Input speed is out of range. Please try again.\n");//speed is the same
+					}
+
+					if(speed != 0){
+						brake = 130;	//no brakes
+					}else{
+						brake = 180; //100%
+					}
+
+					
+					
+
+				}
+
+				break;
+			
+			case 2:
+				while(signal){
+					printf(">> Please enter the steering angle [130 (<-RIGHT) to (LEFT->) 180]\n.");
+					printf(">> To return to the previous menu, enter -1.\n\n");
+					scanf(" %d",&input);
+
+					if(input == -1){
+						signal = 0;
+						return;
+					}else if(input >= 130 && input <= 180){
+						steer = input;
+					}else{
+						printf("Input steer is out of range. Please try again.\n");
+					}
+					
+					
+					
+
+				}
+				break;
+
+			case 3:
+				while(signal){
+					printf(">> Please enter the braking angle [40 (<-100% braking) to (0% braking ->) 130 ]\n.");
+					printf(">> To return to the previous menu, enter -1.\n\n");
+					scanf(" %d",&input);
+
+					if(input == -1){
+						signal = 0;
+						return;
+					}else if(input >= 40 && input <= 130){
+						brake = input;
+						speed = 0;
+					}else{
+						printf("Input brake is out of range. Please try again.\n");
+					}	
+					
+				}
+				
+				break;
+			
+			case 4:
+				printf("Steering Angle: %d\n",steer);
+				printf("Braking Angle: %d\n",brake);
+				break;
+
+			default:
+				printf("Invalid key. Please try again.\n");
+				break;
+		}
+
+
+		msg.data = steer;
+		msg1.data = brake;
+		msg2.data = speed;
 	
-
-    // Publish to each topic
-    pub1_->publish(msg); //front right steer position
-	pub2_->publish(msg1); // front right brake position
+	pub1_->publish(msg); //front right steer position
+	pub2_->publish(msg1); // front right brake position	
 	pub3_->publish(msg2); // front right torque
-
 	
 
   	}
