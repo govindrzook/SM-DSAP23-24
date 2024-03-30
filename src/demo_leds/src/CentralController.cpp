@@ -99,7 +99,7 @@ private:
 					if(speed != 0){
 						brake = 130;	//no brakes
 					}else{
-						brake = 180; //100%
+						brake = 40; //100%
 					}
 
 					pub();
@@ -113,7 +113,7 @@ private:
 			
 			case 2:
 				while(flag){
-					printf(">> Please enter the steering angle [130 (<-RIGHT) to (LEFT->) 180].\n");
+					printf(">> Please enter the steering angle [180 (<--LEFT) to (RIGHT-->) 130].\n");
 					printf(">> To return to the previous menu, enter -1.\n\n");
 					scanf(" %d",&input);
 
@@ -135,7 +135,7 @@ private:
 
 			case 3:
 				while(flag){
-					printf(">> Please enter the braking angle [40 (<-100%% braking) to (0%% braking ->) 130 ].\n");
+					printf(">> Please enter the braking angle [130 (<--0%% braking) to (100%% braking-->)40 ].\n");
 					printf(">> To return to the previous menu, enter -1.\n\n");
 					scanf(" %d",&input);
 
