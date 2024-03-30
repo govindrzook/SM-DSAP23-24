@@ -67,7 +67,7 @@ private:
 			switch(key){
 				case 0:
 					flag = 0;
-					printf("STOP\n.")
+					printf("STOP.\n");
 					rclcpp::shutdown();
 					break;
 
