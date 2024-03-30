@@ -44,8 +44,12 @@ public:
    	pub2_ = create_publisher<std_msgs::msg::UInt8>("frontRightBrakePosition", 10);
 	pub3_ = create_publisher<std_msgs::msg::Float64>("frontRightTorque", 10);
 
+	pub_heartbeat = create_publisher<std_msgs::msg::UInt8>("heartbeat", 10);
+	pub_estop = create_publisher<std_msgs::msg::UInt8>("estop", 10);
+
 	timer_ = create_wall_timer(std::chrono::seconds(5), std::bind(&CentralController::timer_callback, this));
 	timer_steer = create_wall_timer(std::chrono::seconds(1), std::bind(&CentralController::timer_steer_callback, this));
+	timer_heartbeat = create_wall_timer(std::chrono::milliseconds(250), std::bind(&CentralController::heartbeat_callback, this));
 
   }
 
@@ -83,49 +87,45 @@ private:
 		
 	}
 
+	void heartbeat_callback(){
 
+		auto msg = std_msgs::msg::UInt8();
+		msg.data = 1;
+		pub_heartbeat->publish(msg);
+		printf("Publishing heartbeat: \n");
+	}
 
 	void timer_callback(){
 
-	
 	// Create a message to publish
 	
-	auto msg1 = std_msgs::msg::UInt8();
-	auto msg2 = std_msgs::msg::Float64();
+		auto msg1 = std_msgs::msg::UInt8();
+		auto msg2 = std_msgs::msg::Float64();
 
-if(speeds[speedsIndex] == 0){
-	msg1.data = 100; //braking
-	brakeFlag = 1;
-}else{
-	msg1.data = 130; // 0% braking
-	brakeFlag = 0;
-}
+		if(speeds[speedsIndex] == 0){
+			msg1.data = 100; //braking
+			brakeFlag = 1;
+		}else{
+			msg1.data = 130; // 0% braking
+			brakeFlag = 0;
+		}
 		
-    	
-	// msg1.data = brakeAngle[servoIndex]; // static brake angle data
-	msg2.data = speeds[speedsIndex]; // Set speed to be current index in speeds array for demo.
+		// msg1.data = brakeAngle[servoIndex]; // static brake angle data
+		msg2.data = speeds[speedsIndex]; // Set speed to be current index in speeds array for demo.
 
-	
+		// Publish to each topic
+			
+		pub2_->publish(msg1); // front right brake position
+		pub3_->publish(msg2); // front right torque
+		
+		if(speedsIndex >= arraySize -1){
+			speedsIndex = 0; // Reset speed array index.
+		}
+		else{
+			speedsIndex++;
+		}
 
-    // Publish to each topic
-    	
-	pub2_->publish(msg1); // front right brake position
-	pub3_->publish(msg2); // front right torque
-
-	
-
-	  
-
-    
-
-	if(speedsIndex >= arraySize -1){
-		speedsIndex = 0; // Reset speed array index.
-	}
-	else{
-		speedsIndex++;
-	}
-
-	//RCLCPP_INFO(this->get_logger(), "BLDC Speed: '%f'", msg2.data); 
+		//RCLCPP_INFO(this->get_logger(), "BLDC Speed: '%f'", msg2.data); 
 
   	}
 
@@ -184,8 +184,11 @@ if(speeds[speedsIndex] == 0){
 	rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr pub1_;
 	rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr pub2_;
 	rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub3_;
+	rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr pub_heartbeat;
+	rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr pub_estop;
   	rclcpp::TimerBase::SharedPtr timer_;
 	rclcpp::TimerBase::SharedPtr timer_steer;
+	rclcpp::TimerBase::SharedPtr timer_heartbeat;
 
 };
 
