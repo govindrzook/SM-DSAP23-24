@@ -14,9 +14,9 @@
 using std::placeholders::_1;
 int flag = 1;
 int key;
-double speed = 0;
-double steer = 155;
-double brake = 130;
+int speed = 0;
+int steer = 155;
+int brake = 130;
 
 
 class CentralController : public rclcpp::Node
@@ -179,6 +179,7 @@ int main(int argc, char * argv[])
 		case 1:
 			printf("Please enter the speed in RPM [min - max]\n.");
 			scanf(" %d",&speed);
+
 			rclcpp::spin_some(std::make_shared<CentralController>());
 			break;
 		
