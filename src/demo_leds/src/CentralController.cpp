@@ -48,7 +48,7 @@ public:
    	pub2_ = create_publisher<std_msgs::msg::UInt8>("frontRightBrakePosition", 10);
 	pub3_ = create_publisher<std_msgs::msg::Float64>("frontRightTorque", 10);
 
-	timer_ = create_wall_timer(std::chrono::seconds(5), std::bind(&CentralController::timer_callback, this));
+	// timer_ = create_wall_timer(std::chrono::seconds(5), std::bind(&CentralController::timer_callback, this));
 	timer_ask = create_wall_timer(std::chrono::seconds(1), std::bind(&CentralController::timer_ask_callback, this));
 
   }
@@ -209,7 +209,7 @@ private:
 	rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr pub1_;
 	rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr pub2_;
 	rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub3_;
-  	rclcpp::TimerBase::SharedPtr timer_;
+  	// rclcpp::TimerBase::SharedPtr timer_;
 	rclcpp::TimerBase::SharedPtr timer_ask;
 
 };
