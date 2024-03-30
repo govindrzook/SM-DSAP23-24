@@ -53,7 +53,7 @@ public:
    	pub2_ = create_publisher<std_msgs::msg::UInt8>("frontRightBrakePosition", 10);
 	pub3_ = create_publisher<std_msgs::msg::Float64>("frontRightTorque", 10);
 
-	timer_ = create_wall_timer(std::chrono::seconds(1), std::bind(&CentralController::timer_callback, this));
+	timer_ = create_wall_timer(std::chrono::seconds(5), std::bind(&CentralController::timer_callback, this));
 	// timer_ask = create_wall_timer(std::chrono::seconds(1), std::bind(&CentralController::timer_ask_callback, this));
 
   }
@@ -63,7 +63,7 @@ private:
 	
 
 	void timer_callback(){
-while(flag){
+// while(flag){
 			printf("Enter '1' if you want to change the speed.\n");
 			printf("Enter '2' if you want to change the the steering angle.\n");
 			printf("Enter '3' if you want to change the set the braking angle.\n");
@@ -128,7 +128,7 @@ while(flag){
 
 	}
 
-}
+// }
 	
 
     // Publish to each topic
