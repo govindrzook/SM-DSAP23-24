@@ -23,7 +23,7 @@ class CentralController : public rclcpp::Node
 {
 public:
   CentralController()
-  : Node("central_controller"), steer_(155), brake_(130)
+  : Node("central_controller")
   {
     	ax_subscription = this->create_subscription<std_msgs::msg::Float64>(
       		"aX", 10, std::bind(&CentralController::ax_callback, this, _1));
@@ -162,7 +162,7 @@ private:
 
 int main(int argc, char * argv[])
 {
-	int signal = 1;
+
   rclcpp::init(argc, argv);
   while(flag){
 	printf("Enter '1' if you want to change the speed.\n");
@@ -195,7 +195,7 @@ int main(int argc, char * argv[])
 			break;
 		
 		case 4:
-			printf("OUTPUTS\n.")
+			printf("OUTPUTS\n.");
 			rclcpp::spin_some(std::make_shared<CentralController>());
 			break;
 
