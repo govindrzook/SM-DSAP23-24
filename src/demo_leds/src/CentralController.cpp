@@ -18,6 +18,7 @@ int speed = 0;
 int steer = 155;
 int brake = 130;
 int input;
+int signal;
 
 // Create a message to publish
 	auto msg = std_msgs::msg::UInt8();
@@ -71,10 +72,11 @@ private:
 		printf("  '3' if you want to change the set the braking angle.\n");
 		printf("  '4' if you want to display all the output values.\n");
 		printf("  '0' if you want to stop\n\n");
+		signal = 1;
 		scanf(" %d",&key);
 		
 		switch(key){
-			int signal = 1;
+			
 			case 0:
 				flag = 0;
 				printf("STOP\n");
@@ -111,7 +113,7 @@ private:
 			
 			case 2:
 				while(signal){
-					printf(">> Please enter the steering angle [130 (<-RIGHT) to (LEFT->) 180]\n.");
+					printf(">> Please enter the steering angle [130 (<-RIGHT) to (LEFT->) 180].\n");
 					printf(">> To return to the previous menu, enter -1.\n\n");
 					scanf(" %d",&input);
 
@@ -132,7 +134,7 @@ private:
 
 			case 3:
 				while(signal){
-					printf(">> Please enter the braking angle [40 (<-100%% braking) to (0%% braking ->) 130 ]\n.");
+					printf(">> Please enter the braking angle [40 (<-100%% braking) to (0%% braking ->) 130 ].\n");
 					printf(">> To return to the previous menu, enter -1.\n\n");
 					scanf(" %d",&input);
 
