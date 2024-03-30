@@ -18,7 +18,6 @@ int speed = 0;
 int steer = 155;
 int brake = 130;
 int input;
-int signal;
 
 // Create a message to publish
 	auto msg = std_msgs::msg::UInt8();
@@ -72,25 +71,24 @@ private:
 		printf("  '3' if you want to change the set the braking angle.\n");
 		printf("  '4' if you want to display all the output values.\n");
 		printf("  '0' if you want to stop\n\n");
-		signal = 1;
+		flag = 1;
 		scanf(" %d",&key);
 		
 		switch(key){
 			
 			case 0:
-				flag = 0;
 				printf("STOP\n");
 				rclcpp::shutdown();
 				break;
 
 			case 1:
-				while(signal){
+				while(flag){
 					printf(">> Please enter the speed in RPM (CCW) [100 - 200 ] or (CW) [-100 to -200].\n");
 					printf(">> To return to the previous menu, enter -1.\n");
 					scanf(" %d",&input);
 
 					if(input == -1){ 
-						signal = 0;
+						flag = 0;
 						break; // speed is the same
 					}else if((input >= 100 && input <=200) || (input <= -100 && input >= -200) || (input == 0)){
 						speed = input;
@@ -112,13 +110,13 @@ private:
 				break;
 			
 			case 2:
-				while(signal){
+				while(flag){
 					printf(">> Please enter the steering angle [130 (<-RIGHT) to (LEFT->) 180].\n");
 					printf(">> To return to the previous menu, enter -1.\n\n");
 					scanf(" %d",&input);
 
 					if(input == -1){
-						signal = 0;
+						flag = 0;
 						break;
 					}else if(input >= 130 && input <= 180){
 						steer = input;
@@ -133,13 +131,13 @@ private:
 				break;
 
 			case 3:
-				while(signal){
+				while(flag){
 					printf(">> Please enter the braking angle [40 (<-100%% braking) to (0%% braking ->) 130 ].\n");
 					printf(">> To return to the previous menu, enter -1.\n\n");
 					scanf(" %d",&input);
 
 					if(input == -1){
-						signal = 0;
+						flag = 0;
 						break;
 					}else if(input >= 40 && input <= 130){
 						brake = input;
