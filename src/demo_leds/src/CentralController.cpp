@@ -170,27 +170,27 @@ int main(int argc, char * argv[])
 	printf("Enter '3' if you want to change the set the braking angle.\n");
 	printf("Enter '4' if you want to display all the output values.\n");
 	printf("Enter '0' if you want to stop\n");
-	scanf(" %d",key);
+	scanf(" %d",&key);
 	switch(key){
 		case 0:
 			flag = 0;
 			break;
 
 		case 1:
-			printf("Please enter the speed in RPM [min - max]\n.")
-			scanf(" %d",speed);
+			printf("Please enter the speed in RPM [min - max]\n.");
+			scanf(" %d",&speed);
 			rclcpp::spin_some(std::make_shared<CentralController>());
 			break;
 		
 		case 2:
-			printf("Please enter the steering angle [130 to 180]\n.")
-			scanf(" %d",steer);
+			printf("Please enter the steering angle [130 to 180]\n.");
+			scanf(" %d",&steer);
 			rclcpp::spin_some(std::make_shared<CentralController>());
 			break;
 
 		case 3:
-			printf("Please enter the braking angle [40 to 130]\n.")
-			scanf(" %d",brake);
+			printf("Please enter the braking angle [40 to 130]\n.");
+			scanf(" %d",&brake);
 			rclcpp::spin_some(std::make_shared<CentralController>());
 			break;
 		
