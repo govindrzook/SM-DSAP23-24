@@ -12,7 +12,11 @@
 
 
 using std::placeholders::_1;
-
+int flag = 1;
+int key;
+double speed = 0;
+double steer = 155;
+double brake = 130;
 
 
 class CentralController : public rclcpp::Node
@@ -45,128 +49,95 @@ public:
 	pub3_ = create_publisher<std_msgs::msg::Float64>("frontRightTorque", 10);
 
 	timer_ = create_wall_timer(std::chrono::seconds(5), std::bind(&CentralController::timer_callback, this));
-	timer_steer = create_wall_timer(std::chrono::seconds(1), std::bind(&CentralController::timer_steer_callback, this));
+	// timer_steer = create_wall_timer(std::chrono::seconds(1), std::bind(&CentralController::timer_steer_callback, this));
 
   }
 
 private:
-	size_t steer_;
-	size_t brake_;
-
-	const static int steerArraySize = 19;	
-	const static int brakeArraySize = 10;
-	int steerAngle[steerArraySize] = {135, 140, 145, 150, 155, 160, 165, 170, 175, 180, 175, 170, 165, 160, 155, 150, 145, 140, 135};
-	int brakeAngle[brakeArraySize] = {130, 120, 110, 100, 90, 80, 70, 60, 50, 40};
-	int servoIndex = 0;
-	
-	const static int arraySize = 17;
-	double speeds[arraySize] = {100, 125, 150, 150, 200, 150, 125, 100, 0, -100,-125, -150, -200, -150, -125, -100, 0};
-	int speedsIndex = 0;
-	int brakeFlag = 0;
-
-	void timer_steer_callback(){
-		if(brakeFlag == 0){
-			auto msg = std_msgs::msg::UInt8();
-	
-			msg.data = steerAngle[servoIndex];  // Static steering angle data
-	
-			pub1_->publish(msg); //front right steer position
-	
-			if(servoIndex >= steerArraySize - 1){
-				servoIndex = 0;
-			}else{
-				servoIndex++;
-			}
-			printf("servoIndex: %d\n",servoIndex);
-		}
-		
-		
-	}
-
-
 
 	void timer_callback(){
 
 	
 	// Create a message to publish
-	
+	auto msg = std_msgs::msg::UInt8();
 	auto msg1 = std_msgs::msg::UInt8();
 	auto msg2 = std_msgs::msg::Float64();
-
-if(speeds[speedsIndex] == 0){
-	msg1.data = 100; //braking
-	brakeFlag = 1;
-}else{
-	msg1.data = 130; // 0% braking
-	brakeFlag = 0;
-}
 		
-    	
-	// msg1.data = brakeAngle[servoIndex]; // static brake angle data
-	msg2.data = speeds[speedsIndex]; // Set speed to be current index in speeds array for demo.
+	switch(key){
+		case 1:
+			msg2.data = speed;
+			break;
+		case 2:
+			msg.data = steer;
+			break;
+		case 3:
+			msg1.data = brake;
+			break;
+		default:
+			printf("No changes.\n");
+			break;
 
+	}
 	
 
     // Publish to each topic
-    	
+    pub1_->publish(msg); //front right steer position
 	pub2_->publish(msg1); // front right brake position
 	pub3_->publish(msg2); // front right torque
 
 	
 
-	  
-
-    
-
-	if(speedsIndex >= arraySize -1){
-		speedsIndex = 0; // Reset speed array index.
-	}
-	else{
-		speedsIndex++;
-	}
-
-	//RCLCPP_INFO(this->get_logger(), "BLDC Speed: '%f'", msg2.data); 
-
   	}
 
   	void ax_callback(const std_msgs::msg::Float64 & msg) const
   	{
-	    RCLCPP_INFO(this->get_logger(), "aX: '%f'", msg.data);  
-		    
+		if(key == 4){
+			RCLCPP_INFO(this->get_logger(), "aX: '%f'", msg.data);  
+		}
+	    	    
   	}
  	void ay_callback(const std_msgs::msg::Float64 & msg) const
   	{
+		if(key == 4){
 	    RCLCPP_INFO(this->get_logger(), "aY: '%f'", msg.data);  
-		    
+		}
   	}
  	void az_callback(const std_msgs::msg::Float64 & msg) const
   	{
+		if(key == 4){
 	    RCLCPP_INFO(this->get_logger(), "aZ: '%f'", msg.data);  
-		    
+		}
   	}
  	void gx_callback(const std_msgs::msg::Float64 & msg) const
   	{
+		if(key == 4){
 	    RCLCPP_INFO(this->get_logger(), "gX: '%f'", msg.data);  
-		    
+		}
   	}
  	void gy_callback(const std_msgs::msg::Float64 & msg) const
   	{
+		if(key == 4){
 	    RCLCPP_INFO(this->get_logger(), "gY: '%f'", msg.data);  
-		    
+		}
   	}
  	void gz_callback(const std_msgs::msg::Float64 & msg) const
   	{
+		if(key == 4){
 	    RCLCPP_INFO(this->get_logger(), "gZ: '%f'", msg.data);  
-		    
+		}
   	}
 
 	void temp_callback(const std_msgs::msg::Float64 & msg) const
   	{
-	    RCLCPP_INFO(this->get_logger(), "temp: '%f'", msg.data);      
+		if(key == 4){
+	    RCLCPP_INFO(this->get_logger(), "temp: '%f'", msg.data); 
+		}     
   	}
   	void front_right_speed_callback(const std_msgs::msg::Float64 & msg) const
   	{
-		RCLCPP_INFO(this->get_logger(), "Front right BLDC speed feedback: '%f'", msg.data);  	    
+		if(key == 4){
+		RCLCPP_INFO(this->get_logger(), "Front right BLDC speed feedback: '%f'", msg.data); 
+		} 	    
   	}
 
 	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr ax_subscription;
@@ -185,14 +156,56 @@ if(speeds[speedsIndex] == 0){
 	rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr pub2_;
 	rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub3_;
   	rclcpp::TimerBase::SharedPtr timer_;
-	rclcpp::TimerBase::SharedPtr timer_steer;
+	// rclcpp::TimerBase::SharedPtr timer_steer;
 
 };
 
 int main(int argc, char * argv[])
 {
+	int signal = 1;
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<CentralController>());
+  while(flag){
+	printf("Enter '1' if you want to change the speed.\n");
+	printf("Enter '2' if you want to change the the steering angle.\n");
+	printf("Enter '3' if you want to change the set the braking angle.\n");
+	printf("Enter '4' if you want to display all the output values.\n");
+	printf("Enter '0' if you want to stop\n");
+	scanf(" %d",key);
+	switch(key){
+		case 0:
+			flag = 0;
+			break;
+
+		case 1:
+			printf("Please enter the speed in RPM [min - max]\n.")
+			scanf(" %d",speed);
+			rclcpp::spin_some(std::make_shared<CentralController>());
+			break;
+		
+		case 2:
+			printf("Please enter the steering angle [130 to 180]\n.")
+			scanf(" %d",steer);
+			rclcpp::spin_some(std::make_shared<CentralController>());
+			break;
+
+		case 3:
+			printf("Please enter the braking angle [40 to 130]\n.")
+			scanf(" %d",brake);
+			rclcpp::spin_some(std::make_shared<CentralController>());
+			break;
+		
+		case 4:
+			printf("OUTPUTS\n.")
+			rclcpp::spin_some(std::make_shared<CentralController>());
+			break;
+
+		default:
+			printf("Invalid key. Please try again.\n");
+			break;
+	}
+
+	
+  }
   rclcpp::shutdown();
   return 0;
 }
