@@ -65,7 +65,7 @@ private:
 
 	void timer_callback(){
 	
-		printf("Select from the following options:\n")
+		printf("Select from the following options:\n");
 		printf("  '1' if you want to change the speed.\n");
 		printf("  '2' if you want to change the the steering angle.\n");
 		printf("  '3' if you want to change the set the braking angle.\n");
@@ -83,17 +83,17 @@ private:
 
 			case 1:
 				while(signal){
-					printf(">> Please enter the speed in RPM (CCW) [100 - 200 ] or (CW) [-100 to -200]\n.");
+					printf(">> Please enter the speed in RPM (CCW) [100 - 200 ] or (CW) [-100 to -200].\n");
 					printf(">> To return to the previous menu, enter -1.\n");
 					scanf(" %d",&input);
 
 					if(input == -1){ 
 						signal = 0;
-						return; // speed is the same
+						break; // speed is the same
 					}else if((input >= 100 && input <=200) || (input <= -100 && input >= -200) || (input == 0)){
 						speed = input;
 					}else{
-						printf("Input speed is out of range. Please try again.\n");//speed is the same
+						printf("\nInput speed is out of range. Please try again.\n\n");//speed is the same
 					}
 
 					if(speed != 0){
@@ -117,11 +117,11 @@ private:
 
 					if(input == -1){
 						signal = 0;
-						return;
+						break;
 					}else if(input >= 130 && input <= 180){
 						steer = input;
 					}else{
-						printf("Input steer is out of range. Please try again.\n");
+						printf("\nInput steer is out of range. Please try again.\n\n");
 					}
 					
 					
@@ -132,18 +132,18 @@ private:
 
 			case 3:
 				while(signal){
-					printf(">> Please enter the braking angle [40 (<-100% braking) to (0% braking ->) 130 ]\n.");
+					printf(">> Please enter the braking angle [40 (<-100%% braking) to (0%% braking ->) 130 ]\n.");
 					printf(">> To return to the previous menu, enter -1.\n\n");
 					scanf(" %d",&input);
 
 					if(input == -1){
 						signal = 0;
-						return;
+						break;
 					}else if(input >= 40 && input <= 130){
 						brake = input;
 						speed = 0;
 					}else{
-						printf("Input brake is out of range. Please try again.\n");
+						printf("\nInput brake is out of range. Please try again.\n\n");
 					}	
 					
 				}
@@ -156,7 +156,7 @@ private:
 				break;
 
 			default:
-				printf("Invalid key. Please try again.\n");
+				printf("\nInvalid key. Please try again.\n\n");
 				break;
 		}
 
