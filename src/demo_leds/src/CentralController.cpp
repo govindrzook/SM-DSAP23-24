@@ -102,6 +102,8 @@ private:
 						brake = 180; //100%
 					}
 
+					pub();
+
 					
 					
 
@@ -124,6 +126,7 @@ private:
 						printf("\nInput steer is out of range. Please try again.\n\n");
 					}
 					
+					pub();
 					
 					
 
@@ -145,6 +148,7 @@ private:
 					}else{
 						printf("\nInput brake is out of range. Please try again.\n\n");
 					}	
+					pub();
 					
 				}
 				
@@ -159,8 +163,11 @@ private:
 				printf("\nInvalid key. Please try again.\n\n");
 				break;
 		}
+	
 
+  	}
 
+	void pub(){
 		msg.data = steer;
 		msg1.data = brake;
 		msg2.data = speed;
@@ -168,9 +175,7 @@ private:
 	pub1_->publish(msg); //front right steer position
 	pub2_->publish(msg1); // front right brake position	
 	pub3_->publish(msg2); // front right torque
-	
-
-  	}
+	}
 
   	void ax_callback(const std_msgs::msg::Float64 & msg) const
   	{
