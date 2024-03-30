@@ -89,10 +89,10 @@ private:
 
     // Convert the timepoint to a time_t
     std::time_t now_c = std::chrono::system_clock::to_time_t(time_point);
-    RCLCPP_INFO(this->get_logger(), "now '%ld'", now_c);
-    RCLCPP_INFO(this->get_logger(), "last '%ld'", last_c);
+    //RCLCPP_INFO(this->get_logger(), "now '%ld'", now_c);
+    //RCLCPP_INFO(this->get_logger(), "last '%ld'", last_c);
     std::time_t duration = now_c - last_c;
-    RCLCPP_INFO(this->get_logger(), "duration '%ld'", duration);
+    //RCLCPP_INFO(this->get_logger(), "duration '%ld'", duration);
     if(duration > 1){
       RCLCPP_INFO(this->get_logger(), "E-STOP"); 
       soloPtr->emergencyStop();  
@@ -101,9 +101,9 @@ private:
   }
 
   void heartbeat_callback(const std_msgs::msg::UInt8 & msg){
-    RCLCPP_INFO(this->get_logger(), "HEARTBEAT TOPIC CALLBACK");
+    //RCLCPP_INFO(this->get_logger(), "HEARTBEAT TOPIC CALLBACK");
      this->updateLast();
-    RCLCPP_INFO(this->get_logger(), "last '%ld'", last_c);
+    //RCLCPP_INFO(this->get_logger(), "last '%ld'", last_c);
   }
 
   void front_right_torque_callback(const std_msgs::msg::Float64 & msg) const
