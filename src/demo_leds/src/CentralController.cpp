@@ -92,7 +92,7 @@ private:
 		auto msg = std_msgs::msg::UInt8();
 		msg.data = 1;
 		pub_heartbeat->publish(msg);
-		printf("Publishing heartbeat: \n");
+		
 	}
 
 	void timer_callback(){
