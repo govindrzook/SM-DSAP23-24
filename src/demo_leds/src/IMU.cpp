@@ -39,7 +39,7 @@ public:
     pub7_ = create_publisher<std_msgs::msg::Float64>("temp", 10);
 
     // Create a timer to update the topics every 1 ms
-    timer_ = create_wall_timer(std::chrono::milliseconds(500), std::bind(&IMU::timer_callback, this));
+    timer_ = create_wall_timer(std::chrono::seconds(1), std::bind(&IMU::timer_callback, this));
     
   }
 
