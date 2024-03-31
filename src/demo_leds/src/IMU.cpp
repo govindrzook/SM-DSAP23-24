@@ -13,16 +13,6 @@
 #include "std_msgs/msg/float64.hpp"
 #include "std_msgs/msg/string.hpp"
 
-/*struct SensorData {
-    float x_accel_g;
-    float y_accel_g;
-    float z_accel_g;
-    float x_gyro_dps;
-    float y_gyro_dps;
-    float z_gyro_dps;
-    float temp_c;
-};*/
-
 class IMU : public rclcpp::Node
 {
 public:
@@ -61,13 +51,13 @@ private:
 
     imu_obj.read_and_convert_sensor_data();
 
-    msg.data = imu_obj.x_accel_g;  // Example data, replace with your actual data
-    msg1.data = imu_obj.y_accel_g;  // Example data, replace with your actual data
-    msg2.data = imu_obj.z_accel_g;  // Example data, replace with your actual data
-    msg3.data = imu_obj.x_gyro_dps;  // Example data, replace with your actual data
-    msg4.data = imu_obj.y_gyro_dps;  // Example data, replace with your actual data
-    msg5.data = imu_obj.z_gyro_dps;  // Example data, replace with your actual data
-    msg6.data = imu_obj.temp_c;  // Example data, replace with your actual data
+    msg.data = imu_obj.x_accel_g;
+    msg1.data = imu_obj.y_accel_g;
+    msg2.data = imu_obj.z_accel_g; 
+    msg3.data = imu_obj.x_gyro_dps;  
+    msg4.data = imu_obj.y_gyro_dps; 
+    msg5.data = imu_obj.z_gyro_dps;  
+    msg6.data = imu_obj.temp_c;  
 
     // Publish to each topic
     pub1_->publish(msg);
@@ -86,9 +76,6 @@ private:
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub5_;
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub6_;
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub7_;
-  
-  //RCLCPP_INFO(this->get_logger(), "Publishing sensor data");
-
   rclcpp::TimerBase::SharedPtr timer_;
 };
 
