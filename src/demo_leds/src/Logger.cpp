@@ -117,7 +117,8 @@ private:
     void front_right_torque_callback(const std_msgs::msg::Float64 & msg)
     {
 	    if(frSoloTorqueCount >= loggerPeriod){
-        
+		    
+        RCLCPP_INFO(this->get_logger(), "_______________________________________________________________________\n");
         RCLCPP_INFO(this->get_logger(), "FR-SOLO set speed command: '%f'", msg.data); 
 
         file << generateTimestamp() << " FR-SOLO speed command: " << msg.data << std::endl;
@@ -257,6 +258,7 @@ private:
 
       if(frBrakeCounter >= loggerPeriod){
         RCLCPP_INFO(this->get_logger(), "FR-Brake position: '%u'", msg.data);
+	RCLCPP_INFO(this->get_logger(), "_______________________________________________________________________\n");
         file << "[" << generateTimestamp() << "] FR-Braking servo position: " << static_cast<unsigned int>(msg.data) << std::endl; 
         frBrakeCounter = 0;
       }
