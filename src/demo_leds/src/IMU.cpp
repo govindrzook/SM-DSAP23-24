@@ -1,15 +1,25 @@
+
+#include <functional>
+#include <memory>
+#include <fstream>
+#include <iostream>
+#include <stdio.h>
+
+#include "SysModel_IMU.cpp"
+
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/int32.hpp"
+#include "std_msgs/msg/u_int8.hpp"
 #include "std_msgs/msg/float64.hpp"
 #include "std_msgs/msg/string.hpp"
 
 class IMU : public rclcpp::Node
 {
 public:
-  IMU()
-    : Node("imu_node")
+  IMU(): Node("imu_node")
   {
     // Create publishers for six different topics
+    //publisher_= this->create_publisher<std_msgs::msg::SensorData
     pub1_ = create_publisher<std_msgs::msg::Float64>("aX", 10);
     pub2_ = create_publisher<std_msgs::msg::Float64>("aY", 10);
     pub3_ = create_publisher<std_msgs::msg::Float64>("aZ", 10);
@@ -20,9 +30,12 @@ public:
 
     // Create a timer to update the topics every 1 ms
     timer_ = create_wall_timer(std::chrono::milliseconds(1), std::bind(&IMU::timer_callback, this));
+    
   }
 
-private:
+private: 
+  SysModel_IMU imu_obj;
+
   void timer_callback()
   {
     // Create a message to publish
@@ -34,15 +47,17 @@ private:
     auto msg5 = std_msgs::msg::Float64();
     auto msg6 = std_msgs::msg::Float64();
 
-    msg.data = 0.0;  // Example data, replace with your actual data
-    msg1.data = 0.0;  // Example data, replace with your actual data
-    msg2.data = 0.0;  // Example data, replace with your actual data
+    //imu_obj
 
-    msg3.data = 0.0;  // Example data, replace with your actual data
-    msg4.data = 0.0;  // Example data, replace with your actual data
-    msg5.data = 0.0;  // Example data, replace with your actual data
+    imu_obj.read_and_convert_sensor_data();
 
-    msg6.data = 0.0;  // Example data, replace with your actual data
+    msg.data = imu_obj.x_accel_g;
+    msg1.data = imu_obj.y_accel_g;
+    msg2.data = imu_obj.z_accel_g; 
+    msg3.data = imu_obj.x_gyro_dps;  
+    msg4.data = imu_obj.y_gyro_dps; 
+    msg5.data = imu_obj.z_gyro_dps;  
+    msg6.data = imu_obj.temp_c;  
 
     // Publish to each topic
     pub1_->publish(msg);
@@ -61,8 +76,6 @@ private:
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub5_;
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub6_;
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub7_;
-
-
   rclcpp::TimerBase::SharedPtr timer_;
 };
 
