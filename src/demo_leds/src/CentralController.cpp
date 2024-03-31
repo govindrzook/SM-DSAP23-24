@@ -131,42 +131,42 @@ private:
 
   	void ax_callback(const std_msgs::msg::Float64 & msg) const
   	{
-	    RCLCPP_INFO(this->get_logger(), "X Accel (g): '%.2f'", msg.data);  
+	    //RCLCPP_INFO(this->get_logger(), "X Accel (g): '%.2f'", msg.data);  
 		    
   	}
  	void ay_callback(const std_msgs::msg::Float64 & msg) const
   	{
-	    RCLCPP_INFO(this->get_logger(), "Y Accel (g): '%.2f'", msg.data);  
+	    //RCLCPP_INFO(this->get_logger(), "Y Accel (g): '%.2f'", msg.data);  
 		    
   	}
  	void az_callback(const std_msgs::msg::Float64 & msg) const
   	{
-	    RCLCPP_INFO(this->get_logger(), "Z Accel (g): '%.2f'", msg.data);  
+	    //RCLCPP_INFO(this->get_logger(), "Z Accel (g): '%.2f'", msg.data);  
 		    
   	}
  	void gx_callback(const std_msgs::msg::Float64 & msg) const
   	{
-	    RCLCPP_INFO(this->get_logger(), "X Gyro (dps): '%.2f'", msg.data);  
+	    //RCLCPP_INFO(this->get_logger(), "X Gyro (dps): '%.2f'", msg.data);  
 		    
   	}
  	void gy_callback(const std_msgs::msg::Float64 & msg) const
   	{
-	    RCLCPP_INFO(this->get_logger(), "Y Gyro (dps): '%.2f'", msg.data);  
+	    //RCLCPP_INFO(this->get_logger(), "Y Gyro (dps): '%.2f'", msg.data);  
 		    
   	}
  	void gz_callback(const std_msgs::msg::Float64 & msg) const
   	{
-	    RCLCPP_INFO(this->get_logger(), "Z Gyro (dps): '%.2f'", msg.data);  
+	    //RCLCPP_INFO(this->get_logger(), "Z Gyro (dps): '%.2f'", msg.data);  
 		    
   	}
 
 	void temp_callback(const std_msgs::msg::Float64 & msg) const
   	{
-	    RCLCPP_INFO(this->get_logger(), "Temperature (C): '%.2f'", msg.data);      
+	    //RCLCPP_INFO(this->get_logger(), "Temperature (C): '%.2f'", msg.data);      
   	}
   	void front_right_speed_callback(const std_msgs::msg::Float64 & msg) const
   	{
-		RCLCPP_INFO(this->get_logger(), "Front right BLDC speed feedback: '%f'", msg.data);  	    
+		//RCLCPP_INFO(this->get_logger(), "Front right BLDC speed feedback: '%f'", msg.data);  	    
   	}
 
 	rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr ax_subscription;
