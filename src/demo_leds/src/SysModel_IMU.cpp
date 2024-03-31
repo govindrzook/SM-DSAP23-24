@@ -183,7 +183,7 @@ void SysModel_IMU::i2c_write(uint8_t reg_address, uint8_t val) {
 		printf("Error, unable to write to i2c device\n");
 		exit(1);
 	}
-    printf("Value at reg %x should be: %x\n",buf[0], buf[1]);
+    //printf("Value at reg %x should be: %x\n",buf[0], buf[1]);
     close(file);
 }
 uint8_t SysModel_IMU::i2c_read(uint8_t reg_address){
