@@ -5,7 +5,7 @@
 #include <iostream>
 #include <stdio.h>
 
-#include "SysModel_IMU.cpp"
+#include "hardware_libraries/SysModel_IMU.cpp"
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/int32.hpp"

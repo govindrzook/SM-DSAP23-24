@@ -7,7 +7,7 @@
 #include "std_msgs/msg/float64.hpp"
 #include "std_msgs/msg/u_int8.hpp"
 #include </usr/include/libserial/SerialPort.h>
-#include "SOLOUno.cpp"
+#include "hardware_libraries/SOLOUno.cpp"
 
 using std::placeholders::_1;
 
@@ -15,27 +15,27 @@ int direction; // "Current" direction of the motor.
 int lastTorqueCommand = 5000; // Impossible last speed for initial value.
 int lastDirection = 2; // Impossible direction for initial value.
 
-class FrontLeftSOLO : public rclcpp::Node
+class BackLeftSOLO : public rclcpp::Node
 {
 public:
-  FrontLeftSOLO()
-  : Node("front_left_solo")
+  BackLeftSOLO()
+  : Node("back_left_solo")
   {
-    front_left_torque_subscription = this->create_subscription<std_msgs::msg::Float64>(
-      		"frontLeftTorque", 10, std::bind(&FrontLeftSOLO::front_left_torque_callback, this, _1));
+    back_left_torque_subscription = this->create_subscription<std_msgs::msg::Float64>(
+      		"backLeftTorque", 10, std::bind(&BackLeftSOLO::back_left_torque_callback, this, _1));
 
     heartbeat_subscription = this->create_subscription<std_msgs::msg::UInt8>(
-      		"heartbeat", 10, std::bind(&FrontLeftSOLO::heartbeat_callback, this, _1));
+      		"heartbeat", 10, std::bind(&BackLeftSOLO::heartbeat_callback, this, _1));
 
     estop_subscription = this->create_subscription<std_msgs::msg::UInt8>(
-      		"estop", 10, std::bind(&FrontLeftSOLO::estop_callback, this, _1));
+      		"estop", 10, std::bind(&BackLeftSOLO::estop_callback, this, _1));
 
-	  pub1_ = create_publisher<std_msgs::msg::Float64>("frontLeftSpeed", 10);
+	  pub1_ = create_publisher<std_msgs::msg::Float64>("backLeftSpeed", 10);
 
     pub_error = create_publisher<std_msgs::msg::String>("error", 10);
 
-	  timer_ = create_wall_timer(std::chrono::seconds(1), std::bind(&FrontLeftSOLO::timer_callback, this));
-    timer_heartbeat = create_wall_timer(std::chrono::seconds(1), std::bind(&FrontLeftSOLO::heartbeat_timer_callback, this));
+	  timer_ = create_wall_timer(std::chrono::seconds(1), std::bind(&BackLeftSOLO::timer_callback, this));
+    timer_heartbeat = create_wall_timer(std::chrono::seconds(1), std::bind(&BackLeftSOLO::heartbeat_timer_callback, this));
 
     soloPtr = new SoloUno(0x00); 
 
@@ -97,7 +97,7 @@ private:
      this->updateLast();
   }
 
-  void front_left_torque_callback(const std_msgs::msg::Float64 & msg) const{
+  void back_left_torque_callback(const std_msgs::msg::Float64 & msg) const{
 	  RCLCPP_INFO(this->get_logger(), "SOLO received torque command: '%f'", msg.data); 
 
       if(msg.data >= 1){
@@ -137,7 +137,7 @@ private:
   
   }
  
-  rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr front_left_torque_subscription;
+  rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr back_left_torque_subscription;
   rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr heartbeat_subscription;
   rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr estop_subscription;
   rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr pub1_;
@@ -150,7 +150,7 @@ private:
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<FrontLeftSOLO>());
+  rclcpp::spin(std::make_shared<BackLeftSOLO>());
   rclcpp::shutdown();
   return 0;
 }

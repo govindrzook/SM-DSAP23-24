@@ -6,7 +6,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 #include "std_msgs/msg/u_int8.hpp"
-#include "SysModel_PWMServoDriver.cpp"
+#include "hardware_libraries/SysModel_PWMServoDriver.cpp"
 
 using std::placeholders::_1;
 
