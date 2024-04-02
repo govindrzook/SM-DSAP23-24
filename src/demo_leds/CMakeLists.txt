@@ -74,7 +74,13 @@ install(TARGETS
   imu
   central_controller
   front_right_servo_controller
+  front_left_servo_controller
+  back_right_servo_controller
+  back_left_servo_controller
   front_right_solo
+  front_left_solo
+  back_right_solo
+  back_left_solo
   logger
   DESTINATION lib/${PROJECT_NAME})
 ament_package()
