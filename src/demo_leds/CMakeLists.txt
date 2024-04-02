@@ -22,16 +22,25 @@ ament_target_dependencies(central_controller rclcpp std_msgs)
 add_executable(front_right_servo_controller src/FrontRightServoController.cpp)
 ament_target_dependencies(front_right_servo_controller rclcpp std_msgs)
 
-add_executable(front_right_solo src/FrontRightSOLO.cpp src/SOLOUno.cpp) #Added src/SOLOUno.cpp
+add_executable(front_left_servo_controller src/FrontLeftServoController.cpp)
+ament_target_dependencies(front_left_servo_controller rclcpp std_msgs)
+
+add_executable(back_left_servo_controller src/FrontLeftServoController.cpp)
+ament_target_dependencies(back_left_servo_controller rclcpp std_msgs)
+
+add_executable(back_right_servo_controller src/BackRightServoController.cpp)
+ament_target_dependencies(back_right_servo_controller rclcpp std_msgs)
+
+add_executable(front_right_solo src/FrontRightSOLO.cpp src/SOLOUno.cpp)
 ament_target_dependencies(front_right_solo rclcpp std_msgs)
 
-add_executable(front_left_solo src/FrontLeftSOLO.cpp src/SOLOUno.cpp) #Added src/SOLOUno.cpp
+add_executable(front_left_solo src/FrontLeftSOLO.cpp src/SOLOUno.cpp) 
 ament_target_dependencies(front_left_solo rclcpp std_msgs)
 
-add_executable(back_right_solo src/BackRightSOLO.cpp src/SOLOUno.cpp) #Added src/SOLOUno.cpp
+add_executable(back_right_solo src/BackRightSOLO.cpp src/SOLOUno.cpp) 
 ament_target_dependencies(back_right_solo rclcpp std_msgs)
 
-add_executable(back_left_solo src/BackLeftSOLO.cpp src/SOLOUno.cpp) #Added src/SOLOUno.cpp
+add_executable(back_left_solo src/BackLeftSOLO.cpp src/SOLOUno.cpp) 
 ament_target_dependencies(back_left_solo rclcpp std_msgs)
 
 target_link_libraries(front_right_solo
