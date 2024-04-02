@@ -10,17 +10,17 @@
 
 using std::placeholders::_1;
 
-class FrontRightServoController : public rclcpp::Node
+class BackRightServoController : public rclcpp::Node
 {
 public:
-  FrontRightServoController()
-  : Node("front_right_servo_controller")
+  BackRightServoController()
+  : Node("back_right_servo_controller")
   {
-    front_right_steering_position_subscription = this->create_subscription<std_msgs::msg::UInt8>(
-      		"frontRightSteerPosition", 10, std::bind(&FrontRightServoController::steering_position_callback, this, _1));
+    back_right_steering_position_subscription = this->create_subscription<std_msgs::msg::UInt8>(
+      		"backRightSteerPosition", 10, std::bind(&BackRightServoController::steering_position_callback, this, _1));
 	
-    front_right_brake_position_subscription = this->create_subscription<std_msgs::msg::UInt8>(
-      		"frontRightBrakePosition", 10, std::bind(&FrontRightServoController::brake_position_callback, this, _1));
+    back_right_brake_position_subscription = this->create_subscription<std_msgs::msg::UInt8>(
+      		"backRightBrakePosition", 10, std::bind(&BackRightServoController::brake_position_callback, this, _1));
 
     pub_error = create_publisher<std_msgs::msg::String>("error", 10);
   }
@@ -48,7 +48,7 @@ private:
 			servo_steer.setAngle(steerOutput,msg.data);  	
 		}else{
 			auto msg_error = std_msgs::msg::String();
-    		msg_error.data = "FR-Steering angle is out of range.";
+    		msg_error.data = "BR-Steering angle is out of range.";
     		pub_error->publish(msg_error);
 		}
 		
@@ -65,19 +65,19 @@ private:
 		}else{
 			
 			auto msg_error = std_msgs::msg::String();
-    		msg_error.data = "FR-Brake angle input is out of range.";
+    		msg_error.data = "BR-Brake angle input is out of range.";
     		pub_error->publish(msg_error);
 		}
 	}else{
-    	RCLCPP_INFO(this->get_logger(), "FR-Brake angle input is the same as the previous one.");
+    	RCLCPP_INFO(this->get_logger(), "BR-Brake angle input is the same as the previous one.");
 	}
 
 	prevBrake = msg.data;
 		    
   }
  
-	rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr front_right_steering_position_subscription;
-	rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr front_right_brake_position_subscription;
+	rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr back_right_steering_position_subscription;
+	rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr back_right_brake_position_subscription;
 
 	rclcpp::Publisher<std_msgs::msg::String>::SharedPtr pub_error;
 };
@@ -87,7 +87,7 @@ int main(int argc, char * argv[])
 	
 
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<FrontRightServoController>());
+  rclcpp::spin(std::make_shared<BackRightServoController>());
   rclcpp::shutdown();
   return 0;
 }
