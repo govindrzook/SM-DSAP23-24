@@ -5,21 +5,16 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
-
-
-
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
-
 
 add_executable(imu src/IMU.cpp)
 ament_target_dependencies(imu rclcpp std_msgs)
 
 add_executable(logger src/Logger.cpp)
 ament_target_dependencies(logger rclcpp std_msgs)
-
 
 add_executable(central_controller src/CentralController.cpp)
 ament_target_dependencies(central_controller rclcpp std_msgs)
@@ -30,7 +25,28 @@ ament_target_dependencies(front_right_servo_controller rclcpp std_msgs)
 add_executable(front_right_solo src/FrontRightSOLO.cpp src/SOLOUno.cpp) #Added src/SOLOUno.cpp
 ament_target_dependencies(front_right_solo rclcpp std_msgs)
 
+add_executable(front_left_solo src/FrontLeftSOLO.cpp src/SOLOUno.cpp) #Added src/SOLOUno.cpp
+ament_target_dependencies(front_left_solo rclcpp std_msgs)
+
+add_executable(back_right_solo src/BackRightSOLO.cpp src/SOLOUno.cpp) #Added src/SOLOUno.cpp
+ament_target_dependencies(back_right_solo rclcpp std_msgs)
+
+add_executable(back_left_solo src/BackLeftSOLO.cpp src/SOLOUno.cpp) #Added src/SOLOUno.cpp
+ament_target_dependencies(back_left_solo rclcpp std_msgs)
+
 target_link_libraries(front_right_solo
+  ${catkin_LIBRARIES} serial
+)
+
+target_link_libraries(front_left_solo
+  ${catkin_LIBRARIES} serial
+)
+
+target_link_libraries(back_right_solo
+  ${catkin_LIBRARIES} serial
+)
+
+target_link_libraries(back_left_solo
   ${catkin_LIBRARIES} serial
 )
 
