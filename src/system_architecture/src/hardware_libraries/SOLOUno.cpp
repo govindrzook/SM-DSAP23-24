@@ -209,7 +209,7 @@ public:
         }
 
         if(emergencyData | 0x1000000){
-            errorCodes += "CAN communication lost, ";
+            errorCodes += "Stall timeout, ";
         }
     }
 
