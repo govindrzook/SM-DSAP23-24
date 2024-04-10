@@ -52,10 +52,10 @@ public:
 
     void setupForTorqueControlHallSensors(){
 
-        this.soloWriteSlow(0x15,0x01); // Brushless motor
-        this.soloWriteSlow(0x16,0x01); // torque control
-        this.soloWriteSlow(0x02, 0x01); // digital control
-        this.soloWriteSlow(0x13, 0x02); // use hall effect sensors for feedback
+        soloWriteSlow(0x15,0x01); // Brushless motor
+        soloWriteSlow(0x16,0x01); // torque control
+        soloWriteSlow(0x02, 0x01); // digital control
+        soloWriteSlow(0x13, 0x02); // use hall effect sensors for feedback
         
     }
 
