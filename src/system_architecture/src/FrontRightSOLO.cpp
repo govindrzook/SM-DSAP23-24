@@ -38,7 +38,8 @@ public:
     timer_heartbeat = create_wall_timer(std::chrono::seconds(1), std::bind(&FrontRightSOLO::heartbeat_timer_callback, this));
 
     soloPtr = new SoloUno(0x00); 
-
+    soloPtr->setupForTorqueControlHallSensors(); // Initialization for SOLO control and feedback.
+	  
     //These three lines set the initial time for the e-stop mechanism.
     last = this->get_clock()->now();
     std::chrono::time_point<std::chrono::system_clock> time_point(std::chrono::seconds(static_cast<int>(last.seconds())));
