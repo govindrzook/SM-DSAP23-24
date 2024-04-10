@@ -50,6 +50,15 @@ public:
         serial_port.Close();
     }
 
+    void setupForTorqueControlHallSensors(){
+
+        this.soloWriteSlow(0x15,0x01); // Brushless motor
+        this.soloWriteSlow(0x16,0x01); // torque control
+        this.soloWriteSlow(0x02, 0x01); // digital control
+        this.soloWriteSlow(0x13, 0x02); // use hall effect sensors for feedback
+        
+    }
+
     int soloWriteFast(char cmd, int data) { // Fast version of a write, doesn't read back the echo'd data for validation.
      
         serial_port.FlushIOBuffers();
