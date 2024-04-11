@@ -55,10 +55,19 @@ file.open("log_" + str + ".log", std::ofstream::out | std::ofstream::app);
       		"frontRightTorque", 10, std::bind(&Logger::front_right_torque_callback, this, _1));
 
     front_right_steering_position_subscription = this->create_subscription<std_msgs::msg::UInt8>(
-      		"frontRightSteerPosition", 10, std::bind(&Logger::steering_position_callback, this, _1));
+      		"frontRightSteerPosition", 10, std::bind(&Logger::fr_steering_position_callback, this, _1));
 	
     front_right_brake_position_subscription = this->create_subscription<std_msgs::msg::UInt8>(
-      		"frontRightBrakePosition", 10, std::bind(&Logger::brake_position_callback, this, _1));
+      		"frontRightBrakePosition", 10, std::bind(&Logger::fr_brake_position_callback, this, _1));
+
+     front_left_steering_position_subscription = this->create_subscription<std_msgs::msg::UInt8>(
+      		"frontLeftSteerPosition", 10, std::bind(&Logger::fl_steering_position_callback, this, _1));
+	
+    front_left_brake_position_subscription = this->create_subscription<std_msgs::msg::UInt8>(
+      		"frontLeftBrakePosition", 10, std::bind(&Logger::fl_brake_position_callback, this, _1));
+
+    
+
     error_subscription = this->create_subscription<std_msgs::msg::String>(
       		"error", 10, std::bind(&Logger::error_callback, this, _1));
 	  
@@ -90,6 +99,13 @@ private:
 
   int frBrakeCounter = 0;
   int frSteerCounter = 0;
+  int flBrakeCounter = 0;
+  int flSteerCounter = 0;
+
+   int brBrakeCounter = 0;
+  int brSteerCounter = 0;
+  int blBrakeCounter = 0;
+  int blSteerCounter = 0;
 
   std::ofstream file;
   
@@ -112,6 +128,14 @@ private:
 	
 	rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr front_right_steering_position_subscription;
 	rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr front_right_brake_position_subscription;
+  rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr front_left_steering_position_subscription;
+	rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr front_left_brake_position_subscription;
+
+  rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr back_right_steering_position_subscription;
+	rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr back_right_brake_position_subscription;
+  rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr back_left_steering_position_subscription;
+	rclcpp::Subscription<std_msgs::msg::UInt8>::SharedPtr back_left_brake_position_subscription;
+
   rclcpp::Subscription<std_msgs::msg::String>::SharedPtr error_subscription;
 
     std::string generateTimestamp(){
@@ -334,7 +358,7 @@ private:
 		    tempCounter++;     
     }
 
-    void steering_position_callback(const std_msgs::msg::UInt8 & msg)
+    void fr_steering_position_callback(const std_msgs::msg::UInt8 & msg)
     {
 	    	
       if(frSteerCounter >= loggerPeriod){
@@ -346,7 +370,7 @@ private:
 		    frSteerCounter++; 
 		    
     }
-    void brake_position_callback(const std_msgs::msg::UInt8 & msg)
+    void fr_brake_position_callback(const std_msgs::msg::UInt8 & msg)
     {	  
 	     
 
@@ -359,6 +383,86 @@ private:
 		    frBrakeCounter++;  
 		    
     }
+
+    void fl_steering_position_callback(const std_msgs::msg::UInt8 & msg)
+    {
+	    	
+      if(flSteerCounter >= loggerPeriod){
+        RCLCPP_INFO(this->get_logger(), "FL-Steering position: '%u'", msg.data);
+        file << "[" << generateTimestamp() << "] FL-Steering servo position: " << static_cast<unsigned int>(msg.data)  << std::endl;     
+        flSteerCounter = 0;
+      }
+	    	
+		    flSteerCounter++; 
+		    
+    }
+    void fl_brake_position_callback(const std_msgs::msg::UInt8 & msg)
+    {	  
+	     
+
+      if(flBrakeCounter >= loggerPeriod){
+        RCLCPP_INFO(this->get_logger(), "FL-Brake position: '%u'", msg.data);
+        file << "[" << generateTimestamp() << "] FL-Braking servo position: " << static_cast<unsigned int>(msg.data) << std::endl; 
+        flBrakeCounter = 0;
+      }
+	    	
+		    flBrakeCounter++;  
+		    
+    }
+
+    void bl_steering_position_callback(const std_msgs::msg::UInt8 & msg)
+    {
+	    	
+      if(blSteerCounter >= loggerPeriod){
+        RCLCPP_INFO(this->get_logger(), "BL-Steering position: '%u'", msg.data);
+        file << "[" << generateTimestamp() << "] BL-Steering servo position: " << static_cast<unsigned int>(msg.data)  << std::endl;     
+        blSteerCounter = 0;
+      }
+	    	
+		    blSteerCounter++; 
+		    
+    }
+    void bl_brake_position_callback(const std_msgs::msg::UInt8 & msg)
+    {	  
+	     
+
+      if(blBrakeCounter >= loggerPeriod){
+        RCLCPP_INFO(this->get_logger(), "BL-Brake position: '%u'", msg.data);
+        file << "[" << generateTimestamp() << "] BL-Braking servo position: " << static_cast<unsigned int>(msg.data) << std::endl; 
+        blBrakeCounter = 0;
+      }
+	    	
+		    blBrakeCounter++;  
+		    
+    }
+
+    void br_steering_position_callback(const std_msgs::msg::UInt8 & msg)
+    {
+	    	
+      if(brSteerCounter >= loggerPeriod){
+        RCLCPP_INFO(this->get_logger(), "BR-Steering position: '%u'", msg.data);
+        file << "[" << generateTimestamp() << "] BR-Steering servo position: " << static_cast<unsigned int>(msg.data)  << std::endl;     
+        brSteerCounter = 0;
+      }
+	    	
+		    brSteerCounter++; 
+		    
+    }
+    void br_brake_position_callback(const std_msgs::msg::UInt8 & msg)
+    {	  
+	     
+
+      if(brBrakeCounter >= loggerPeriod){
+        RCLCPP_INFO(this->get_logger(), "BR-Brake position: '%u'", msg.data);
+        file << "[" << generateTimestamp() << "] BR-Braking servo position: " << static_cast<unsigned int>(msg.data) << std::endl; 
+        brBrakeCounter = 0;
+      }
+	    	
+		    brBrakeCounter++;  
+		    
+    }
+
+    
 };
 
 int main(int argc, char * argv[])
