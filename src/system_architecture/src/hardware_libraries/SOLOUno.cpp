@@ -220,6 +220,7 @@ public:
         if(emergencyData | 0x1000000){
             errorCodes += "Stall timeout, ";
         }
+        return errorCodes;
     }
 
     int clearErrorRegister(){
