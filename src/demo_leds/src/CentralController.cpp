@@ -113,14 +113,14 @@ private:
 			
 			case 2:
 				while(flag){
-					printf(">> Please enter the steering angle [180 (<--LEFT) to (RIGHT-->) 130].\n");
+					printf(">> Please enter the steering angle [180 (<--LEFT) to (RIGHT-->) 135].\n");
 					printf(">> To return to the previous menu, enter -1.\n\n");
 					scanf(" %d",&input);
 
 					if(input == -1){
 						flag = 0;
 						break;
-					}else if(input >= 130 && input <= 180){
+					}else if(input >= 135 && input <= 180){
 						steer = input;
 					}else{
 						printf("\nInput steer is out of range. Please try again.\n\n");
@@ -135,14 +135,14 @@ private:
 
 			case 3:
 				while(flag){
-					printf(">> Please enter the braking angle [130 (<--0%% braking) to (100%% braking-->)40 ].\n");
+					printf(">> Please enter the braking angle [130 (<--0%% braking) to (100%% braking-->) 60 ].\n");
 					printf(">> To return to the previous menu, enter -1.\n\n");
 					scanf(" %d",&input);
 
 					if(input == -1){
 						flag = 0;
 						break;
-					}else if(input >= 40 && input <= 130){
+					}else if(input >= 60 && input <= 130){
 						brake = input;
 						speed = 0;
 					}else{

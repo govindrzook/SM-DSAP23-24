@@ -76,6 +76,7 @@ private:
   int gyCount= 0;
   int gzCount = 0;
   int tempCounter = 0;
+  int lastSpeedFeedback = 0;
 
   int frBrakeCounter = 0;
   int frSteerCounter = 0;
@@ -115,7 +116,7 @@ private:
            return ss.str();
     }
     void front_right_torque_callback(const std_msgs::msg::Float64 & msg)
-    {
+    {		lastSpeedFeedback = msg.data;
 	    if(frSoloTorqueCount >= loggerPeriod){
         
         RCLCPP_INFO(this->get_logger(), "FR-SOLO set speed command: '%f'", msg.data); 
@@ -132,9 +133,11 @@ private:
     void front_right_speed_callback(const std_msgs::msg::Float64 & msg)
     {
       if(frSoloSpeedReadingCount >= loggerPeriod){
-        RCLCPP_INFO(this->get_logger(), "FR-BLDC speed reading: '%f'", msg.data);  
+        if(!(msg.data == 0 && lastSpeedFeedback !=0)){
+        RCLCPP_INFO(this->get_logger(), "FR-BLDC speed reading: '%f'", msg.data);
+	}
         file << "[" << generateTimestamp() << "] FR-SOLO speed calculation: " << msg.data << std::endl;
-
+	
 
         frSoloSpeedReadingCount = 0;
       }

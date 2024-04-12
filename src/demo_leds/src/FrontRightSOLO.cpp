@@ -46,7 +46,7 @@ private:
     msg.data = soloPtr->readSpeed();
  
     //RCLCPP_INFO(this->get_logger(), "Speed reading: '%f'", msg.data); 
-    pub1_->publish(msg); 
+    if(msg.data != NULL){pub1_->publish(msg);} 
   }
 
   void front_right_torque_callback(const std_msgs::msg::Float64 & msg) const
