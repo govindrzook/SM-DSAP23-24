@@ -76,6 +76,7 @@ private:
   int gyCount= 0;
   int gzCount = 0;
   int tempCounter = 0;
+  int lastSpeedFeedback = 0;
 
   int frBrakeCounter = 0;
   int frSteerCounter = 0;
@@ -115,9 +116,9 @@ private:
            return ss.str();
     }
     void front_right_torque_callback(const std_msgs::msg::Float64 & msg)
-    {
+    {		lastSpeedFeedback = msg.data;
 	    if(frSoloTorqueCount >= loggerPeriod){
-		    
+        
         RCLCPP_INFO(this->get_logger(), "FR-SOLO set speed command: '%f'", msg.data); 
 
         file << generateTimestamp() << " FR-SOLO speed command: " << msg.data << std::endl;
@@ -132,9 +133,11 @@ private:
     void front_right_speed_callback(const std_msgs::msg::Float64 & msg)
     {
       if(frSoloSpeedReadingCount >= loggerPeriod){
-        RCLCPP_INFO(this->get_logger(), "FR-BLDC speed reading: '%f'", msg.data);  
+        if(!(msg.data == 0 && lastSpeedFeedback !=0)){
+        RCLCPP_INFO(this->get_logger(), "FR-BLDC speed reading: '%f'", msg.data);
+	}
         file << "[" << generateTimestamp() << "] FR-SOLO speed calculation: " << msg.data << std::endl;
-
+	
 
         frSoloSpeedReadingCount = 0;
       }
@@ -147,7 +150,7 @@ private:
 	     
 
       if(axCount >= loggerPeriod){
-        RCLCPP_INFO(this->get_logger(), "X Accel (g): '%f'", msg.data);   
+        RCLCPP_INFO(this->get_logger(), "IMU aX: '%f'", msg.data);   
         
         file << "[" << generateTimestamp() << "] IMU aX: " << msg.data << std::endl;
         axCount = 0;
@@ -161,7 +164,7 @@ private:
 	     
 
       if( ayCount >= loggerPeriod){
-        RCLCPP_INFO(this->get_logger(), "Y Accel (g):'%f'", msg.data);
+        RCLCPP_INFO(this->get_logger(), "IMU aY: '%f'", msg.data);
 
         file << "[" << generateTimestamp() << "] IMU aY: " << msg.data << std::endl;  
         ayCount = 0;
@@ -176,7 +179,7 @@ private:
 	    
 
       if( azCount >= loggerPeriod){
-        RCLCPP_INFO(this->get_logger(), "Z Accel (g): '%f'", msg.data);
+        RCLCPP_INFO(this->get_logger(), "IMU aZ: '%f'", msg.data);
         file << "[" << generateTimestamp() << "] IMU aZ: " << msg.data << std::endl;
 
         azCount = 0;
@@ -190,7 +193,7 @@ private:
 		
 
     if( gxCount >= loggerPeriod){
-        RCLCPP_INFO(this->get_logger(), "X Gyro (dps): '%f'", msg.data);
+        RCLCPP_INFO(this->get_logger(), "IMU gX: '%f'", msg.data);
         file << "[" << generateTimestamp() << "] IMU gX: " << msg.data << std::endl; 
          gxCount = 0;
       }
@@ -203,7 +206,7 @@ private:
 	    
 
       if(gyCount >= loggerPeriod){
-        RCLCPP_INFO(this->get_logger(), "Y Gyro (dps): '%f'", msg.data);
+        RCLCPP_INFO(this->get_logger(), "gY: '%f'", msg.data);
         file << "[" << generateTimestamp() << "] IMU gY: " << msg.data << std::endl;    
         gyCount = 0;
       }
@@ -216,7 +219,7 @@ private:
 	    
 
       if(gzCount >= loggerPeriod){
-        RCLCPP_INFO(this->get_logger(), "Z Gyro (dps): '%f'", msg.data);
+        RCLCPP_INFO(this->get_logger(), "gZ: '%f'", msg.data);
         file << "[" << generateTimestamp() << "] IMU gZ: " << msg.data << std::endl;    
         gzCount = 0;
       }
@@ -230,7 +233,7 @@ private:
 	    
 
       if(tempCounter >= loggerPeriod){
-        RCLCPP_INFO(this->get_logger(), "Temperature (C): '%f'", msg.data);
+        RCLCPP_INFO(this->get_logger(), "IMU temperature: '%f'", msg.data);
         file << "[" << generateTimestamp() << "] IMU temperature: " << msg.data << std::endl;    
         tempCounter = 0;
       }
